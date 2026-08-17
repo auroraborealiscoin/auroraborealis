@@ -54,8 +54,8 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "The Times 03/Jan/2018 Bitcoin is name of the game for new generation of firms";
-    const CScript genesisOutputScript = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
+    const char* pszTimestamp = "Aurora Borealis Coin 17/Aug/2026 - GPU mining under a new light";
+    const CScript genesisOutputScript = CScript() << ParseHex("0475e831b907aae367204f125424adae0857fabb8a8dd782a7325bbaf86bbf00b453dc9ae76d5cb3079e961b8c671cafb045211e2126600bb4f8530217a870a6a9") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -137,60 +137,73 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nOverrideRuleChangeActivationThreshold = 1814;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nOverrideMinerConfirmationWindow = 2016;
         consensus.vDeployments[Consensus::DEPLOYMENT_ASSETS].bit = 6;  //Assets (RIP2)
-        consensus.vDeployments[Consensus::DEPLOYMENT_ASSETS].nStartTime = 1540944000; // Oct 31, 2018
-        consensus.vDeployments[Consensus::DEPLOYMENT_ASSETS].nTimeout = 1572480000; // Oct 31, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_ASSETS].nStartTime = 4102444800; // ABRS: disabled (future activation) // Oct 31, 2018
+        consensus.vDeployments[Consensus::DEPLOYMENT_ASSETS].nTimeout = 4133980800; // ABRS: disabled // Oct 31, 2019
         consensus.vDeployments[Consensus::DEPLOYMENT_ASSETS].nOverrideRuleChangeActivationThreshold = 1814;
         consensus.vDeployments[Consensus::DEPLOYMENT_ASSETS].nOverrideMinerConfirmationWindow = 2016;
         consensus.vDeployments[Consensus::DEPLOYMENT_MSG_REST_ASSETS].bit = 7;  // Assets (RIP5)
-        consensus.vDeployments[Consensus::DEPLOYMENT_MSG_REST_ASSETS].nStartTime = 1578920400; // UTC: Mon Jan 13 2020 13:00:00
-        consensus.vDeployments[Consensus::DEPLOYMENT_MSG_REST_ASSETS].nTimeout = 1610542800; // UTC: Wed Jan 13 2021 13:00:00
+        consensus.vDeployments[Consensus::DEPLOYMENT_MSG_REST_ASSETS].nStartTime = 4102444800; // ABRS: disabled (future activation) // UTC: Mon Jan 13 2020 13:00:00
+        consensus.vDeployments[Consensus::DEPLOYMENT_MSG_REST_ASSETS].nTimeout = 4133980800; // ABRS: disabled // UTC: Wed Jan 13 2021 13:00:00
         consensus.vDeployments[Consensus::DEPLOYMENT_MSG_REST_ASSETS].nOverrideRuleChangeActivationThreshold = 1714; // Approx 85% of 2016
         consensus.vDeployments[Consensus::DEPLOYMENT_MSG_REST_ASSETS].nOverrideMinerConfirmationWindow = 2016;
         consensus.vDeployments[Consensus::DEPLOYMENT_TRANSFER_SCRIPT_SIZE].bit = 8;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TRANSFER_SCRIPT_SIZE].nStartTime = 1588788000; // UTC: Wed May 06 2020 18:00:00
-        consensus.vDeployments[Consensus::DEPLOYMENT_TRANSFER_SCRIPT_SIZE].nTimeout = 1620324000; // UTC: Thu May 06 2021 18:00:00
+        consensus.vDeployments[Consensus::DEPLOYMENT_TRANSFER_SCRIPT_SIZE].nStartTime = 4102444800; // ABRS: disabled (future activation) // UTC: Wed May 06 2020 18:00:00
+        consensus.vDeployments[Consensus::DEPLOYMENT_TRANSFER_SCRIPT_SIZE].nTimeout = 4133980800; // ABRS: disabled // UTC: Thu May 06 2021 18:00:00
         consensus.vDeployments[Consensus::DEPLOYMENT_TRANSFER_SCRIPT_SIZE].nOverrideRuleChangeActivationThreshold = 1714; // Approx 85% of 2016
         consensus.vDeployments[Consensus::DEPLOYMENT_TRANSFER_SCRIPT_SIZE].nOverrideMinerConfirmationWindow = 2016;
         consensus.vDeployments[Consensus::DEPLOYMENT_ENFORCE_VALUE].bit = 9;
-        consensus.vDeployments[Consensus::DEPLOYMENT_ENFORCE_VALUE].nStartTime = 1593453600; // UTC: Mon Jun 29 2020 18:00:00
-        consensus.vDeployments[Consensus::DEPLOYMENT_ENFORCE_VALUE].nTimeout = 1624989600; // UTC: Mon Jun 29 2021 18:00:00
+        consensus.vDeployments[Consensus::DEPLOYMENT_ENFORCE_VALUE].nStartTime = 4102444800; // ABRS: disabled (future activation) // UTC: Mon Jun 29 2020 18:00:00
+        consensus.vDeployments[Consensus::DEPLOYMENT_ENFORCE_VALUE].nTimeout = 4133980800; // ABRS: disabled // UTC: Mon Jun 29 2021 18:00:00
         consensus.vDeployments[Consensus::DEPLOYMENT_ENFORCE_VALUE].nOverrideRuleChangeActivationThreshold = 1411; // Approx 70% of 2016
         consensus.vDeployments[Consensus::DEPLOYMENT_ENFORCE_VALUE].nOverrideMinerConfirmationWindow = 2016;
         consensus.vDeployments[Consensus::DEPLOYMENT_COINBASE_ASSETS].bit = 10;
-        consensus.vDeployments[Consensus::DEPLOYMENT_COINBASE_ASSETS].nStartTime = 1597341600; // UTC: Thu Aug 13 2020 18:00:00
-        consensus.vDeployments[Consensus::DEPLOYMENT_COINBASE_ASSETS].nTimeout = 1628877600; // UTC: Fri Aug 13 2021 18:00:00
+        consensus.vDeployments[Consensus::DEPLOYMENT_COINBASE_ASSETS].nStartTime = 4102444800; // ABRS: disabled (future activation) // UTC: Thu Aug 13 2020 18:00:00
+        consensus.vDeployments[Consensus::DEPLOYMENT_COINBASE_ASSETS].nTimeout = 4133980800; // ABRS: disabled // UTC: Fri Aug 13 2021 18:00:00
         consensus.vDeployments[Consensus::DEPLOYMENT_COINBASE_ASSETS].nOverrideRuleChangeActivationThreshold = 1411; // Approx 70% of 2016
         consensus.vDeployments[Consensus::DEPLOYMENT_COINBASE_ASSETS].nOverrideMinerConfirmationWindow = 2016;
 
 
         // The best chain should have at least this much work
-        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000355cd0ac1503c83052"); // Block 2383567
+        consensus.nMinimumChainWork = uint256S("0x00"); // ABRS: no minimum chain work at launch
 
         // By default assume that the signatures in ancestors of this block are valid. Block# 1040000
-        consensus.defaultAssumeValid = uint256S("0x0000000000018d2fdcf4ac8eaac8db059584bd2840be5629562bb8599d39998c"); // Block 2383560
+        consensus.defaultAssumeValid = uint256S("0x00"); // ABRS: no assume-valid at launch
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0x52; // R
-        pchMessageStart[1] = 0x41; // A
-        pchMessageStart[2] = 0x56; // V
-        pchMessageStart[3] = 0x4e; // N
-        nDefaultPort = 8767;
+        pchMessageStart[0] = 0xA7; // ABRS mainnet magic
+        pchMessageStart[1] = 0xB4;
+        pchMessageStart[2] = 0x52;
+        pchMessageStart[3] = 0x19;
+        nDefaultPort = 17333;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1514999494, 25023712, 0x1e00ffff, 4, 5000 * COIN);
+        // Aurora Borealis Coin mainnet genesis block.
+        // Genesis uses the bootstrap X16R header format.
+        // KAWPOW activates immediately after the genesis timestamp.
+        genesis = CreateGenesisBlock(
+            1786991358,
+            2118441,
+            0x1e00ffff,
+            4,
+            900 * COIN
+        );
 
         consensus.hashGenesisBlock = genesis.GetX16RHash();
 
-        assert(consensus.hashGenesisBlock == uint256S("0000006b444bc2f2ffe627be9d9e7e7a0730000870ef6eb6da46c8eae389df90"));
-        assert(genesis.hashMerkleRoot == uint256S("28ff00a867739a352523808d301f504bc4547699398d70faf2266a8bae5f3516"));
+        assert(consensus.hashGenesisBlock == uint256S(
+            "000000cd5a59f24ee3704faac843f2d464bf71c5fdda92454f331335b95bf32d"
+        ));
+        assert(genesis.hashMerkleRoot == uint256S(
+            "371ce8220f0e78b1e16cdfbd41995785b18d115bca979c2e30a72f61ac0f4aeb"
+        ));
 
-        vSeeds.emplace_back("seed-raven.bitactivate.com", false);
-        vSeeds.emplace_back("seed-raven.ravencoin.com", false);
-        vSeeds.emplace_back("seed-raven.ravencoin.org", false);
+        // ABRS: DNS seeds will be added before public mainnet launch
+        // ABRS: no Ravencoin DNS seeds
+        // ABRS: no Ravencoin DNS seeds
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,122);
@@ -201,34 +214,25 @@ public:
         // Raven BIP44 cointype in mainnet is '175'
         nExtCoinType = 175;
 
-        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
+        vFixedSeeds.clear(); // ABRS: fixed seeds added before public mainnet launch
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
         fMiningRequiresPeers = true;
 
+        // ABRS: no historical checkpoints at launch.
+        // Genesis checkpoint will be added after generating the ABRS genesis.
         checkpointData = (CCheckpointData) {
             {
-                { 535721, uint256S("0x000000000001217f58a594ca742c8635ecaaaf695d1a63f6ab06979f1c159e04")},
-                { 697376, uint256S("0x000000000000499bf4ebbe61541b02e4692b33defc7109d8f12d2825d4d2dfa0")},
-                { 740000, uint256S("0x00000000000027d11bf1e7a3b57d3c89acc1722f39d6e08f23ac3a07e16e3172")},
-                { 909251, uint256S("0x000000000000694c9a363eff06518aa7399f00014ce667b9762f9a4e7a49f485")},
-                { 1040000, uint256S("0x000000000000138e2690b06b1ddd8cf158c3a5cf540ee5278debdcdffcf75839")},
-                { 1186833, uint256S("0x0000000000000d4840d4de1f7d943542c2aed532bd5d6527274fc0142fa1a410")},
-                { 2383550, uint256S("0x0000000000008927ed21a1e3bb87d3e1020646e8cc94354a1f8fc608395e15dc")}
+                { 0, uint256S("000000cd5a59f24ee3704faac843f2d464bf71c5fdda92454f331335b95bf32d") }
             }
         };
-
-		// 20969961 transactions as of block #2383625 at 2022-07-28 22:02:22 (UTC)
-		// previously set at 6709969 txns by time 1577939273 ==>
+        // ABRS starts with no historical chain transaction data.
         chainTxData = ChainTxData{
-            // Update as we know more about the contents of the Raven chain
-            // Stats as of 0x00000000000016ec03d8d93f9751323bcc42137b1b4df67e6a11c4394fd8e5ad window size 43200
-            1659045742, // * UNIX timestamp of last known number of transactions
-            20969961,    // * total number of transactions between genesis and that timestamp
-                        //   (the tx=... number in the SetBestChain debug.log lines)
-            5.7       // * estimated number of transactions per second after that timestamp
+            0,   // UNIX timestamp
+            0,   // transaction count
+            0.0  // estimated transactions per second
         };
 
         /** RVN Start **/
@@ -258,17 +262,19 @@ public:
         strGlobalBurnAddress = "RXBurnXXXXXXXXXXXXXXXXXXXXXXWUo9FV";
 
         // DGW Activation
-        nDGWActivationBlock = 338778;
+        nDGWActivationBlock = 1; // ABRS: DGW from first mined block
 
         nMaxReorganizationDepth = 60; // 60 at 1 minute block timespan is +/- 60 minutes.
         nMinReorganizationPeers = 4;
         nMinReorganizationAge = 60 * 60 * 12; // 12 hours
 
-        nAssetActivationHeight = 435456; // Asset activated block height
-        nMessagingActivationBlock = 1092672; // Messaging activated block height
-        nRestrictedActivationBlock = 1092672; // Restricted activated block height
+        nAssetActivationHeight = 2147483647; // ABRS: assets disabled
+        nMessagingActivationBlock = 0xFFFFFFFF; // ABRS: messaging disabled
+        nRestrictedActivationBlock = 0xFFFFFFFF; // ABRS: restricted assets disabled
 
-        nKAAAWWWPOWActivationTime = 1588788000; // UTC: Wed May 06 2020 18:00:00
+        // ABRS genesis: 1786991358
+        // KAWPOW starts immediately after the genesis timestamp.
+        nKAAAWWWPOWActivationTime = 1786991359;
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
         /** RVN End **/
     }
