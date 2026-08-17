@@ -26,6 +26,7 @@
 #include "txmempool.h"
 #include "util.h"
 #include "utilmoneystr.h"
+#include "utilstrencodings.h"
 #include "validationinterface.h"
 
 #include "wallet/wallet.h"
@@ -174,9 +175,35 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     CMutableTransaction coinbaseTx;
     coinbaseTx.vin.resize(1);
     coinbaseTx.vin[0].prevout.SetNull();
-    coinbaseTx.vout.resize(1);
+
+    const bool fABRSPremineBlock =
+        chainparams.NetworkIDString() == "main" && nHeight == 1;
+
+    coinbaseTx.vout.resize(fABRSPremineBlock ? 3 : 1);
+
+    // Normal miner reward + transaction fees.
     coinbaseTx.vout[0].scriptPubKey = scriptPubKeyIn;
-    coinbaseTx.vout[0].nValue = nFees + GetBlockSubsidy(nHeight, chainparams.GetConsensus());
+    coinbaseTx.vout[0].nValue =
+        nFees + GetBlockSubsidy(nHeight, chainparams.GetConsensus());
+
+    if (fABRSPremineBlock) {
+        static const CAmount ABRS_FOUNDER_PREMINE   = 210000000 * COIN;
+        static const CAmount ABRS_TREASURY_PREMINE  = 210000000 * COIN;
+
+        const std::vector<unsigned char> founderScriptBytes =
+            ParseHex("76a914fa14ee3f3828b18899bd497c39a968f188ba1c6388ac");
+        const std::vector<unsigned char> treasuryScriptBytes =
+            ParseHex("76a914f85021fb0823000d92931aa36f8e7de2976de17d88ac");
+
+        coinbaseTx.vout[1].nValue = ABRS_FOUNDER_PREMINE;
+        coinbaseTx.vout[1].scriptPubKey =
+            CScript(founderScriptBytes.begin(), founderScriptBytes.end());
+
+        coinbaseTx.vout[2].nValue = ABRS_TREASURY_PREMINE;
+        coinbaseTx.vout[2].scriptPubKey =
+            CScript(treasuryScriptBytes.begin(), treasuryScriptBytes.end());
+    }
+
     coinbaseTx.vin[0].scriptSig = CScript() << nHeight << OP_0;
     pblock->vtx[0] = MakeTransactionRef(std::move(coinbaseTx));
     pblocktemplate->vchCoinbaseCommitment = GenerateCoinbaseCommitment(*pblock, pindexPrev, chainparams.GetConsensus());

@@ -23,8 +23,15 @@ unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const CBlockH
     const arith_uint256 bnPowLimit = UintToArith256(params.powLimit);
     int64_t nPastBlocks = 180; // ~3hr
 
-    // make sure we have at least (nPastBlocks + 1) blocks, otherwise just return powLimit
+    // ABRS/Ravencoin KAWPOW bootstrap:
+    // Before there are 180 KAWPOW blocks available for DGW, use the
+    // dedicated temporary KAWPOW limit. For pre-KAWPOW blocks, retain
+    // the normal powLimit behavior.
     if (!pindexLast || pindexLast->nHeight < nPastBlocks) {
+        if (pblock->nTime >= nKAWPOWActivationTime) {
+            const arith_uint256 bnKawPowLimit = UintToArith256(params.kawpowLimit);
+            return bnKawPowLimit.GetCompact();
+        }
         return bnPowLimit.GetCompact();
     }
 

@@ -2739,6 +2739,51 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
     LogPrint(BCLog::BENCH, "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs (%.2fms/blk)]\n", (unsigned)block.vtx.size(), MILLI * (nTime3 - nTime2), MILLI * (nTime3 - nTime2) / block.vtx.size(), nInputs <= 1 ? 0 : MILLI * (nTime3 - nTime2) / (nInputs-1), nTimeConnect * MICRO, nTimeConnect * MILLI / nBlocksTotal);
 
     CAmount blockReward = nFees + GetBlockSubsidy(pindex->nHeight, chainparams.GetConsensus());
+
+    // ============================================================
+    // Aurora Borealis Coin mainnet premine - block #1 only
+    //
+    // Founder:  210,000,000 ABRS
+    // Treasury: 210,000,000 ABRS
+    //
+    // These outputs are consensus-enforced. A block #1 that changes
+    // either destination or amount is invalid.
+    // ============================================================
+    if (chainparams.NetworkIDString() == "main" && pindex->nHeight == 1) {
+        static const CAmount ABRS_FOUNDER_PREMINE  = 210000000 * COIN;
+        static const CAmount ABRS_TREASURY_PREMINE = 210000000 * COIN;
+
+        const std::vector<unsigned char> founderScriptBytes =
+            ParseHex("76a914fa14ee3f3828b18899bd497c39a968f188ba1c6388ac");
+        const std::vector<unsigned char> treasuryScriptBytes =
+            ParseHex("76a914f85021fb0823000d92931aa36f8e7de2976de17d88ac");
+
+        const CScript founderScript(founderScriptBytes.begin(), founderScriptBytes.end());
+        const CScript treasuryScript(treasuryScriptBytes.begin(), treasuryScriptBytes.end());
+
+        if (block.vtx[0]->vout.size() < 3) {
+            return state.DoS(100,
+                             error("ConnectBlock(): ABRS premine coinbase missing required outputs"),
+                             REJECT_INVALID, "bad-cb-premine-outputs");
+        }
+
+        if (block.vtx[0]->vout[1].nValue != ABRS_FOUNDER_PREMINE ||
+            block.vtx[0]->vout[1].scriptPubKey != founderScript) {
+            return state.DoS(100,
+                             error("ConnectBlock(): invalid ABRS Founder premine output"),
+                             REJECT_INVALID, "bad-cb-premine-founder");
+        }
+
+        if (block.vtx[0]->vout[2].nValue != ABRS_TREASURY_PREMINE ||
+            block.vtx[0]->vout[2].scriptPubKey != treasuryScript) {
+            return state.DoS(100,
+                             error("ConnectBlock(): invalid ABRS Treasury premine output"),
+                             REJECT_INVALID, "bad-cb-premine-treasury");
+        }
+
+        blockReward += ABRS_FOUNDER_PREMINE + ABRS_TREASURY_PREMINE;
+    }
+
     if (block.vtx[0]->GetValueOut(AreEnforcedValuesDeployed()) > blockReward)
         return state.DoS(100,
                          error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d)",
