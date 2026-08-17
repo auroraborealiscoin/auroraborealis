@@ -71,7 +71,7 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/raven.conf are parsed in qt/raven.cpp's main()
+    // If Qt is used, parameters/auroraborealis.conf are parsed in qt/raven.cpp's main()
     gArgs.ParseParameters(argc, argv);
 
     // Process help and version before taking care about datadir
