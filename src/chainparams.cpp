@@ -212,8 +212,10 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
-        // Raven BIP44 cointype in mainnet is '175'
-        nExtCoinType = 175;
+        // ABRS development BIP44 coin type.
+        // Provisional value: replace with an officially assigned coin type
+        // before public mainnet release.
+        nExtCoinType = 10000;
 
         vFixedSeeds.clear(); // ABRS: fixed seeds added before public mainnet launch
 
