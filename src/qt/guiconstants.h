@@ -114,7 +114,7 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "Raven"
+#define QAPP_ORG_NAME "AuroraBorealis"
 #define QAPP_ORG_DOMAIN "raven.org"
 #define QAPP_APP_NAME_DEFAULT "AuroraBorealis-Qt"
 #define QAPP_APP_NAME_TESTNET "AuroraBorealis-Qt-testnet"

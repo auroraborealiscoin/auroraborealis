@@ -52,9 +52,9 @@ QString RavenUnits::description(int unit)
 {
     switch(unit)
     {
-    case RVN: return QString("Ravens");
-    case mRVN: return QString("Milli-Ravens (1 / 1" THIN_SP_UTF8 "000)");
-    case uRVN: return QString("Micro-Ravens (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case RVN: return QString("ABRS");
+    case mRVN: return QString("mABRS (1 / 1" THIN_SP_UTF8 "000)");
+    case uRVN: return QString("uABRS (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }

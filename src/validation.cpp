@@ -65,7 +65,7 @@
 using namespace boost::placeholders;
 
 #if defined(NDEBUG)
-# error "Raven cannot be compiled without assertions."
+# error "Aurora Borealis cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001
