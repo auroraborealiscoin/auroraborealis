@@ -657,4 +657,252 @@ BOOST_FIXTURE_TEST_SUITE(miner_tests, TestingSetup)
         fCheckpointsEnabled = true;
     }
 
+
+    BOOST_AUTO_TEST_CASE(abrs_mainnet_premine_template_test)
+    {
+        BOOST_TEST_MESSAGE("Testing Aurora Borealis mainnet block #1 premine template");
+
+        auto chainParams = CreateChainParams(CBaseChainParams::MAIN);
+        CChainParams& chainparams = *chainParams;
+
+        const CScript minerScript =
+            CScript() << ParseHex(
+                "04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb"
+                "649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f"
+            ) << OP_CHECKSIG;
+
+        const std::vector<unsigned char> founderBytes =
+            ParseHex("76a914fa14ee3f3828b18899bd497c39a968f188ba1c6388ac");
+
+        const std::vector<unsigned char> treasuryBytes =
+            ParseHex("76a914f85021fb0823000d92931aa36f8e7de2976de17d88ac");
+
+        const CScript founderScript(
+            founderBytes.begin(),
+            founderBytes.end()
+        );
+
+        const CScript treasuryScript(
+            treasuryBytes.begin(),
+            treasuryBytes.end()
+        );
+
+        static const CAmount FOUNDER_PREMINE =
+            210000000 * COIN;
+
+        static const CAmount TREASURY_PREMINE =
+            210000000 * COIN;
+
+        LOCK(cs_main);
+
+        // TestingSetup starts mainnet at genesis, therefore
+        // CreateNewBlock() must construct block height #1.
+        BOOST_REQUIRE_EQUAL(chainActive.Height(), 0);
+
+        std::unique_ptr<CBlockTemplate> blockTemplate =
+            AssemblerForTest(chainparams).CreateNewBlock(minerScript);
+
+        BOOST_REQUIRE(blockTemplate);
+        BOOST_REQUIRE(!blockTemplate->block.vtx.empty());
+
+        const CTransaction& coinbase =
+            *blockTemplate->block.vtx[0];
+
+        BOOST_REQUIRE(coinbase.vout.size() >= 3U);
+
+        // vout[0] = normal miner subsidy + fees.
+        BOOST_CHECK(
+            coinbase.vout[0].scriptPubKey == minerScript
+        );
+
+        // vout[1] = Founder premine.
+        BOOST_CHECK_EQUAL(
+            coinbase.vout[1].nValue,
+            FOUNDER_PREMINE
+        );
+
+        BOOST_CHECK(
+            coinbase.vout[1].scriptPubKey == founderScript
+        );
+
+        // vout[2] = Treasury premine.
+        BOOST_CHECK_EQUAL(
+            coinbase.vout[2].nValue,
+            TREASURY_PREMINE
+        );
+
+        BOOST_CHECK(
+            coinbase.vout[2].scriptPubKey == treasuryScript
+        );
+
+        BOOST_CHECK_EQUAL(
+            coinbase.vout[1].nValue +
+            coinbase.vout[2].nValue,
+            420000000 * COIN
+        );
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_mainnet_premine_consensus_rejection_test)
+    {
+        BOOST_TEST_MESSAGE("Testing Aurora Borealis mainnet premine consensus rejection");
+
+        auto chainParams = CreateChainParams(CBaseChainParams::MAIN);
+        CChainParams& chainparams = *chainParams;
+
+        const CScript minerScript =
+            CScript() << ParseHex(
+                "04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb"
+                "649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f"
+            ) << OP_CHECKSIG;
+
+        LOCK(cs_main);
+
+        BOOST_REQUIRE_EQUAL(chainActive.Height(), 0);
+
+        std::unique_ptr<CBlockTemplate> blockTemplate =
+            AssemblerForTest(chainparams).CreateNewBlock(minerScript);
+
+        BOOST_REQUIRE(blockTemplate);
+        BOOST_REQUIRE(!blockTemplate->block.vtx.empty());
+
+        const CBlock validBlock = blockTemplate->block;
+
+        // Baseline: the unmodified block #1 template must be valid.
+        {
+            CValidationState state;
+
+            BOOST_CHECK(
+                TestBlockValidity(
+                    state,
+                    chainparams,
+                    validBlock,
+                    chainActive.Tip(),
+                    false,  // Skip real PoW for this deterministic unit test.
+                    false   // Skip Merkle root check after test mutations.
+                )
+            );
+        }
+
+        // ---------------------------------------------------------
+        // Founder amount altered -> bad-cb-premine-founder
+        // ---------------------------------------------------------
+        {
+            CBlock block = validBlock;
+
+            CMutableTransaction coinbase(*block.vtx[0]);
+
+            BOOST_REQUIRE(coinbase.vout.size() >= 3U);
+
+            coinbase.vout[1].nValue -= 1;
+
+            block.vtx[0] =
+                MakeTransactionRef(std::move(coinbase));
+
+            CValidationState state;
+
+            BOOST_CHECK(
+                !TestBlockValidity(
+                    state,
+                    chainparams,
+                    block,
+                    chainActive.Tip(),
+                    false,
+                    false
+                )
+            );
+
+            BOOST_CHECK_EQUAL(
+                state.GetRejectReason(),
+                "bad-cb-premine-founder"
+            );
+        }
+
+        // ---------------------------------------------------------
+        // Treasury amount altered -> bad-cb-premine-treasury
+        // ---------------------------------------------------------
+        {
+            CBlock block = validBlock;
+
+            CMutableTransaction coinbase(*block.vtx[0]);
+
+            BOOST_REQUIRE(coinbase.vout.size() >= 3U);
+
+            coinbase.vout[2].nValue -= 1;
+
+            block.vtx[0] =
+                MakeTransactionRef(std::move(coinbase));
+
+            CValidationState state;
+
+            BOOST_CHECK(
+                !TestBlockValidity(
+                    state,
+                    chainparams,
+                    block,
+                    chainActive.Tip(),
+                    false,
+                    false
+                )
+            );
+
+            BOOST_CHECK_EQUAL(
+                state.GetRejectReason(),
+                "bad-cb-premine-treasury"
+            );
+        }
+
+        // ---------------------------------------------------------
+        // Required premine outputs removed
+        // -> bad-cb-premine-outputs
+        //
+        // If a SegWit commitment exists, preserve it as vout[1].
+        // ---------------------------------------------------------
+        {
+            CBlock block = validBlock;
+
+            CMutableTransaction coinbase(*block.vtx[0]);
+
+            BOOST_REQUIRE(coinbase.vout.size() >= 3U);
+
+            const CTxOut minerOutput =
+                coinbase.vout[0];
+
+            if (coinbase.vout.size() > 3U) {
+                const CTxOut commitmentOutput =
+                    coinbase.vout.back();
+
+                coinbase.vout.clear();
+                coinbase.vout.push_back(minerOutput);
+                coinbase.vout.push_back(commitmentOutput);
+            } else {
+                coinbase.vout.clear();
+                coinbase.vout.push_back(minerOutput);
+            }
+
+            BOOST_REQUIRE(coinbase.vout.size() < 3U);
+
+            block.vtx[0] =
+                MakeTransactionRef(std::move(coinbase));
+
+            CValidationState state;
+
+            BOOST_CHECK(
+                !TestBlockValidity(
+                    state,
+                    chainparams,
+                    block,
+                    chainActive.Tip(),
+                    false,
+                    false
+                )
+            );
+
+            BOOST_CHECK_EQUAL(
+                state.GetRejectReason(),
+                "bad-cb-premine-outputs"
+            );
+        }
+    }
+
 BOOST_AUTO_TEST_SUITE_END()
