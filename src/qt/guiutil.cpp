@@ -602,10 +602,10 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Raven.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Aurora Borealis.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Raven (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Raven (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Aurora Borealis (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Aurora Borealis (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -745,9 +745,9 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=Raven\n";
+            optionFile << "Name=Aurora Borealis\n";
         else
-            optionFile << strprintf("Name=Raven (%s)\n", chain);
+            optionFile << strprintf("Name=Aurora Borealis (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", gArgs.GetBoolArg("-testnet", false), gArgs.GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
