@@ -123,3 +123,7 @@ contrib/devtools/split-debug.sh
 cmake-build-debug
 
 CMakeLists.txt
+
+# Aurora Borealis local build binaries
+/src/auroraborealisd
+/src/auroraborealis-cli
