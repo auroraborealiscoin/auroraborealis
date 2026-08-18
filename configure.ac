@@ -9,7 +9,7 @@ define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2022)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
 define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Aurora Borealis Core]])
-AC_INIT([Aurora Borealis Core],m4_join([.], _CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MINOR, _CLIENT_VERSION_REVISION, m4_if(_CLIENT_VERSION_BUILD, [0], [], _CLIENT_VERSION_BUILD))m4_if(_CLIENT_VERSION_RC, [0], [], [test]_CLIENT_VERSION_RC),[https://github.com/RavenProject/Ravencoin/issues],[auroraborealis],[https://ravencoin.org/])
+AC_INIT([Aurora Borealis Core],m4_join([.], _CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MINOR, _CLIENT_VERSION_REVISION, m4_if(_CLIENT_VERSION_BUILD, [0], [], _CLIENT_VERSION_BUILD))m4_if(_CLIENT_VERSION_RC, [0], [], [test]_CLIENT_VERSION_RC),[https://github.com/auroraborealiscoin/auroraborealis/issues],[auroraborealis],[https://auroraborealiscoin.com/])
 
 AC_CONFIG_SRCDIR([src/validation.cpp])
 AC_CONFIG_HEADERS([src/config/raven-config.h])

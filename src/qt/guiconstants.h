@@ -116,11 +116,12 @@ static const int MAX_URI_LENGTH = 255;
 
 #define QAPP_ORG_NAME "Raven"
 #define QAPP_ORG_DOMAIN "raven.org"
-#define QAPP_APP_NAME_DEFAULT "Raven-Qt"
-#define QAPP_APP_NAME_TESTNET "Raven-Qt-testnet"
+#define QAPP_APP_NAME_DEFAULT "AuroraBorealis-Qt"
+#define QAPP_APP_NAME_TESTNET "AuroraBorealis-Qt-testnet"
 
 /* Default third party browser urls */
-#define DEFAULT_THIRD_PARTY_BROWSERS "https://api.ravencoin.org/tx/%s|https://rvn.cryptoscope.io/tx/?txid=%s|https://blockbook.ravencoin.org/tx/%s|https://explorer.mangofarmassets.com/tx/%s|https://www.assetsexplorer.com/tx/%s|https://explorer.ravenland.org/tx/%s"
+// ABRS official pool/explorer: https://auroraborealiscoin.org/
+#define DEFAULT_THIRD_PARTY_BROWSERS ""
 
 /* Default IPFS viewer */
 #define DEFAULT_IPFS_VIEWER "https://ipfs.io/ipfs/%s"
