@@ -398,7 +398,7 @@
         <translation>Шакл</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
         <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг Raven тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
     </message>
     <message>
@@ -803,7 +803,7 @@
         <translation>&amp;Ёрдам</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
         <translation>Тўловлар (QR кодлари ва raven ёрдамида яратишлар: URI’лар) сўраш</translation>
     </message>
     <message>
@@ -815,7 +815,7 @@
         <translation>Фойдаланилган қабул қилинган манзиллар ва ёрлиқлар рўйхатини кўрсатиш</translation>
     </message>
     <message>
-        <source>Open a raven: URI or payment request</source>
+        <source>Open a auroraborealis: URI or payment request</source>
         <translation>Raven’ни очиш: URI ёки тўлов сўрови</translation>
     </message>
     <message>

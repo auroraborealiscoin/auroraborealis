@@ -1644,7 +1644,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Formular</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the raven network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Aurora Borealis network, as detailed below.</source>
         <translation>Neueste Transaktionen werden eventuell noch nicht angezeigt, daher könnte Ihr Kontostand veraltet sein. Er wird korrigiert, sobald Ihre Wallet die Synchronisation mit dem Raven-Netzwerk erfolgreich abgeschlossen hat. Details dazu finden sich weiter unten.</translation>
     </message>
     <message>
@@ -1869,7 +1869,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Eingehende Verbindungen zulassen.</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
+        <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
         <translation>Über einen SOCKS5-Proxy mit dem Raven-Netzwerk verbinden.</translation>
     </message>
     <message>
@@ -1905,7 +1905,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Aurora Borealis network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>Über einen separaten SOCKS5 Proxy für Tor Services mit dem Raven Netzwerk verbinden.</translation>
     </message>
     <message>
@@ -2008,7 +2008,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Formular</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
         <translation>Die angezeigten Informationen sind möglicherweise nicht mehr aktuell. Ihre Wallet wird automatisch synchronisiert, nachdem eine Verbindung zum Raven-Netzwerk hergestellt wurde. Dieser Prozess ist jedoch derzeit noch nicht abgeschlossen.</translation>
     </message>
     <message>
@@ -2119,7 +2119,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Fehlerhafte Zahlungsanforderung</translation>
     </message>
     <message>
-        <source>Cannot start raven: click-to-pay handler</source>
+        <source>Cannot start auroraborealis: click-to-pay handler</source>
         <translation>Kann Raven nicht starten: Klicken-zum-Bezahlen-Handler</translation>
     </message>
     <message>
@@ -2869,7 +2869,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>&amp;Hilfe</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
         <translation>Zahlungen anfordern (erzeugt QR-Codes und "raven:"-URIs)</translation>
     </message>
     <message>
@@ -2881,7 +2881,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Liste verwendeter Empfangsadressen und Bezeichnungen anzeigen</translation>
     </message>
     <message>
-        <source>Open a raven: URI or payment request</source>
+        <source>Open a auroraborealis: URI or payment request</source>
         <translation>Eine "raven:"-URI oder Zahlungsanforderung öffnen</translation>
     </message>
     <message>
@@ -2889,7 +2889,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>&amp;Kommandozeilenoptionen</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Raven network</source>
+        <source>%n active connection(s) to Aurora Borealis network</source>
         <translation><numerusform>%n aktive Verbindungen zum Raven-Netzwerk</numerusform><numerusform>%n aktive Verbindungen zum Raven-Netzwerk</numerusform></translation>
     </message>
     <message>
@@ -3038,7 +3038,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Vorhandene Empfangsadresse &amp;wiederverwenden (nicht empfohlen)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Raven network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aurora Borealis network.</source>
         <translation>Eine optionale Nachricht, die an die Zahlungsanforderung angehängt wird. Sie wird angezeigt, wenn die Anforderung geöffnet wird. Hinweis: Diese Nachricht wird nicht mit der Zahlung über das Raven-Netzwerk gesendet.</translation>
     </message>
     <message>
@@ -3501,7 +3501,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Dies ist eine Asset-Zahlung</translation>
     </message>
     <message>
-        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Raven network.</source>
+        <source>A message that was attached to the auroraborealis: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aurora Borealis network.</source>
         <translation>Eine an die "raven:"-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das Raven-Netzwerk gesendet.</translation>
     </message>
     <message>
@@ -3859,7 +3859,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Adressbezeichnung eingeben, die dann zusammen mit der Adresse der Liste bereits verwendeter Adressen hinzugefügt wird.</translation>
     </message>
     <message>
-        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Raven network.</source>
+        <source>A message that was attached to the auroraborealis: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aurora Borealis network.</source>
         <translation>Eine an die "raven:"-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das Raven-Netzwerk gesendet.</translation>
     </message>
     <message>

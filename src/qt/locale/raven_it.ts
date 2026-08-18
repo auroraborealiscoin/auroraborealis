@@ -736,7 +736,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Mappa le porte tramite &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
+        <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
         <translation>Connessione alla rete Raven attraverso un proxy SOCKS5.</translation>
     </message>
     <message>
@@ -772,7 +772,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Aurora Borealis network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>Connette alla rete Raven attraverso un proxy SOCKS5 separato per Tor.</translation>
     </message>
     <message>
@@ -859,7 +859,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
         <translation>Le informazioni visualizzate potrebbero non essere aggiornate. Il portamonete si sincronizza automaticamente con la rete Raven una volta stabilita una connessione, ma questo processo non è ancora stato completato.</translation>
     </message>
     <message>
@@ -930,7 +930,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Errore di richiesta di pagamento</translation>
     </message>
     <message>
-        <source>Cannot start raven: click-to-pay handler</source>
+        <source>Cannot start auroraborealis: click-to-pay handler</source>
         <translation>Impossibile avviare raven: gestore click-to-pay</translation>
     </message>
     <message>
@@ -1548,8 +1548,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>&amp;Aiuto</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
-        <translation>Richiedi pagamenti (genera codici QR e raven: URI)</translation>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
+        <translation>Richiedi pagamenti (genera codici QR e auroraborealis: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -1560,8 +1560,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Mostra la lista degli indirizzi di ricezione utilizzati</translation>
     </message>
     <message>
-        <source>Open a raven: URI or payment request</source>
-        <translation>Apri un raven: URI o una richiesta di pagamento</translation>
+        <source>Open a auroraborealis: URI or payment request</source>
+        <translation>Apri un auroraborealis: URI o una richiesta di pagamento</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1701,7 +1701,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>R&amp;iusa un indirizzo di ricezione (non raccomandato)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Raven network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aurora Borealis network.</source>
         <translation>Un messaggio opzionale da allegare e mostrare all'apertura della richiesta di pagamento. Nota: Il messaggio non sarà inviato con il pagamento sulla rete Raven.</translation>
     </message>
     <message>
@@ -2158,7 +2158,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Inserisci un'etichetta per questo indirizzo per aggiungerlo alla lista degli indirizzi utilizzati</translation>
     </message>
     <message>
-        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Raven network.</source>
+        <source>A message that was attached to the auroraborealis: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aurora Borealis network.</source>
         <translation>Messaggio incluso nel raven URI e che sarà memorizzato con la transazione per vostro riferimento. Nota: Questo messaggio non sarà inviato attraverso la rete Raven.</translation>
     </message>
     <message>

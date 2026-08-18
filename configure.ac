@@ -17,7 +17,7 @@ AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
 RAVEN_DAEMON_NAME=ravend
-RAVEN_GUI_NAME=raven-qt
+RAVEN_GUI_NAME=auroraborealis-qt
 RAVEN_CLI_NAME=raven-cli
 RAVEN_TX_NAME=raven-tx
 

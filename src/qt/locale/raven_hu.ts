@@ -349,7 +349,7 @@
         <translation type="vanished">&amp;UPnP port-feltérképezés</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
+        <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
         <translation type="vanished">Csatlakozás a Raven hálózatához SOCKS5 proxyn keresztül</translation>
     </message>
     <message>
@@ -444,7 +444,7 @@
         <translation type="vanished">Űrlap</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
         <translation type="vanished">A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Raven hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
     </message>
     <message>
@@ -916,7 +916,7 @@
         <translation type="vanished">Fül eszköztár</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
         <translation type="vanished">Fizetési kérelem (QR-kódot és "raven:" URI azonosítót hoz létre)</translation>
     </message>
     <message>
@@ -928,7 +928,7 @@
         <translation type="vanished">A használt fogadó címek és címkék megtekintése</translation>
     </message>
     <message>
-        <source>Open a raven: URI or payment request</source>
+        <source>Open a auroraborealis: URI or payment request</source>
         <translation type="vanished">"raven:" URI azonosító vagy fizetési kérelem megnyitása</translation>
     </message>
     <message>
@@ -936,7 +936,7 @@
         <translation type="vanished">Paran&amp;cssor kapcsolók</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Raven network</source>
+        <source>%n active connection(s) to Aurora Borealis network</source>
         <translation type="vanished">
             <numerusform>%n aktív kapcsolat a Raven hálózathoz</numerusform>
         </translation>

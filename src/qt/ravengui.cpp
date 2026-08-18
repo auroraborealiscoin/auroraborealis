@@ -347,7 +347,7 @@ void RavenGUI::createActions()
     sendCoinsMenuAction->setToolTip(sendCoinsMenuAction->statusTip());
 
     receiveCoinsAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/receiving_addresses_selected", ":/icons/receiving_addresses"), tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and raven: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and auroraborealis: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
@@ -368,6 +368,7 @@ void RavenGUI::createActions()
 
     /** RVN START */
     createAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_create_selected", ":/icons/asset_create"), tr("&Create Assets"), this);
+    createAssetAction->setVisible(false);
     createAssetAction->setStatusTip(tr("Create new assets"));
     createAssetAction->setToolTip(createAssetAction->statusTip());
     createAssetAction->setCheckable(true);
@@ -376,6 +377,7 @@ void RavenGUI::createActions()
     tabGroup->addAction(createAssetAction);
 
     transferAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_transfer_selected", ":/icons/asset_transfer"), tr("&Transfer Assets"), this);
+    transferAssetAction->setVisible(false);
     transferAssetAction->setStatusTip(tr("Transfer assets to RVN addresses"));
     transferAssetAction->setToolTip(transferAssetAction->statusTip());
     transferAssetAction->setCheckable(true);
@@ -384,6 +386,7 @@ void RavenGUI::createActions()
     tabGroup->addAction(transferAssetAction);
 
     manageAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_manage_selected", ":/icons/asset_manage"), tr("&Manage Assets"), this);
+    manageAssetAction->setVisible(false);
     manageAssetAction->setStatusTip(tr("Manage assets you are the administrator of"));
     manageAssetAction->setToolTip(manageAssetAction->statusTip());
     manageAssetAction->setCheckable(true);
@@ -408,6 +411,7 @@ void RavenGUI::createActions()
     tabGroup->addAction(votingAction);
 
     restrictedAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/restricted_asset_selected", ":/icons/restricted_asset"), tr("&Restricted Assets"), this);
+    restrictedAssetAction->setVisible(false);
     restrictedAssetAction->setStatusTip(tr("Manage restricted assets"));
     restrictedAssetAction->setToolTip(restrictedAssetAction->statusTip());
     restrictedAssetAction->setCheckable(true);
@@ -492,7 +496,7 @@ void RavenGUI::createActions()
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
     openAction = new QAction(platformStyle->TextColorIcon(":/icons/open"), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a raven: URI or payment request"));
+    openAction->setStatusTip(tr("Open an auroraborealis: URI or payment request"));
 
     showHelpMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/info"), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
@@ -597,12 +601,22 @@ void RavenGUI::createToolBars()
         labelToolbar->setAlignment(Qt::AlignLeft);
 
         if(IconsOnly) {
-            labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/rvntext")));
+            labelToolbar->setText("ABRS");
+            labelToolbar->setAlignment(Qt::AlignCenter);
         }
         else {
-            labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/ravencointext")));
+            labelToolbar->setText("AURORA BOREALIS");
+            labelToolbar->setAlignment(Qt::AlignCenter);
         }
-        labelToolbar->setStyleSheet(".QLabel{background-color: transparent;}");
+
+        labelToolbar->setStyleSheet(
+            ".QLabel {"
+            "background-color: transparent;"
+            "color: white;"
+            "font-size: 18px;"
+            "font-weight: 600;"
+            "}"
+        );
 
         /** RVN END */
 
@@ -915,15 +929,18 @@ void RavenGUI::createToolBars()
 void RavenGUI::updateIconsOnlyToolbar(bool IconsOnly)
 {
     if(IconsOnly) {
-        labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/rvntext")));
+        labelToolbar->setText("ABRS");
+        labelToolbar->setAlignment(Qt::AlignCenter);
+        m_toolbar->setMinimumWidth(65);
         m_toolbar->setMaximumWidth(65);
         m_toolbar->setToolButtonStyle(Qt::ToolButtonIconOnly);
     }
     else {
-        labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/ravencointext")));
-        m_toolbar->setMinimumWidth(labelToolbar->width());
+        labelToolbar->setText("AURORA BOREALIS");
+        labelToolbar->setAlignment(Qt::AlignCenter);
+        m_toolbar->setMinimumWidth(220);
         m_toolbar->setMaximumWidth(255);
-        m_toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);        
+        m_toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     }
 }
 void RavenGUI::setClientModel(ClientModel *_clientModel)

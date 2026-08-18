@@ -783,8 +783,8 @@
         <translation>&amp;Help</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en raven: URI's)</translation>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en auroraborealis: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -795,8 +795,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a raven: URI or payment request</source>
-        <translation>Skep 'n raven: URI of betalingsversoek</translation>
+        <source>Open a auroraborealis: URI or payment request</source>
+        <translation>Skep 'n auroraborealis: URI of betalingsversoek</translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>

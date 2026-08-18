@@ -723,12 +723,12 @@
         <translation>&amp;Ajutor</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
-        <translation>Cerere plată (generează coduri QR și raven: URIs)</translation>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
+        <translation>Cerere plată (generează coduri QR și auroraborealis: URIs)</translation>
     </message>
     <message>
-        <source>Open a raven: URI or payment request</source>
-        <translation>Deschide un raven: URI sau cerere de plată</translation>
+        <source>Open a auroraborealis: URI or payment request</source>
+        <translation>Deschide un auroraborealis: URI sau cerere de plată</translation>
     </message>
     <message>
         <source>%1 behind</source>

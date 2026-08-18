@@ -1015,7 +1015,7 @@
         <translation>Mapare port folosind &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
+        <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
         <translation>Conectare la reţeaua Raven printr-un proxy SOCKS.</translation>
     </message>
     <message>
@@ -1126,7 +1126,7 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
         <translation>Informaţiile afişate pot fi neactualizate. Portofelul dvs. se sincronizează automat cu reţeaua Raven după ce o conexiune este stabilită, dar acest proces nu a fost finalizat încă.</translation>
     </message>
     <message>
@@ -1607,7 +1607,7 @@
         <translation>A&amp;jutor</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
         <translation>Cereţi plăţi (generează coduri QR şi raven-uri: URls)</translation>
     </message>
     <message>
@@ -1619,7 +1619,7 @@
         <translation>Arată lista de adrese pentru primire şi etichetele</translation>
     </message>
     <message>
-        <source>Open a raven: URI or payment request</source>
+        <source>Open a auroraborealis: URI or payment request</source>
         <translation>Deschidere raven: o adresa URI sau o cerere de plată</translation>
     </message>
     <message>
@@ -1728,7 +1728,7 @@
         <translation>R&amp;efoloseşte o adresă de primire (nu este recomandat)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Raven network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aurora Borealis network.</source>
         <translation>Un mesaj opţional de ataşat la cererea de plată, care va fi afişat cînd cererea este deschisă. Notă: Acest mesaj nu va fi trimis cu plata către reţeaua Raven.</translation>
     </message>
     <message>
@@ -1969,8 +1969,8 @@
         <translation>Introduceţi eticheta pentru ca această adresa să fie introdusă în lista de adrese folosite</translation>
     </message>
     <message>
-        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Raven network.</source>
-        <translation>un mesaj a fost ataşat la raven: URI care va fi stocat cu tranzacţia pentru referinţa dvs. Notă: Acest mesaj nu va fi trimis către reţeaua raven.</translation>
+        <source>A message that was attached to the auroraborealis: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aurora Borealis network.</source>
+        <translation>un mesaj a fost ataşat la auroraborealis: URI care va fi stocat cu tranzacţia pentru referinţa dvs. Notă: Acest mesaj nu va fi trimis către reţeaua raven.</translation>
     </message>
     <message>
         <source>Memo:</source>

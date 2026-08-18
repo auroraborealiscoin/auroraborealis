@@ -582,7 +582,7 @@
         <translation>Formulário</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the raven network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Aurora Borealis network, as detailed below.</source>
         <translation>Transações recentes podem não ser visíveis por agora, portanto o saldo da sua carteira pode estar incorreto. Esta informação será corrigida quando a sua carteira acabar de sincronizar com a rede, como está explicado em baixo.</translation>
     </message>
     <message>
@@ -744,7 +744,7 @@
         <translation>Mapear porta, utilizando &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
+        <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
         <translation>Conectar à rede da Raven através dum proxy SOCLS5.</translation>
     </message>
     <message>
@@ -780,7 +780,7 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Aurora Borealis network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>Ligar à rede Raven através de um proxy SOCKS5 separado para utilizar os serviços ocultos do Tor.</translation>
     </message>
     <message>
@@ -867,7 +867,7 @@
         <translation>Formulário</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
         <translation>A informação mostrada poderá estar desatualizada. A sua carteira sincroniza automaticamente com a rede Raven depois de estabelecer ligação, mas este processo ainda não está completo.</translation>
     </message>
     <message>
@@ -938,7 +938,7 @@
         <translation>Erro do pedido de pagamento</translation>
     </message>
     <message>
-        <source>Cannot start raven: click-to-pay handler</source>
+        <source>Cannot start auroraborealis: click-to-pay handler</source>
         <translation>Impossível iniciar o controlador de raven: click-to-pay</translation>
     </message>
     <message>
@@ -1564,8 +1564,8 @@
         <translation>&amp;Ajuda</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
-        <translation>Solicitar pagamentos (gera códigos QR e raven: URIs)</translation>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
+        <translation>Solicitar pagamentos (gera códigos QR e auroraborealis: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -1576,7 +1576,7 @@
         <translation>Mostrar a lista de rótulos e endereços de receção usados</translation>
     </message>
     <message>
-        <source>Open a raven: URI or payment request</source>
+        <source>Open a auroraborealis: URI or payment request</source>
         <translation>Abrir URI raven: ou pedido de pagamento</translation>
     </message>
     <message>
@@ -1717,7 +1717,7 @@
         <translation>Reutilizar um endereço de receção existente (não recomendado)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Raven network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aurora Borealis network.</source>
         <translation>Uma mensagem opcional para anexar ao pedido de pagamento, que será exibida quando o pedido for aberto. Nota: A mensagem não será enviada com o pagamento através da rede Raven.</translation>
     </message>
     <message>
@@ -2174,7 +2174,7 @@
         <translation>Introduza um rótulo para este endereço para o adicionar à sua lista de endereços usados</translation>
     </message>
     <message>
-        <source>A message that was attached to the raven: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Raven network.</source>
+        <source>A message that was attached to the auroraborealis: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aurora Borealis network.</source>
         <translation>Uma mensagem que estava anexada ao URI raven: que será armazenada com a transação para sua referência. Nota: Esta mensagem não será enviada através da rede Raven.</translation>
     </message>
     <message>

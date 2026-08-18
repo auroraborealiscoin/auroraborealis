@@ -402,7 +402,7 @@
         <translation>Desde</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
         <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Raven después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
@@ -691,7 +691,7 @@
         <translation>A&amp;yuda</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
         <translation>Solicitar pagos (genera codigo QR y URL's de Raven)</translation>
     </message>
     <message>
@@ -703,8 +703,8 @@
         <translation>Muestra la lista de direcciones de recepción y etiquetas</translation>
     </message>
     <message>
-        <source>Open a raven: URI or payment request</source>
-        <translation>Abrir un raven: URI o petición de pago</translation>
+        <source>Open a auroraborealis: URI or payment request</source>
+        <translation>Abrir un auroraborealis: URI o petición de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

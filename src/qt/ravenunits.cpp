@@ -41,9 +41,9 @@ QString RavenUnits::name(int unit)
 {
     switch(unit)
     {
-    case RVN: return QString("RVN");
-    case mRVN: return QString("mRVN");
-    case uRVN: return QString::fromUtf8("μRVN");
+    case RVN: return QString("ABRS");
+    case mRVN: return QString("mABRS");
+    case uRVN: return QString::fromUtf8("μABRS");
     default: return QString("???");
     }
 }

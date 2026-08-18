@@ -370,7 +370,7 @@
         <translation>Formulario</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
         <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede Raven despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
     </message>
     <message>
@@ -639,8 +639,8 @@
         <translation>A&amp;xuda</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
-        <translation>Solicitar pagos (xenera códigos QR e raven: URIs)</translation>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
+        <translation>Solicitar pagos (xenera códigos QR e auroraborealis: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -651,8 +651,8 @@
         <translation>Amosar a listaxe de etiquetas e direccións para recibir empregadas</translation>
     </message>
     <message>
-        <source>Open a raven: URI or payment request</source>
-        <translation>Abrir un raven: URI ou solicitude de pago</translation>
+        <source>Open a auroraborealis: URI or payment request</source>
+        <translation>Abrir un auroraborealis: URI ou solicitude de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

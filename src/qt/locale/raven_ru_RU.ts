@@ -339,7 +339,7 @@
         <translation>Пробросить порт через &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
+        <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
         <translation>Подключится к сети Raven через SOCKS5 прокси.</translation>
     </message>
     <message>

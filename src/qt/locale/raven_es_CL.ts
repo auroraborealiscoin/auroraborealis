@@ -514,7 +514,7 @@
         <translation>&amp;Ayuda</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
         <translation>Pide pagos (genera codigos QR and raven: URls)</translation>
     </message>
     <message>

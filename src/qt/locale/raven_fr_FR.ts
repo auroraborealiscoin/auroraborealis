@@ -1011,16 +1011,16 @@
         <translation>&amp;Aide</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
-        <translation>Demander des paiements (générer QR codes et raven: URIs)</translation>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
+        <translation>Demander des paiements (générer QR codes et auroraborealis: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
         <translation>Montrer la liste des adresses d'envois utilisées et les étiquettes</translation>
     </message>
     <message>
-        <source>Open a raven: URI or payment request</source>
-        <translation>Ouvrir un raven: URI ou demande de paiement</translation>
+        <source>Open a auroraborealis: URI or payment request</source>
+        <translation>Ouvrir un auroraborealis: URI ou demande de paiement</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

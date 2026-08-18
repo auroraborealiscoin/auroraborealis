@@ -365,7 +365,7 @@ void RavenCore::shutdown()
 }
 
 static int qt_argc = 1;
-static const char* qt_argv = "raven-qt";
+static const char* qt_argv = "auroraborealis-qt";
 
 RavenApplication::RavenApplication():
     QApplication(qt_argc, const_cast<char **>(&qt_argv)),
@@ -554,7 +554,7 @@ void RavenApplication::initializeResult(bool success)
 
 #ifdef ENABLE_WALLET
         // Now that initialization/startup is done, process any command-line
-        // raven: URIs or payment requests:
+        // auroraborealis: URIs or payment requests:
         connect(paymentServer, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
                          window, SLOT(handlePaymentRequest(SendCoinsRecipient)));
         connect(window, SIGNAL(receivedURI(QString)),
@@ -717,7 +717,7 @@ int main(int argc, char *argv[])
         exit(EXIT_SUCCESS);
 
     // Start up the payment server early, too, so impatient users that click on
-    // raven: links repeatedly have their payment requests routed to this process:
+    // auroraborealis: links repeatedly have their payment requests routed to this process:
     app.createPaymentServer();
 #endif
 

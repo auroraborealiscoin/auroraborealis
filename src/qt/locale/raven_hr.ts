@@ -414,7 +414,7 @@
         <translation>Oblik</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Raven network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
         <translation>Prikazani podatci mogu biti zastarjeli. Vaš novčanik se automatski sinkronizira s Raven mrežom kada je veza uspostavljena, ali taj proces još nije završen.</translation>
     </message>
     <message>
@@ -683,8 +683,8 @@
         <translation>&amp;Pomoć</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
-        <translation>Zatraži uplatu (stvara QR kod i raven: URI adresu)</translation>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
+        <translation>Zatraži uplatu (stvara QR kod i auroraborealis: URI adresu)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -695,8 +695,8 @@
         <translation>Prikaži popis korištenih adresa i oznaka za primanje novca</translation>
     </message>
     <message>
-        <source>Open a raven: URI or payment request</source>
-        <translation>Otvori raven: URI adresu ili zahtjev za uplatu</translation>
+        <source>Open a auroraborealis: URI or payment request</source>
+        <translation>Otvori auroraborealis: URI adresu ili zahtjev za uplatu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

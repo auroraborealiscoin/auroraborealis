@@ -299,7 +299,7 @@
         <translation>Ví</translation>
     </message>
     <message>
-        <source>Connect to the Raven network through a SOCKS5 proxy.</source>
+        <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
         <translation>Kết nối đến máy chủ Raven thông qua SOCKS5 proxy.</translation>
     </message>
     <message>
@@ -607,7 +607,7 @@
         <translation>Trợ &amp;giúp</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and raven: URIs)</source>
+        <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
         <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ Raven: URLs)</translation>
     </message>
     <message>
@@ -619,7 +619,7 @@
         <translation>Hiện thỉ danh sách các địa chỉ và nhãn đã dùng để nhận.</translation>
     </message>
     <message>
-        <source>Open a raven: URI or payment request</source>
+        <source>Open a auroraborealis: URI or payment request</source>
         <translation>Mở raven:URL hoặc yêu cầu thanh toán</translation>
     </message>
     <message>

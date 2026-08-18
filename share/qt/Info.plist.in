@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Raven-Qt</string>
+  <string>AuroraBorealis-Qt</string>
   
   <key>CFBundleName</key>
-  <string>Raven-Qt</string>
+  <string>AuroraBorealis-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.ravenfoundation.Raven-Qt</string>
+  <string>com.auroraborealiscoin.AuroraBorealis-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
