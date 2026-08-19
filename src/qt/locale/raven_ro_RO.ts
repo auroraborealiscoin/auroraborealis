@@ -2147,7 +2147,7 @@
         <translation>Rulează în fundal ca un demon şi acceptă comenzi</translation>
     </message>
     <message>
-        <source>Raven Core</source>
+        <source>Aurora Borealis Core</source>
         <translation>Nucleul Raven</translation>
     </message>
     <message>

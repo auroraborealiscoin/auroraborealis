@@ -793,8 +793,8 @@
         <translation>Valikud:</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>Aurora Borealis Core</source>
+        <translation>Aurora Borealis Core</translation>
     </message>
     <message>
         <source>Information</source>

@@ -2828,8 +2828,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Impossibile avviare il server HTTP. Dettagli nel log di debug.</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>Aurora Borealis Core</source>
+        <translation>Aurora Borealis Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

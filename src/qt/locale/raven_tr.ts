@@ -961,8 +961,8 @@
         <translation>Address:</translation>
     </message>
     <message>
-        <source>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-        <translation>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</translation>
+        <source>The ABRS address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <translation>The ABRS address that will hold this asset (You must own this address). Leave blank to create a new address.</translation>
     </message>
     <message>
         <source>Verifier String:</source>
@@ -1097,8 +1097,8 @@
         <translation>Balance:</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 ABRS</source>
+        <translation>123.456 ABRS</translation>
     </message>
     <message>
         <source>Copy quantity</source>
@@ -1726,7 +1726,7 @@ They are not recoverable !!</translation>
         <translation>Son işlemler henüz görünmeyebilir ve bu nedenle cüzdanınızın bakiyesi yanlış olabilir. Bu bilgiler, aşağıda detaylandırıldığı gibi, cüzdanınız raven ağı ile senkronizasyonunu tamamladığında doğru olacaktır. </translation>
     </message>
     <message>
-        <source>Attempting to spend ravens that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend ABRS that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Henüz görüntülenmeyen işlemlerden etkilenen ravenleri harcama girişiminde bulunmak ağ tarafından kabul edilmeyecektir.</translation>
     </message>
     <message>
@@ -1825,8 +1825,8 @@ They are not recoverable !!</translation>
         <translation>User-defined intent/purpose of the transaction.</translation>
     </message>
     <message>
-        <source>The asset (or RVN) removed or added to balance.</source>
-        <translation>The asset (or RVN) removed or added to balance.</translation>
+        <source>The asset (or ABRS) removed or added to balance.</source>
+        <translation>The asset (or ABRS) removed or added to balance.</translation>
     </message>
 </context>
 <context>
@@ -1911,8 +1911,8 @@ They are not recoverable !!</translation>
         <translation>&amp;Currency Unit:</translation>
     </message>
     <message>
-        <source>Choose which currency to display the realtime value of RVN in (ie: BTC/RVN).</source>
-        <translation>Choose which currency to display the realtime value of RVN in (ie: BTC/RVN).</translation>
+        <source>Choose which currency to display the realtime value of ABRS in (ie: BTC/ABRS).</source>
+        <translation>Choose which currency to display the realtime value of ABRS in (ie: BTC/ABRS).</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -2186,8 +2186,8 @@ They are not recoverable !!</translation>
         <translation>Güncel toplam bakiyeniz</translation>
     </message>
     <message>
-        <source>RVN Balances</source>
-        <translation>RVN Balances</translation>
+        <source>ABRS Balances</source>
+        <translation>ABRS Balances</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -2883,8 +2883,8 @@ They are not recoverable !!</translation>
         <translation>&amp;Transfer Assets</translation>
     </message>
     <message>
-        <source>Transfer assets to RVN addresses</source>
-        <translation>Transfer assets to RVN addresses</translation>
+        <source>Transfer assets to ABRS addresses</source>
+        <translation>Transfer assets to ABRS addresses</translation>
     </message>
     <message>
         <source>&amp;Manage Assets</source>
@@ -2987,8 +2987,8 @@ They are not recoverable !!</translation>
         <translation>&amp;Wallet</translation>
     </message>
     <message>
-        <source>Ravencoin Market Price</source>
-        <translation>Ravencoin Market Price</translation>
+        <source>Aurora Borealis Market Price</source>
+        <translation>Aurora Borealis Market Price</translation>
     </message>
     <message>
         <source>Brought to you by binance.com</source>
@@ -3465,8 +3465,8 @@ They are not recoverable !!</translation>
         <translation>Address:</translation>
     </message>
     <message>
-        <source>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-        <translation>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</translation>
+        <source>The ABRS address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <translation>The ABRS address that will hold this asset (You must own this address). Leave blank to create a new address.</translation>
     </message>
     <message>
         <source>Verifier String:</source>
@@ -3597,8 +3597,8 @@ They are not recoverable !!</translation>
         <translation>Balance:</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 ABRS</source>
+        <translation>123.456 ABRS</translation>
     </message>
     <message>
         <source>Copy quantity</source>
@@ -4691,8 +4691,8 @@ They are not recoverable !!</translation>
         <translation>Oluşturulan raven'lerin harcanabilmelerinden önce %1 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda, blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu "kabul edilmedi" olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
     </message>
     <message>
-        <source>Net RVN amount</source>
-        <translation>Net RVN amount</translation>
+        <source>Net ABRS amount</source>
+        <translation>Net ABRS amount</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -4869,8 +4869,8 @@ They are not recoverable !!</translation>
         <translation>Bakiyeden kaldırılan ya da bakiyeye eklenen tutar.</translation>
     </message>
     <message>
-        <source>The asset (or RVN) removed or added to balance.</source>
-        <translation>The asset (or RVN) removed or added to balance.</translation>
+        <source>The asset (or ABRS) removed or added to balance.</source>
+        <translation>The asset (or ABRS) removed or added to balance.</translation>
     </message>
 </context>
 <context>
@@ -5179,7 +5179,7 @@ They are not recoverable !!</translation>
         <translation>HTTP sunucusu başlatılamadı. Ayrıntılar için debug.log dosyasına bakınız.</translation>
     </message>
     <message>
-        <source>Raven Core</source>
+        <source>Aurora Borealis Core</source>
         <translation>Raven Çekirdeği</translation>
     </message>
     <message>

@@ -1033,7 +1033,7 @@
 <context>
     <name>raven-core</name>
     <message>
-        <source>Raven Core</source>
+        <source>Aurora Borealis Core</source>
         <translation>Raven Kern</translation>
     </message>
     <message>

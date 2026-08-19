@@ -941,7 +941,7 @@
         <translation>Dirbti fone kaip šešėlyje ir priimti komandas</translation>
     </message>
     <message>
-        <source>Raven Core</source>
+        <source>Aurora Borealis Core</source>
         <translation>Raven branduolys</translation>
     </message>
     <message>

@@ -613,8 +613,8 @@
         <translation>Wis</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 ABRS</source>
+        <translation>123.456 ABRS</translation>
     </message>
     <message>
         <source>Warning: Invalid Raven address</source>
@@ -928,7 +928,7 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Recente transacties zijn mogelijk nog niet zichtbaar. De balans van de geldbeugel is daarom mogelijk niet correct. Deze informatie is correct van zodra de synchronisatie met het Raven-netwerk werd voltooid, zoals onderaan beschreven.</translation>
     </message>
     <message>
-        <source>Attempting to spend ravens that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend ABRS that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Poging om ravens te besteden die door "nog niet weergegeven" transacties worden beïnvloed, worden niet door het netwerk geaccepteerd.</translation>
     </message>
     <message>
@@ -1300,8 +1300,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Uw totale saldo</translation>
     </message>
     <message>
-        <source>RVN Balances</source>
-        <translation>RVN Balance</translation>
+        <source>ABRS Balances</source>
+        <translation>ABRS Balance</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -3473,8 +3473,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Niet mogelijk ok HTTP-server te starten. Zie debuglogboek voor details.</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>Aurora Borealis Core</source>
+        <translation>Aurora Borealis Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

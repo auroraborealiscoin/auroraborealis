@@ -333,8 +333,8 @@
 <context>
     <name>raven-core</name>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>Aurora Borealis Core</source>
+        <translation>Aurora Borealis Core</translation>
     </message>
     <message>
         <source>Insufficient funds</source>

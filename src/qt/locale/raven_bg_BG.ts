@@ -465,7 +465,7 @@
 <context>
     <name>raven-core</name>
     <message>
-        <source>Raven Core</source>
+        <source>Aurora Borealis Core</source>
         <translation>Биткойн ядро</translation>
     </message>
     </context>

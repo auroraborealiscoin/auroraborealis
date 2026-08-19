@@ -473,8 +473,8 @@
         <translation>Balance:</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 ABRS</source>
+        <translation>123.456 ABRS</translation>
     </message>
     <message>
         <source>Sub Asset</source>
@@ -718,7 +718,7 @@
         <translation>Les transactions récentes ne sont peut-être pas encore visibles et par conséquent le solde de votre porte-monnaie est peut-être erroné. Cette information sera juste quand votre porte-monnaie aura fini de se synchroniser avec le réseau Raven, comme décrit ci-dessous.</translation>
     </message>
     <message>
-        <source>Attempting to spend ravens that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend ABRS that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Toute tentative de dépense de ravens affectés par des transactions qui ne sont pas encore affichées ne sera pas acceptée par le réseau.</translation>
     </message>
     <message>
@@ -1086,8 +1086,8 @@
         <translation>Votre solde total actuel</translation>
     </message>
     <message>
-        <source>RVN Balances</source>
-        <translation>Balance RVN</translation>
+        <source>ABRS Balances</source>
+        <translation>Balance ABRS</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -1703,7 +1703,7 @@
         <translation>Ouvrir une &amp;URI...</translation>
     </message>
     <message>
-        <source>Ravencoin Market Price</source>
+        <source>Aurora Borealis Market Price</source>
         <translation>Ravencoin Prix du Marché</translation>
     </message>
     <message>
@@ -2105,8 +2105,8 @@
         <translation>ex: 1.00000000</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 ABRS</source>
+        <translation>123.456 ABRS</translation>
     </message>
     <message>
         <source>Copy change</source>
@@ -3235,8 +3235,8 @@
         <translation>Impossible de démarrer le serveur HTTP. Voir le journal de débogage pour plus de détails.</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>Aurora Borealis Core</source>
+        <translation>Aurora Borealis Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

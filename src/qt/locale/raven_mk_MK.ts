@@ -599,7 +599,7 @@
         <translation>Опции:</translation>
     </message>
     <message>
-        <source>Raven Core</source>
+        <source>Aurora Borealis Core</source>
         <translation>Биткоин Core</translation>
     </message>
     <message>

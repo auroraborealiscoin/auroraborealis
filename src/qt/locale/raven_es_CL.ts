@@ -789,7 +789,7 @@
 </translation>
     </message>
     <message>
-        <source>Raven Core</source>
+        <source>Aurora Borealis Core</source>
         <translation>raven core</translation>
     </message>
     <message>

@@ -945,7 +945,7 @@
         <translation>Adresse:</translation>
     </message>
     <message>
-        <source>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <source>The ABRS address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
         <translation>Die RVN-Adresse, die dieses Asset halten wird (Sie müssen diese Adresse besitzen). Das Feld Leer lassen, um eine neue Adresse zu erstellen.</translation>
     </message>
     <message>
@@ -1081,8 +1081,8 @@
         <translation>Kontostand:</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 ABRS</source>
+        <translation>123.456 ABRS</translation>
     </message>
     <message>
         <source>Copy quantity</source>
@@ -1648,7 +1648,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Neueste Transaktionen werden eventuell noch nicht angezeigt, daher könnte Ihr Kontostand veraltet sein. Er wird korrigiert, sobald Ihre Wallet die Synchronisation mit dem Raven-Netzwerk erfolgreich abgeschlossen hat. Details dazu finden sich weiter unten.</translation>
     </message>
     <message>
-        <source>Attempting to spend ravens that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend ABRS that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Versuche, Ravens aus noch nicht angezeigten Transaktionen auszugeben, werden vom Netzwerk nicht akzeptiert.</translation>
     </message>
     <message>
@@ -1727,7 +1727,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Benutzerdefinierte Absicht bzw. Verwendungszweck der Transaktion</translation>
     </message>
     <message>
-        <source>The asset (or RVN) removed or added to balance.</source>
+        <source>The asset (or ABRS) removed or added to balance.</source>
         <translation>Das Asset (oder RVN), das entfernt oder zum Bestand hinzugefügt wurde.</translation>
     </message>
 </context>
@@ -1805,8 +1805,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>&amp;Währungseinheit:</translation>
     </message>
     <message>
-        <source>Choose which currency to display the realtime value of RVN in (ie: BTC/RVN).</source>
-        <translation>Wählen Sie, in welcher Währung der Echtzeitwert von RVN angezeigt wird (z.B.: BTC/RVN).</translation>
+        <source>Choose which currency to display the realtime value of ABRS in (ie: BTC/ABRS).</source>
+        <translation>Wählen Sie, in welcher Währung der Echtzeitwert von RVN angezeigt wird (z.B.: BTC/ABRS).</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -2048,8 +2048,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Aktueller Gesamtbetrag aus obigen Kategorien</translation>
     </message>
     <message>
-        <source>RVN Balances</source>
-        <translation>RVN Kontostände</translation>
+        <source>ABRS Balances</source>
+        <translation>ABRS Kontostände</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -2693,7 +2693,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>&amp;Assets verschicken</translation>
     </message>
     <message>
-        <source>Transfer assets to RVN addresses</source>
+        <source>Transfer assets to ABRS addresses</source>
         <translation>Assets an RVN Adressen verschicken</translation>
     </message>
     <message>
@@ -2777,7 +2777,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>&amp;Wallet</translation>
     </message>
     <message>
-        <source>Ravencoin Market Price</source>
+        <source>Aurora Borealis Market Price</source>
         <translation>Ravencoin Marktpreis</translation>
     </message>
     <message>
@@ -3251,7 +3251,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Adresse:</translation>
     </message>
     <message>
-        <source>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <source>The ABRS address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
         <translation>Die RVN-Adresse, die dieses Asset halten wird (Sie müssen diese Adresse besitzen). Das Feld leer lassen, um eine neue Adresse zu erstellen.</translation>
     </message>
     <message>
@@ -3359,8 +3359,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Kontostand:</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123,456 RVN</translation>
+        <source>123.456 ABRS</source>
+        <translation>123,456 ABRS</translation>
     </message>
     <message>
         <source>Copy quantity</source>
@@ -4617,8 +4617,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Kann HTTP Server nicht starten. Siehe debug log für Details.</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>Aurora Borealis Core</source>
+        <translation>Aurora Borealis Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

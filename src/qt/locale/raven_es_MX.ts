@@ -629,7 +629,7 @@
         <translation>Opciones:</translation>
     </message>
     <message>
-        <source>Raven Core</source>
+        <source>Aurora Borealis Core</source>
         <translation>nucleo Raven</translation>
     </message>
     <message>

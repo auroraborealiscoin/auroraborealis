@@ -584,7 +584,7 @@
     </message>
     <message>
         <source>Raven</source>
-        <translation>Raven Core</translation>
+        <translation>Aurora Borealis Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -825,8 +825,8 @@
 <context>
     <name>raven-core</name>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>Aurora Borealis Core</source>
+        <translation>Aurora Borealis Core</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>

@@ -1218,7 +1218,7 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <source>The ABRS address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1389,7 +1389,7 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 RVN</source>
+        <source>123.456 ABRS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2176,7 +2176,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+19"/>
-        <source>Attempting to spend ravens that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend ABRS that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2302,7 +2302,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+2"/>
-        <source>The asset (or RVN) removed or added to balance.</source>
+        <source>The asset (or ABRS) removed or added to balance.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2411,7 +2411,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>Choose which currency to display the realtime value of RVN in (ie: BTC/RVN).</source>
+        <source>Choose which currency to display the realtime value of ABRS in (ie: BTC/ABRS).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2773,7 +2773,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="-249"/>
-        <source>RVN Balances</source>
+        <source>ABRS Balances</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3723,7 +3723,7 @@ They are not recoverable !!</source>
     <message>
         <location line="+1"/>
         <location line="+1143"/>
-        <source>Transfer assets to RVN addresses</source>
+        <source>Transfer assets to ABRS addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3865,7 +3865,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+149"/>
-        <source>Ravencoin Market Price</source>
+        <source>Aurora Borealis Market Price</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4465,7 +4465,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+10"/>
-        <source>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <source>The ABRS address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4631,7 +4631,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+7"/>
-        <source>123.456 RVN</source>
+        <source>123.456 ABRS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6097,7 +6097,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="-37"/>
-        <source>Net RVN amount</source>
+        <source>Net ABRS amount</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6323,7 +6323,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+2"/>
-        <source>The asset (or RVN) removed or added to balance.</source>
+        <source>The asset (or ABRS) removed or added to balance.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6742,8 +6742,8 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="-525"/>
-        <source>Raven Core</source>
-        <translation type="unfinished">Raven Core</translation>
+        <source>Aurora Borealis Core</source>
+        <translation type="unfinished">Aurora Borealis Core</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -1124,7 +1124,7 @@
 </translation>
     </message>
     <message>
-        <source>Raven Core</source>
+        <source>Aurora Borealis Core</source>
         <translation>Núcleo de Raven</translation>
     </message>
     <message>

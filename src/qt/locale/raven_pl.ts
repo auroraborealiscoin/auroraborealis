@@ -944,7 +944,7 @@
         <translation>Adres:</translation>
     </message>
     <message>
-        <source>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <source>The ABRS address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
         <translation>Adres RVN, na którym będzie przechowywane to aktywo.
 (Musisz być jego właścicielem). Zostaw puste miejsce jeśli chcesz utworzyć nowy adres. </translation>
     </message>
@@ -1069,8 +1069,8 @@
         <translation>Saldo:</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 ABRS</source>
+        <translation>123.456 ABRS</translation>
     </message>
     <message>
         <source>Copy quantity</source>
@@ -1668,7 +1668,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Zdefiniowany przez użytkownika cel transakcji.</translation>
     </message>
     <message>
-        <source>The asset (or RVN) removed or added to balance.</source>
+        <source>The asset (or ABRS) removed or added to balance.</source>
         <translation>Aktywo (lub RVN) usunięte lub dodane do salda.</translation>
     </message>
 </context>
@@ -1969,8 +1969,8 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Twoje obecne saldo</translation>
     </message>
     <message>
-        <source>RVN Balances</source>
-        <translation>Salda RVN</translation>
+        <source>ABRS Balances</source>
+        <translation>Salda ABRS</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -3056,8 +3056,8 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Saldo:</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 ABRS</source>
+        <translation>123.456 ABRS</translation>
     </message>
     <message>
         <source>Copy quantity</source>
@@ -4171,7 +4171,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
         <translation>Uruchomienie serwera HTTP nie powiodło się. Zobacz dziennik debugowania, aby uzyskać więcej szczegółów.</translation>
     </message>
     <message>
-        <source>Raven Core</source>
+        <source>Aurora Borealis Core</source>
         <translation>Rdzeń Ravena</translation>
     </message>
     <message>

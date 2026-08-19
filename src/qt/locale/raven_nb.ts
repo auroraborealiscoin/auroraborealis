@@ -905,7 +905,7 @@
         <translation>Adresse:</translation>
     </message>
     <message>
-        <source>The RVN address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <source>The ABRS address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
         <translation>RVN adressen som skal eie aktivumet. (Du må eie denne adressen). La stå tom for å lage ny adresse.</translation>
     </message>
     <message>
@@ -1009,8 +1009,8 @@
         <translation>Saldo:</translation>
     </message>
     <message>
-        <source>123.456 RVN</source>
-        <translation>123.456 RVN</translation>
+        <source>123.456 ABRS</source>
+        <translation>123.456 ABRS</translation>
     </message>
     <message>
         <source>Copy quantity</source>
@@ -1858,8 +1858,8 @@
         <translation>Din nåværende saldo</translation>
     </message>
     <message>
-        <source>RVN Balances</source>
-        <translation>RVN Oversikt</translation>
+        <source>ABRS Balances</source>
+        <translation>ABRS Oversikt</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -2405,7 +2405,7 @@
         <translation>Lommebok</translation>
     </message>
     <message>
-        <source>Ravencoin Market Price</source>
+        <source>Aurora Borealis Market Price</source>
         <translation>Ravencoin markedspris</translation>
     </message>
     <message>
@@ -3821,8 +3821,8 @@
         <translation>Kunne ikke starte HTTP server. Se debug logg for detaljer.</translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation>Raven Core</translation>
+        <source>Aurora Borealis Core</source>
+        <translation>Aurora Borealis Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

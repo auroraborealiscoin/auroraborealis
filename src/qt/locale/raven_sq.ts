@@ -809,7 +809,7 @@
         <translation>Opsionet:</translation>
     </message>
     <message>
-        <source>Raven Core</source>
+        <source>Aurora Borealis Core</source>
         <translation>Berthama Raven</translation>
     </message>
     <message>

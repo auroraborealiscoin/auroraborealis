@@ -1385,8 +1385,8 @@
 </translation>
     </message>
     <message>
-        <source>Raven Core</source>
-        <translation type="vanished">Raven Core</translation>
+        <source>Aurora Borealis Core</source>
+        <translation type="vanished">Aurora Borealis Core</translation>
     </message>
     <message>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>

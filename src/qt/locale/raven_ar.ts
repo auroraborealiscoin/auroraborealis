@@ -1965,7 +1965,7 @@
         <translation>حدد مجلد المعلومات</translation>
     </message>
     <message>
-        <source>Raven Core</source>
+        <source>Aurora Borealis Core</source>
         <translation>جوهر البيت كوين</translation>
     </message>
     <message>
