@@ -89,7 +89,7 @@ if [[ ${OS} == "windows" ]]; then
         fi
     done
 
-    for rmfile in detach-sig-create.sh win-codesign.cert raven-cli.exe raven-qt.exe ravend.exe; do
+    for rmfile in detach-sig-create.sh win-codesign.cert auroraborealis-cli.exe auroraborealis-qt.exe auroraborealisd.exe; do
         if [[ -e ${rmfile} ]]; then
             rm -f ${rmfile}
         fi
@@ -103,8 +103,8 @@ elif [[ ${OS} == "osx" ]]; then
 
     make deploydir
 
-    if [[ -e ${GITHUB_WORKSPACE}/dist/Raven-Qt.app/Contents/MacOS/install_cli.sh ]]; then
-        chmod +x ${GITHUB_WORKSPACE}/dist/Raven-Qt.app/Contents/MacOS/install_cli.sh
+    if [[ -e ${GITHUB_WORKSPACE}/dist/AuroraBorealis-Qt.app/Contents/MacOS/install_cli.sh ]]; then
+        chmod +x ${GITHUB_WORKSPACE}/dist/AuroraBorealis-Qt.app/Contents/MacOS/install_cli.sh
     fi
 
     mkdir -p unsigned-app-${DISTNAME}
@@ -208,8 +208,8 @@ elif [[ ${OS} == "arm32v7" || ${OS} == "arm32v7-disable-wallet" ]]; then
             exit 1
         fi
         cd ${STAGE_DIR}
-        cp -Rf ${DISTNAME}/bin/ravend .
-        cp -Rf ${DISTNAME}/bin/raven-cli .
+        cp -Rf ${DISTNAME}/bin/auroraborealisd .
+        cp -Rf ${DISTNAME}/bin/auroraborealis-cli .
     else
         echo "release directory doesn't exist"
     fi
@@ -244,8 +244,8 @@ elif [[ ${OS} == "aarch64" || ${OS} == "aarch64-disable-wallet" ]]; then
             exit 1
         fi
         cd ${STAGE_DIR}
-        cp -Rf ${DISTNAME}/bin/ravend .
-        cp -Rf ${DISTNAME}/bin/raven-cli .
+        cp -Rf ${DISTNAME}/bin/auroraborealisd .
+        cp -Rf ${DISTNAME}/bin/auroraborealis-cli .
     else
         echo "release directory doesn't exist"
     fi

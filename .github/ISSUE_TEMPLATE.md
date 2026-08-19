@@ -1,37 +1,35 @@
-<!--- Remove sections that do not apply -->
+<!-- Remove sections that do not apply -->
 
-This issue tracker is only for technical issues related to Ravencoin.
+This issue tracker is for technical issues related to Aurora Borealis Core.
 
-General Ravencoin questions and/or support requests and are best directed to the [Ravencoin Discord](https://discord.gg/jn6uhur)).
-
-For reporting security issues, please direct message one of the core developers in discord.
+For security-sensitive vulnerabilities, do not publish private keys, seed phrases, wallet credentials, RPC passwords or other secrets.
 
 ### Describe the issue
 
 ### Can you reliably reproduce the issue?
-#### If so, please list the steps to reproduce below:
+If so, list the steps:
 1.
 2.
 3.
 
 ### Expected behaviour
-Tell us what should happen
+Describe what should happen.
 
 ### Actual behaviour
-Tell us what happens instead
+Describe what happens instead.
 
-### Screenshots.
-If the issue is related to the GUI, screenshots can be added to this issue via drag & drop.
+### Screenshots
+If the issue concerns the GUI, screenshots may be attached.
 
-### What version of Ravencoin are you using?
-List the version number/commit ID, and if it is an official binary, self compiled or a distribution package such as PPA.
+### Aurora Borealis Core version
+Provide the version or commit ID and indicate whether it is an official release or self-compiled build.
 
-### Machine specs:
+### Machine specifications
 - OS:
 - CPU:
 - RAM:
 - Disk size:
-- Disk Type (HD/SDD):
+- Disk type:
 
-### Any extra information that might be useful in the debugging process.
-This is normally the contents of a `debug.log` or `config.log` file. Raw text or a link to a pastebin type site are preferred.
+### Additional debugging information
+Include relevant debug.log or config.log excerpts, but remove passwords, private keys, seed phrases and other sensitive information.
