@@ -1,5 +1,5 @@
-Building Raven
-================
+Building Aurora Borealis Core
+============================
 
 See doc/build-*.md for instructions on building the various
-elements of the Raven Core reference implementation of Raven.
+components of Aurora Borealis Core.
