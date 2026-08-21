@@ -21,10 +21,10 @@ unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const CBlockH
 
     unsigned int nProofOfWorkLimit = UintToArith256(params.powLimit).GetCompact();
     const arith_uint256 bnPowLimit = UintToArith256(params.powLimit);
-    int64_t nPastBlocks = 180; // ~3hr
+    int64_t nPastBlocks = 20; // ABRS bootstrap: ~20 min at 60s target
 
     // ABRS/Ravencoin KAWPOW bootstrap:
-    // Before there are 180 KAWPOW blocks available for DGW, use the
+    // Before there are nPastBlocks KAWPOW blocks available for DGW, use the
     // dedicated temporary KAWPOW limit. For pre-KAWPOW blocks, retain
     // the normal powLimit behavior.
     if (!pindexLast || pindexLast->nHeight < nPastBlocks) {
@@ -76,7 +76,7 @@ unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const CBlockH
     }
 
     // If we are mining a KAWPOW block. We check to see if we have mined
-    // 180 KAWPOW blocks already. If we haven't we are going to return our
+    // nPastBlocks KAWPOW blocks already. If we haven't we are going to return our
     // temp limit. This will allow us to change algos to kawpow without having to
     // change the DGW math.
     if (pblock->nTime >= nKAWPOWActivationTime) {
