@@ -80,12 +80,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Aurora Borealis addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Aurora Borealis addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -211,7 +211,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RAVENS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ABRS&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -227,7 +227,7 @@
     </message>
     <message>
         <location line="-56"/>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ravens from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ABRS from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -617,7 +617,7 @@
     <message>
         <location line="+27"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -813,7 +813,7 @@
     </message>
     <message>
         <location line="+107"/>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid Aurora Borealis address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1334,7 +1334,7 @@
     <message>
         <location line="+27"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1491,7 +1491,7 @@
         <location line="+43"/>
         <location line="+22"/>
         <location line="+645"/>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid Aurora Borealis address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1648,7 +1648,7 @@
     </message>
     <message>
         <location line="+71"/>
-        <source>The entered address &quot;%1&quot; is not a valid Raven address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid Aurora Borealis address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1932,8 +1932,8 @@ Recommended action: Fully sync your wallet before sending a transaction.
     </message>
     <message>
         <location filename="../intro.cpp" line="+20"/>
-        <source>Raven</source>
-        <translation type="unfinished">Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation type="unfinished">Aurora Borealis</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1947,7 +1947,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
     </message>
     <message>
         <location line="+8"/>
-        <source>%1 will download and store a copy of the Raven block chain.</source>
+        <source>%1 will download and store a copy of the Aurora Borealis block chain.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2004,7 +2004,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
     </message>
     <message>
         <location line="+26"/>
-        <source>Since no wallet.dat file was found in the Raven block chain data directory, a wallet file will be created.</source>
+        <source>Since no wallet.dat file was found in the Aurora Borealis block chain data directory, a wallet file will be created.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2487,8 +2487,8 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+30"/>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2904,7 +2904,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Raven address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Aurora Borealis address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3036,7 +3036,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="-349"/>
-        <source>Enter a Raven address (e.g. %1)</source>
+        <source>Enter a Aurora Borealis address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3900,8 +3900,8 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="-974"/>
-        <source>Send coins to a Raven address</source>
-        <translation>Send coins to a Raven address</translation>
+        <source>Send coins to a Aurora Borealis address</source>
+        <translation>Send coins to a Aurora Borealis address</translation>
     </message>
     <message>
         <location line="+131"/>
@@ -3925,8 +3925,8 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+912"/>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <location line="-1252"/>
@@ -3960,13 +3960,13 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Sign messages with your Raven addresses to prove you own them</translation>
+        <source>Sign messages with your Aurora Borealis addresses to prove you own them</source>
+        <translation>Sign messages with your Aurora Borealis addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Verify messages to ensure they were signed with specified Raven addresses</translation>
+        <source>Verify messages to ensure they were signed with specified Aurora Borealis addresses</source>
+        <translation>Verify messages to ensure they were signed with specified Aurora Borealis addresses</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -4066,7 +4066,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="-833"/>
-        <source>Show the %1 help message to get a list with possible Raven command-line options</source>
+        <source>Show the %1 help message to get a list with possible Aurora Borealis command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4158,7 +4158,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location filename="../raven.cpp" line="-114"/>
-        <source>A fatal error occurred. Raven can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Aurora Borealis can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4581,7 +4581,7 @@ They are not recoverable !!</source>
     <message>
         <location line="+27"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4701,7 +4701,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+8"/>
-        <source>Invalid Raven Destination Address</source>
+        <source>Invalid Aurora Borealis Destination Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4712,7 +4712,7 @@ They are not recoverable !!</source>
     <message>
         <location line="+6"/>
         <location line="+659"/>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid Aurora Borealis address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5054,7 +5054,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+22"/>
-        <source>The Raven address to send the payment to</source>
+        <source>The Aurora Borealis address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5299,7 +5299,7 @@ They are not recoverable !!</source>
     <message>
         <location line="+78"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5510,7 +5510,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+101"/>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid Aurora Borealis address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5560,7 +5560,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+66"/>
-        <source>The Raven address to send the payment to</source>
+        <source>The Aurora Borealis address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5587,7 +5587,7 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="-1140"/>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less ravens than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less ABRS than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5679,12 +5679,12 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+6"/>
-        <source>You can sign messages/agreements with your addresses to prove you can receive ravens sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive ABRS sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Raven address to sign the message with</source>
+        <source>The Aurora Borealis address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5726,8 +5726,8 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Sign the message to prove you own this Raven address</translation>
+        <source>Sign the message to prove you own this Aurora Borealis address</source>
+        <translation>Sign the message to prove you own this Aurora Borealis address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5757,13 +5757,13 @@ They are not recoverable !!</source>
     </message>
     <message>
         <location line="+21"/>
-        <source>The Raven address the message was signed with</source>
+        <source>The Aurora Borealis address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Verify the message to ensure it was signed with the specified Raven address</translation>
+        <source>Verify the message to ensure it was signed with the specified Aurora Borealis address</source>
+        <translation>Verify the message to ensure it was signed with the specified Aurora Borealis address</translation>
     </message>
     <message>
         <location line="+3"/>

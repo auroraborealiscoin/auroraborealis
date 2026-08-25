@@ -459,8 +459,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -718,7 +718,7 @@
     <name>raven-core</name>
     <message>
         <source>Aurora Borealis Core</source>
-        <translation>Raven மையம்</translation>
+        <translation>Aurora Borealis மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

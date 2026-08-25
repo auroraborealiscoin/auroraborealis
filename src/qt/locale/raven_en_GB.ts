@@ -495,8 +495,8 @@
         <translation>&amp;Spend unconfirmed change</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -711,8 +711,8 @@
         <translation>Amount</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation>Enter a Raven address (e.g. %1)</translation>
+        <source>Enter a Aurora Borealis address (e.g. %1)</source>
+        <translation>Enter a Aurora Borealis address (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1099,8 +1099,8 @@
         <translation>Reindexing blocks on disk...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Send coins to a Raven address</translation>
+        <source>Send coins to a Aurora Borealis address</source>
+        <translation>Send coins to a Aurora Borealis address</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1119,8 +1119,8 @@
         <translation>&amp;Verify message...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1147,12 +1147,12 @@
         <translation>Encrypt the private keys that belong to your wallet</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Sign messages with your Raven addresses to prove you own them</translation>
+        <source>Sign messages with your Aurora Borealis addresses to prove you own them</source>
+        <translation>Sign messages with your Aurora Borealis addresses to prove you own them</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Verify messages to ensure they were signed with specified Raven addresses</translation>
+        <source>Verify messages to ensure they were signed with specified Aurora Borealis addresses</source>
+        <translation>Verify messages to ensure they were signed with specified Aurora Borealis addresses</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1219,8 +1219,8 @@
         <translation>Up to date</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Raven command-line options</source>
-        <translation>Show the %1 help message to get a list with possible Raven command-line options</translation>
+        <source>Show the %1 help message to get a list with possible Aurora Borealis command-line options</source>
+        <translation>Show the %1 help message to get a list with possible Aurora Borealis command-line options</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -1474,8 +1474,8 @@
         <translation>Hide</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
-        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
+        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -1549,8 +1549,8 @@
         <translation>This is a normal payment.</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>The Raven address to send the payment to</translation>
+        <source>The Aurora Borealis address to send the payment to</source>
+        <translation>The Aurora Borealis address to send the payment to</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1569,8 +1569,8 @@
         <translation>Remove this entry</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less ravens than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>The fee will be deducted from the amount being sent. The recipient will receive less ravens than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less ABRS than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>The fee will be deducted from the amount being sent. The recipient will receive less ABRS than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -1626,12 +1626,12 @@
         <translation>&amp;Sign Message</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive ravens sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>You can sign messages/agreements with your addresses to prove you can receive ravens sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive ABRS sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>You can sign messages/agreements with your addresses to prove you can receive ABRS sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
     </message>
     <message>
-        <source>The Raven address to sign the message with</source>
-        <translation>The Raven address to sign the message with</translation>
+        <source>The Aurora Borealis address to sign the message with</source>
+        <translation>The Aurora Borealis address to sign the message with</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1662,8 +1662,8 @@
         <translation>Copy the current signature to the system clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Sign the message to prove you own this Raven address</translation>
+        <source>Sign the message to prove you own this Aurora Borealis address</source>
+        <translation>Sign the message to prove you own this Aurora Borealis address</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1686,12 +1686,12 @@
         <translation>Enter the receiver's address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack. Note that this only proves the signing party receives with the address, it cannot prove sendership of any transaction!</translation>
     </message>
     <message>
-        <source>The Raven address the message was signed with</source>
-        <translation>The Raven address the message was signed with</translation>
+        <source>The Aurora Borealis address the message was signed with</source>
+        <translation>The Aurora Borealis address the message was signed with</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Verify the message to ensure it was signed with the specified Raven address</translation>
+        <source>Verify the message to ensure it was signed with the specified Aurora Borealis address</source>
+        <translation>Verify the message to ensure it was signed with the specified Aurora Borealis address</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>

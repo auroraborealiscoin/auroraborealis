@@ -639,7 +639,9 @@ DBErrors CWalletDB::LoadWallet(CWallet* pwallet)
             {
                 // losing keys is considered a catastrophic error, anything else
                 // we assume the user can live with:
-                if (IsKeyType(strType) || strType == "defaultkey")
+                if (IsKeyType(strType) ||
+                    strType == "defaultkey" ||
+                    strType == "hdchain")
                     result = DB_CORRUPT;
                 else
                 {

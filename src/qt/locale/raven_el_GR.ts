@@ -62,12 +62,12 @@
         <translation>Διευθύνσεις λήψης</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Αυτές είναι οι Raven διευθύνσεις για να στέλνεις πληρωμές. Πάντα ελέγχετε το ποσό και την διεύθενση παραλήπτη πριν στείλετε νομίσματα.</translation>
+        <source>These are your Aurora Borealis addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Αυτές είναι οι Aurora Borealis διευθύνσεις για να στέλνεις πληρωμές. Πάντα ελέγχετε το ποσό και την διεύθενση παραλήπτη πριν στείλετε νομίσματα.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Αυτές είναι οι Raven διευθύνσεις για να στέλνεις πληρωμές. Είναι προτινόμενο να χρησιμοποιείτε μια νέα διεύθυνση για κάθε συναλλαγή.</translation>
+        <source>These are your Aurora Borealis addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Αυτές είναι οι Aurora Borealis διευθύνσεις για να στέλνεις πληρωμές. Είναι προτινόμενο να χρησιμοποιείτε μια νέα διεύθυνση για κάθε συναλλαγή.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,8 +160,8 @@
         <translation>επιβεβαίωση κρυπτογράφησης πορτοφολιού</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RAVENS&lt;/b&gt;!</source>
-        <translation>Προειδοποίηση: Αν κρυπτογραφήσεις το πορτοφόλι σου και χάσεις τον κωδικό, &lt;b&gt; ΘΑ ΧΑΣΕΙΣ ΟΛΑ ΤΑ RAVENS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ABRS&lt;/b&gt;!</source>
+        <translation>Προειδοποίηση: Αν κρυπτογραφήσεις το πορτοφόλι σου και χάσεις τον κωδικό, &lt;b&gt; ΘΑ ΧΑΣΕΙΣ ΟΛΑ ΤΑ ABRS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -172,8 +172,8 @@
         <translation>Το πορτοφόλι κρυπτογραφήθηκε</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ravens from being stolen by malware infecting your computer.</source>
-        <translation>%1 θα κλείσει τώρα για να τελειώσει την διαδικασία κρυπτογράφησης. Θυμήσου οτι η κρυπτογράφηση του πορτοφολιού σας δεν μπορεί να προστατεύσει πλήρως τα ravens από το να κλαπούν λόγω κακόβουλου λογισμικού στον υπολογιστή σας.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ABRS from being stolen by malware infecting your computer.</source>
+        <translation>%1 θα κλείσει τώρα για να τελειώσει την διαδικασία κρυπτογράφησης. Θυμήσου οτι η κρυπτογράφηση του πορτοφολιού σας δεν μπορεί να προστατεύσει πλήρως τα ABRS από το να κλαπούν λόγω κακόβουλου λογισμικού στον υπολογιστή σας.</translation>
     </message>
     <message>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
@@ -338,7 +338,7 @@
     </message>
     <message>
         <source>The ABRS address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-        <translation>H διεύθυνση RVN που θα κρατά αυτό το περιουσιακό στοιχείο (Πρέπει να σου ανήκει αυτή η διεύθυνση). Άφηστε το κενό για δημιουργία νέας διεύθυνσης.</translation>
+        <translation>H διεύθυνση ABRS που θα κρατά αυτό το περιουσιακό στοιχείο (Πρέπει να σου ανήκει αυτή η διεύθυνση). Άφηστε το κενό για δημιουργία νέας διεύθυνσης.</translation>
     </message>
     <message>
         <source>Balance:</source>
@@ -404,8 +404,8 @@
         <translation>Επεξεργασία διεύθυνση αποστολής</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Raven address.</source>
-        <translation>Η εισαχθείσα διεύθυνση "%1" δεν είναι έγκυρη Raven διεύθυνση.</translation>
+        <source>The entered address "%1" is not a valid Aurora Borealis address.</source>
+        <translation>Η εισαχθείσα διεύθυνση "%1" δεν είναι έγκυρη Aurora Borealis διεύθυνση.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -615,8 +615,8 @@
         <translation>&amp;Ξόδεμα μη επικυρωμένων ρέστων</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Αυτόματο άνοιγμα των θυρών Raven στον δρομολογητή. Λειτουργεί μόνο αν ο δρομολογητής σας υποστηρίζει τη λειτουργία UPnP.</translation>
+        <source>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Αυτόματο άνοιγμα των θυρών Aurora Borealis στον δρομολογητή. Λειτουργεί μόνο αν ο δρομολογητής σας υποστηρίζει τη λειτουργία UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -624,7 +624,7 @@
     </message>
     <message>
         <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
-        <translation>Σύνδεση στο Raven δίκτυο μέσω διαμεσολαβητή SOCKS5 (π.χ. για σύνδεση μέσω Tor)</translation>
+        <translation>Σύνδεση στο Aurora Borealis δίκτυο μέσω διαμεσολαβητή SOCKS5 (π.χ. για σύνδεση μέσω Tor)</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -720,7 +720,7 @@
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
-        <translation>Οι πληροφορίες που εμφανίζονται μπορεί να είναι ξεπερασμένες. Το πορτοφόλι σας συγχρονίζεται αυτόματα με το δίκτυο Raven μετά από μια σύνδεση, αλλά αυτή η διαδικασία δεν έχει ακόμη ολοκληρωθεί. </translation>
+        <translation>Οι πληροφορίες που εμφανίζονται μπορεί να είναι ξεπερασμένες. Το πορτοφόλι σας συγχρονίζεται αυτόματα με το δίκτυο Aurora Borealis μετά από μια σύνδεση, αλλά αυτή η διαδικασία δεν έχει ακόμη ολοκληρωθεί. </translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -796,8 +796,8 @@
         <translation>Ποσό</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation>Εισάγετε μια διεύθυνση Raven (π.χ. %1)</translation>
+        <source>Enter a Aurora Borealis address (e.g. %1)</source>
+        <translation>Εισάγετε μια διεύθυνση Aurora Borealis (π.χ. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1084,8 +1084,8 @@
         <translation>Φόρτωση ευρετηρίου μπλοκ στον σκληρο δισκο...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Στείλε νομίσματα σε μια διεύθυνση raven</translation>
+        <source>Send coins to a Aurora Borealis address</source>
+        <translation>Στείλε νομίσματα σε μια διεύθυνση Aurora Borealis</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1104,8 +1104,8 @@
         <translation>&amp;Επιβεβαίωση μηνύματος</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1132,12 +1132,12 @@
         <translation>Κρυπτογραφήστε τα ιδιωτικά κλειδιά που ανήκουν στο πορτοφόλι σας </translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
+        <source>Sign messages with your Aurora Borealis addresses to prove you own them</source>
         <translation>Υπογράψτε ένα μήνυμα για να βεβαιώσετε πως είστε ο κάτοχος αυτής της διεύθυνσης</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως ανήκει μια συγκεκριμένη διεύθυνση Raven</translation>
+        <source>Verify messages to ensure they were signed with specified Aurora Borealis addresses</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως ανήκει μια συγκεκριμένη διεύθυνση Aurora Borealis</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1149,7 +1149,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
-        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις raven: )</translation>
+        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις auroraborealis: )</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -1554,8 +1554,8 @@
         <translation>Αυτή είναι μια απλή πληρωμή.</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>Η διεύθυνση Raven που θα σταλεί η πληρωμή</translation>
+        <source>The Aurora Borealis address to send the payment to</source>
+        <translation>Η διεύθυνση Aurora Borealis που θα σταλεί η πληρωμή</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1607,8 +1607,8 @@
         <translation>&amp;Υπογραφή Μηνύματος</translation>
     </message>
     <message>
-        <source>The Raven address to sign the message with</source>
-        <translation>Διεύθυνση Raven που θα σταλεί το μήνυμα</translation>
+        <source>The Aurora Borealis address to sign the message with</source>
+        <translation>Διεύθυνση Aurora Borealis που θα σταλεί το μήνυμα</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1639,8 +1639,8 @@
         <translation>Αντέγραφη της επιλεγμενης διεύθυνσης στο πρόχειρο του συστηματος</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως σας ανήκει μια συγκεκριμένη διεύθυνση Raven</translation>
+        <source>Sign the message to prove you own this Aurora Borealis address</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως σας ανήκει μια συγκεκριμένη διεύθυνση Aurora Borealis</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1659,12 +1659,12 @@
         <translation>&amp;Επιβεβαίωση μηνύματος</translation>
     </message>
     <message>
-        <source>The Raven address the message was signed with</source>
-        <translation>Διεύθυνση Raven η οποία το μήνυμα έχει υπογραφεί</translation>
+        <source>The Aurora Borealis address the message was signed with</source>
+        <translation>Διεύθυνση Aurora Borealis η οποία το μήνυμα έχει υπογραφεί</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως υπογραφθηκε απο μια συγκεκριμένη διεύθυνση Raven</translation>
+        <source>Verify the message to ensure it was signed with the specified Aurora Borealis address</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως υπογραφθηκε απο μια συγκεκριμένη διεύθυνση Aurora Borealis</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>

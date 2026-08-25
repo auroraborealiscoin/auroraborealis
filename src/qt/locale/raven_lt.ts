@@ -263,8 +263,8 @@
         <translation>Piniginė</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatiškai atidaryti Raven kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
+        <source>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatiškai atidaryti Aurora Borealis kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -595,8 +595,8 @@
         <translation>Blokai iš naujo indeksuojami...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Siųsti monetas Raven adresui</translation>
+        <source>Send coins to a Aurora Borealis address</source>
+        <translation>Siųsti monetas Aurora Borealis adresui</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -615,8 +615,8 @@
         <translation>&amp;Tikrinti žinutę...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -852,7 +852,7 @@
         <translation>Įveskite pranešimą, kurį norite pasirašyti čia</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
+        <source>Sign the message to prove you own this Aurora Borealis address</source>
         <translation>Registruotis žinute įrodymuii, kad turite šį adresą</translation>
     </message>
     <message>
@@ -868,8 +868,8 @@
         <translation>&amp;Patikrinti žinutę</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Raven adresas</translation>
+        <source>Verify the message to ensure it was signed with the specified Aurora Borealis address</source>
+        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Aurora Borealis adresas</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -942,7 +942,7 @@
     </message>
     <message>
         <source>Aurora Borealis Core</source>
-        <translation>Raven branduolys</translation>
+        <translation>Aurora Borealis branduolys</translation>
     </message>
     <message>
         <source>Error opening block database</source>

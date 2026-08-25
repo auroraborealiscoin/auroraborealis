@@ -291,8 +291,8 @@
         <translation>Moedeiro</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente o porto do cliente Raven no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
+        <source>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente o porto do cliente Aurora Borealis no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -371,7 +371,7 @@
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
-        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede Raven despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
+        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede Aurora Borealis despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -575,8 +575,8 @@
         <translation>Reindexando bloques no disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Enviar moedas a unha dirección Raven</translation>
+        <source>Send coins to a Aurora Borealis address</source>
+        <translation>Enviar moedas a unha dirección Aurora Borealis</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -595,8 +595,8 @@
         <translation>&amp;Verificar mensaxe...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -623,12 +623,12 @@
         <translation>Encriptar as claves privadas que pertencen ao teu moedeiro</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Asina mensaxes coas túas direccións Raven para probar que te pertencen</translation>
+        <source>Sign messages with your Aurora Borealis addresses to prove you own them</source>
+        <translation>Asina mensaxes coas túas direccións Aurora Borealis para probar que te pertencen</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Verificar mensaxes para asegurar que foron asinados con direccións Raven dadas.</translation>
+        <source>Verify messages to ensure they were signed with specified Aurora Borealis addresses</source>
+        <translation>Verificar mensaxes para asegurar que foron asinados con direccións Aurora Borealis dadas.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -928,8 +928,8 @@
         <translation>Copiar a sinatura actual ao portapapeis do sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Asina a mensaxe para probar que posees esta dirección Raven</translation>
+        <source>Sign the message to prove you own this Aurora Borealis address</source>
+        <translation>Asina a mensaxe para probar que posees esta dirección Aurora Borealis</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -948,8 +948,8 @@
         <translation>&amp;Verificar Mensaxe</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección Raven especificada</translation>
+        <source>Verify the message to ensure it was signed with the specified Aurora Borealis address</source>
+        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección Aurora Borealis especificada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1030,7 +1030,7 @@
     </message>
     <message>
         <source>Aurora Borealis Core</source>
-        <translation>Core de Raven</translation>
+        <translation>Core de Aurora Borealis</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

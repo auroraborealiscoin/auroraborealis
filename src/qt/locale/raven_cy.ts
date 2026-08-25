@@ -295,8 +295,8 @@
         <translation>Newid y cyfrinymadrodd a ddefnyddiwyd ar gyfer amgryptio'r waled</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -522,7 +522,7 @@
     </message>
     <message>
         <source>Aurora Borealis Core</source>
-        <translation>Craidd Raven</translation>
+        <translation>Craidd Aurora Borealis</translation>
     </message>
     <message>
         <source>Information</source>

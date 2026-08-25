@@ -341,8 +341,8 @@
         <translation type="vanished">Szakértő</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="vanished">A Raven-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
+        <source>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="vanished">A Aurora Borealis-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -350,7 +350,7 @@
     </message>
     <message>
         <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
-        <translation type="vanished">Csatlakozás a Raven hálózatához SOCKS5 proxyn keresztül</translation>
+        <translation type="vanished">Csatlakozás a Aurora Borealis hálózatához SOCKS5 proxyn keresztül</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -445,7 +445,7 @@
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
-        <translation type="vanished">A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Raven hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
+        <translation type="vanished">A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Aurora Borealis hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -510,8 +510,8 @@
         <translation type="vanished">Összeg</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation type="vanished">Ad meg egy Raven címet (pl: %1)</translation>
+        <source>Enter a Aurora Borealis address (e.g. %1)</source>
+        <translation type="vanished">Ad meg egy Aurora Borealis címet (pl: %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -840,8 +840,8 @@
         <translation type="vanished">Lemezen lévő blokkok újraindexelése...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation type="vanished">Raven küldése megadott címre</translation>
+        <source>Send coins to a Aurora Borealis address</source>
+        <translation type="vanished">Aurora Borealis küldése megadott címre</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -864,8 +864,8 @@
         <translation type="vanished">Üzenet &amp;valódiságának ellenőrzése</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation type="vanished">Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation type="vanished">Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -892,12 +892,12 @@
         <translation type="vanished">A tárcádhoz tartozó privát kulcsok titkosítása</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation type="vanished">Üzenetek aláírása a Raven-címmeiddel, amivel bizonyítod, hogy a cím a sajátod</translation>
+        <source>Sign messages with your Aurora Borealis addresses to prove you own them</source>
+        <translation type="vanished">Üzenetek aláírása a Aurora Borealis-címmeiddel, amivel bizonyítod, hogy a cím a sajátod</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation type="vanished">Üzenetek ellenőrzése, hogy valóban a megjelölt Raven-címekkel vannak-e aláírva</translation>
+        <source>Verify messages to ensure they were signed with specified Aurora Borealis addresses</source>
+        <translation type="vanished">Üzenetek ellenőrzése, hogy valóban a megjelölt Aurora Borealis-címekkel vannak-e aláírva</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -917,7 +917,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
-        <translation type="vanished">Fizetési kérelem (QR-kódot és "raven:" URI azonosítót hoz létre)</translation>
+        <translation type="vanished">Fizetési kérelem (QR-kódot és "auroraborealis:" URI azonosítót hoz létre)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -929,7 +929,7 @@
     </message>
     <message>
         <source>Open a auroraborealis: URI or payment request</source>
-        <translation type="vanished">"raven:" URI azonosító vagy fizetési kérelem megnyitása</translation>
+        <translation type="vanished">"auroraborealis:" URI azonosító vagy fizetési kérelem megnyitása</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -938,7 +938,7 @@
     <message numerus="yes">
         <source>%n active connection(s) to Aurora Borealis network</source>
         <translation type="vanished">
-            <numerusform>%n aktív kapcsolat a Raven hálózathoz</numerusform>
+            <numerusform>%n aktív kapcsolat a Aurora Borealis hálózathoz</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -1299,7 +1299,7 @@
         <translation type="vanished">A jelenleg kiválasztott aláírás másolása a rendszer-vágólapra</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
+        <source>Sign the message to prove you own this Aurora Borealis address</source>
         <translation type="vanished">Üzenet </translation>
     </message>
     <message>

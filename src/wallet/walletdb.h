@@ -67,14 +67,20 @@ public:
     CKeyID seed_id; //!< seed hash160
 
     bool bUse_bip44;
+    uint32_t nCoinType;
     SecureVector vchMnemonic;
     SecureVector vchMnemonicPassphrase;
     SecureVector vchSeed;
 
-    static const int VERSION_HD_BASE        = 1;
-    static const int VERSION_HD_CHAIN_SPLIT = 2;
-    static const int VERSION_HD_BIP44_BIP39 = 3;
-    static const int CURRENT_VERSION        = VERSION_HD_BIP44_BIP39;
+    static constexpr int VERSION_HD_BASE            = 1;
+    static constexpr int VERSION_HD_CHAIN_SPLIT     = 2;
+    static constexpr int VERSION_HD_BIP44_BIP39     = 3;
+    static constexpr int VERSION_HD_BIP44_COIN_TYPE = 4;
+    static constexpr int CURRENT_VERSION            = VERSION_HD_BIP44_COIN_TYPE;
+
+    static constexpr uint32_t LEGACY_ABRS_COIN_TYPE = 10000;
+    static constexpr uint32_t BIP44_COIN_TYPE_UNSET = 0xffffffffU;
+    static constexpr uint32_t BIP44_HARDENED_LIMIT = 0x80000000U;
     int nVersion;
 
     CWallet* pwallet;
@@ -92,8 +98,12 @@ public:
             READWRITE(nInternalChainCounter);
         }
 
-        if(VERSION_HD_BIP44_BIP39 == this->nVersion) {
+        if (this->nVersion >= VERSION_HD_BIP44_BIP39) {
             READWRITE(bUse_bip44);
+        }
+
+        if (this->nVersion >= VERSION_HD_BIP44_COIN_TYPE) {
+            READWRITE(nCoinType);
         }
     }
 
@@ -106,6 +116,7 @@ public:
         nInternalChainCounter = 0;
         seed_id.SetNull();
         bUse_bip44 = false;
+        nCoinType = BIP44_COIN_TYPE_UNSET;
     }
 
     bool IsNull() { return seed_id.IsNull();}
@@ -113,6 +124,19 @@ public:
 
     void UseBip44( bool b = true)   { bUse_bip44 = b;}
     bool IsBip44() const            { return bUse_bip44 == true;}
+
+    uint32_t GetCoinType() const
+    {
+        if (IsBip44() && nVersion < VERSION_HD_BIP44_COIN_TYPE)
+            return LEGACY_ABRS_COIN_TYPE;
+
+        return nCoinType;
+    }
+
+    static bool IsValidCoinType(uint32_t coinType)
+    {
+        return coinType < BIP44_HARDENED_LIMIT;
+    }
 
 
     bool SetMnemonic(const SecureString& ssMnemonic, const SecureString& ssMnemonicPassphrase, SecureVector& vchSeed);

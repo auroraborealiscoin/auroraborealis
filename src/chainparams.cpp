@@ -201,9 +201,12 @@ public:
             "371ce8220f0e78b1e16cdfbd41995785b18d115bca979c2e30a72f61ac0f4aeb"
         ));
 
-        // ABRS: DNS seeds will be added before public mainnet launch
-        // ABRS: no Ravencoin DNS seeds
-        // ABRS: no Ravencoin DNS seeds
+        // Aurora Borealis Coin public mainnet DNS bootstrap.
+        // These are ordinary A/AAAA seed hostnames, not service-bit filtered DNS seeds.
+        vSeeds.clear();
+        vSeeds.emplace_back("seed.auroraborealiscoin.com", false);
+        vSeeds.emplace_back("seed1.auroraborealiscoin.com", false);
+        vSeeds.emplace_back("seed2.auroraborealiscoin.com", false);
 
         // Aurora Borealis Coin mainnet Base58 prefixes
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);  // A...
@@ -217,7 +220,25 @@ public:
         // before public mainnet release.
         nExtCoinType = 10000;
 
-        vFixedSeeds.clear(); // ABRS: fixed seeds added before public mainnet launch
+        // Aurora Borealis Coin mainnet bootstrap nodes.
+        // IPv4 addresses are encoded as IPv4-mapped IPv6 SeedSpec6 entries.
+        // NODE 1: 2.29.2.2:17333
+        // NODE 2: 49.12.240.12:17333
+        vFixedSeeds.clear();
+
+        const SeedSpec6 abrsMainnetSeeds[] = {
+            {{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+              0x00,0x00,0xff,0xff,0x02,0x1d,0x02,0x02}, 17333},
+
+            {{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+              0x00,0x00,0xff,0xff,0x31,0x0c,0xf0,0x0c}, 17333}
+        };
+
+        vFixedSeeds.assign(
+            abrsMainnetSeeds,
+            abrsMainnetSeeds +
+                (sizeof(abrsMainnetSeeds) / sizeof(abrsMainnetSeeds[0]))
+        );
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;

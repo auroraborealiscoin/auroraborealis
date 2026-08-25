@@ -561,7 +561,7 @@ UniValue dumpprivkey(const JSONRPCRequest& request)
             "\nReveals the private key corresponding to 'address'.\n"
             "Then the importprivkey can be used with this output\n"
             "\nArguments:\n"
-            "1. \"address\"   (string, required) The raven address for the private key\n"
+            "1. \"address\"   (string, required) The Aurora Borealis address for the private key\n"
             "\nResult:\n"
             "\"key\"                (string) The private key\n"
             "\nExamples:\n"
@@ -603,7 +603,7 @@ UniValue dumpwallet(const JSONRPCRequest& request)
             "dumpwallet \"filename\"\n"
             "\nDumps all wallet keys in a human-readable format to a server-side file. This does not allow overwriting existing files.\n"
             "\nArguments:\n"
-            "1. \"filename\"    (string, required) The filename with path (either absolute or relative to ravend)\n"
+            "1. \"filename\"    (string, required) The filename with path (either absolute or relative to auroraborealisd)\n"
             "\nResult:\n"
             "{                           (json object)\n"
             "  \"filename\" : {        (string) The filename with full absolute path\n"
@@ -856,7 +856,12 @@ UniValue getmasterkeyinfo(const JSONRPCRequest& request)
             // Add the private and public key to the output
             ret.push_back(std::make_pair("bip32_root_private",  b58extkey.ToString()));
             ret.push_back(std::make_pair("bip32_root_public",  b58extpubkey.ToString()));
-            std::string path = strprintf("m/44'/%d'/%d'", GetParams().ExtCoinType(), 0);
+
+            const uint32_t coinType = pwallet->GetHDChain().GetCoinType();
+            if (!CHDChain::IsValidCoinType(coinType))
+                throw JSONRPCError(RPC_WALLET_ERROR, "Invalid or uninitialized BIP44 coin type");
+
+            std::string path = strprintf("m/44'/%u'/%d'", coinType, 0);
             ret.push_back(std::make_pair("account_derivation_path",  path));
 
             // Lets generate the account private and public keys
@@ -866,7 +871,7 @@ UniValue getmasterkeyinfo(const JSONRPCRequest& request)
             // derive m/purpose'
             masterKey.Derive(purposeKey, 44 | 0x80000000);
             // derive m/purpose'/coin_type'
-            purposeKey.Derive(coinTypeKey, GetParams().ExtCoinType() | 0x80000000);
+            purposeKey.Derive(coinTypeKey, coinType | CHDChain::BIP44_HARDENED_LIMIT);
             // derive m/purpose'/coin_type'/account'
             coinTypeKey.Derive(accountKey, 0 | 0x80000000);
 
@@ -1348,7 +1353,7 @@ UniValue importmulti(const JSONRPCRequest& mainRequest)
                                       "block from time %d, which is after or within %d seconds of key creation, and "
                                       "could contain transactions pertaining to the key. As a result, transactions "
                                       "and coins using this key may not appear in the wallet. This error could be "
-                                      "caused by pruning or data corruption (see ravend log for details) and could "
+                                      "caused by pruning or data corruption (see auroraborealisd log for details) and could "
                                       "be dealt with by downloading and rescanning the relevant blocks (see -reindex "
                                       "and -rescan options).",
                                 GetImportTimestamp(request, now), scannedTime - TIMESTAMP_WINDOW - 1, TIMESTAMP_WINDOW)));

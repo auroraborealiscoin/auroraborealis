@@ -114,11 +114,12 @@
       </palette>
      </property>
      <property name="text">
-      <string/>
+      <string />
      </property>
     </widget>
-   </item>   
-   <item><widget class="QLabel" name="lblWarningJapanese">
+   </item>
+   <item>
+    <widget class="QLabel" name="lblWarningJapanese">
      <property name="palette">
       <palette>
        <active>
@@ -211,12 +212,12 @@
       </palette>
      </property>
      <property name="text">
-      <string/>
+      <string />
      </property>
     </widget>
-   </item> 
-   <item>     
-    <widget class="QComboBox" name="languageSeedWords"/>
+   </item>
+   <item>
+    <widget class="QComboBox" name="languageSeedWords" />
    </item>
    <item>
     <widget class="QGroupBox" name="groupBox">
@@ -309,6 +310,32 @@ They are not recoverable!!</string>
        </property>
       </widget>
      </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="recoveryCoinTypeLabel">
+       <property name="text">
+        <string>Wallet recovery profile:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="recoveryCoinTypeCombo">
+       <item>
+        <property name="text">
+         <string>Select recovery profile...</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Current Aurora Borealis coin type</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Legacy Aurora Borealis wallet (coin type 10000)</string>
+        </property>
+       </item>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
@@ -371,6 +398,6 @@ They are not recoverable!!</string>
    </item>
   </layout>
  </widget>
- <resources/>
- <connections/>
+ <resources />
+ <connections />
 </ui>

@@ -16,6 +16,8 @@
 #include "test/test_raven.h"
 #include "validation.h"
 #include "wallet/coincontrol.h"
+#include "wallet/db.h"
+#include "wallet/walletdb.h"
 #include "wallet/test/wallet_test_fixture.h"
 
 #include <boost/test/unit_test.hpp>
@@ -403,7 +405,7 @@ BOOST_FIXTURE_TEST_SUITE(wallet_tests, WalletTestingSetup)
             CWallet wallet;
             AddKey(wallet, coinbaseKey);
             BOOST_CHECK_EQUAL(nullBlock, wallet.ScanForWalletTransactions(oldTip, nullptr));
-            BOOST_CHECK_EQUAL(wallet.GetImmatureBalance(), 10000 * COIN);
+            BOOST_CHECK_EQUAL(wallet.GetImmatureBalance(), 1800 * COIN);
         }
 
         // Prune the older block file.
@@ -416,7 +418,7 @@ BOOST_FIXTURE_TEST_SUITE(wallet_tests, WalletTestingSetup)
             CWallet wallet;
             AddKey(wallet, coinbaseKey);
             BOOST_CHECK_EQUAL(oldTip, wallet.ScanForWalletTransactions(oldTip, nullptr));
-            BOOST_CHECK_EQUAL(wallet.GetImmatureBalance(), 5000 * COIN);
+            BOOST_CHECK_EQUAL(wallet.GetImmatureBalance(), 900 * COIN);
         }
 
         // Verify importmulti RPC returns failure for a key whose creation time is
@@ -546,7 +548,7 @@ BOOST_FIXTURE_TEST_SUITE(wallet_tests, WalletTestingSetup)
         // credit amount is calculated.
         wtx.MarkDirty();
         wallet.AddKeyPubKey(coinbaseKey, coinbaseKey.GetPubKey());
-        BOOST_CHECK_EQUAL(wtx.GetImmatureCredit(), 5000 * COIN);
+        BOOST_CHECK_EQUAL(wtx.GetImmatureCredit(), 900 * COIN);
     }
 
     static int64_t AddTx(CWallet &wallet, uint32_t lockTime, int64_t mockTime, int64_t blockTime)
@@ -680,7 +682,7 @@ BOOST_FIXTURE_TEST_SUITE(wallet_tests, WalletTestingSetup)
         BOOST_CHECK_EQUAL(list.begin()->second.size(), (uint64_t)1L);
 
         // Check initial balance from one mature coinbase transaction.
-        BOOST_CHECK_EQUAL(5000 * COIN, wallet->GetAvailableBalance());
+        BOOST_CHECK_EQUAL(900 * COIN, wallet->GetAvailableBalance());
 
         // Add a transaction creating a change address, and confirm ListCoins still
         // returns the coin associated with the change address underneath the
@@ -715,5 +717,321 @@ BOOST_FIXTURE_TEST_SUITE(wallet_tests, WalletTestingSetup)
         BOOST_CHECK_EQUAL(boost::get<CKeyID>(list.begin()->first).ToString(), coinbaseAddress);
         BOOST_CHECK_EQUAL(list.begin()->second.size(), (uint64_t)2L);
     }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_minversion_rejects_before_hdchain_deserialize)
+    {
+        BOOST_TEST_MESSAGE(
+            "ABRS wallet minversion gate must reject before hdchain deserialization");
+
+        // Use a dedicated Berkeley DB mock file. No user wallet is involved.
+        const std::string walletFile =
+            "abrs_minversion_gate_test.dat";
+
+        std::unique_ptr<CWalletDBWrapper> dbw(
+            new CWalletDBWrapper(&bitdb, walletFile));
+
+        {
+            CDB rawdb(*dbw, "cr+");
+
+            // Deliberately require a client newer than the one executing
+            // this test. LoadWallet() must stop on this record immediately.
+            BOOST_REQUIRE(
+                rawdb.Write(
+                    std::string("minversion"),
+                    CLIENT_VERSION + 1));
+
+            // Deliberately malformed/truncated CHDChain payload.
+            //
+            // CDB::Write serializes this vector itself, so the stored value
+            // is not a valid CHDChain serialization. If LoadWallet() reaches
+            // the hdchain record, deserialization will fail instead of
+            // returning DB_TOO_NEW.
+            const std::vector<unsigned char> malformedHdChain = {
+                0x01
+            };
+
+            BOOST_REQUIRE(
+                rawdb.Write(
+                    std::string("hdchain"),
+                    malformedHdChain));
+
+            rawdb.Flush();
+        }
+
+        CWallet wallet(std::move(dbw));
+
+        bool firstRun = false;
+        const DBErrors loadResult = wallet.LoadWallet(firstRun);
+
+        // Strong ordering invariant:
+        // minversion must be checked before any cursor scan / hdchain parse.
+        BOOST_CHECK_EQUAL(loadResult, DB_TOO_NEW);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_hdchain_future_version_db_rejected)
+    {
+        BOOST_TEST_MESSAGE(
+            "ABRS wallet must reject future CHDChain versions as DB_CORRUPT");
+
+        const std::string walletFile =
+            "abrs_hdchain_future_version_test.dat";
+
+        std::unique_ptr<CWalletDBWrapper> dbw(
+            new CWalletDBWrapper(&bitdb, walletFile));
+
+        {
+            CDB rawdb(*dbw, "cr+");
+
+            CHDChain invalid(nullptr);
+            invalid.nVersion = CHDChain::CURRENT_VERSION + 1;
+            invalid.UseBip44(true);
+            invalid.nCoinType = 10000U;
+
+            BOOST_REQUIRE(
+                rawdb.Write(
+                    std::string("hdchain"),
+                    invalid));
+
+            rawdb.Flush();
+        }
+
+        CWallet wallet(std::move(dbw));
+
+        bool firstRun = false;
+        const DBErrors loadResult = wallet.LoadWallet(firstRun);
+
+        BOOST_CHECK_EQUAL(loadResult, DB_CORRUPT);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_hdchain_invalid_coin_type_db_rejected)
+    {
+        BOOST_TEST_MESSAGE(
+            "ABRS wallet must reject invalid v4 BIP44 coin type as DB_CORRUPT");
+
+        const std::string walletFile =
+            "abrs_hdchain_invalid_coin_type_test.dat";
+
+        std::unique_ptr<CWalletDBWrapper> dbw(
+            new CWalletDBWrapper(&bitdb, walletFile));
+
+        {
+            CDB rawdb(*dbw, "cr+");
+
+            CHDChain invalid(nullptr);
+            invalid.nVersion = CHDChain::VERSION_HD_BIP44_COIN_TYPE;
+            invalid.UseBip44(true);
+            invalid.nCoinType = CHDChain::BIP44_COIN_TYPE_UNSET;
+
+            BOOST_REQUIRE(
+                rawdb.Write(
+                    std::string("hdchain"),
+                    invalid));
+
+            rawdb.Flush();
+        }
+
+        CWallet wallet(std::move(dbw));
+
+        bool firstRun = false;
+        const DBErrors loadResult = wallet.LoadWallet(firstRun);
+
+        BOOST_CHECK_EQUAL(loadResult, DB_CORRUPT);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_default)
+    {
+        const uint32_t result =
+            ResolveBip44RecoveryCoinType(
+                12345, false, -1, false, false, "", false);
+
+        BOOST_CHECK_EQUAL(result, 12345U);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_cli_legacy_override)
+    {
+        const uint32_t result =
+            ResolveBip44RecoveryCoinType(
+                12345, false, -1, false, true, "10000", true);
+
+        BOOST_CHECK_EQUAL(
+            result,
+            CHDChain::LEGACY_ABRS_COIN_TYPE);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_gui_legacy_override)
+    {
+        const uint32_t result =
+            ResolveBip44RecoveryCoinType(
+                12345,
+                true,
+                CHDChain::LEGACY_ABRS_COIN_TYPE,
+                true,
+                false,
+                "",
+                false);
+
+        BOOST_CHECK_EQUAL(
+            result,
+            CHDChain::LEGACY_ABRS_COIN_TYPE);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_requires_cli_mnemonic)
+    {
+        BOOST_CHECK_THROW(
+            ResolveBip44RecoveryCoinType(
+                12345, false, -1, false, true, "10000", false),
+            std::runtime_error);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_requires_gui_mnemonic)
+    {
+        BOOST_CHECK_THROW(
+            ResolveBip44RecoveryCoinType(
+                12345,
+                true,
+                CHDChain::LEGACY_ABRS_COIN_TYPE,
+                false,
+                false,
+                "",
+                false),
+            std::runtime_error);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_cli_parse_fail_closed)
+    {
+        BOOST_CHECK_THROW(
+            ResolveBip44RecoveryCoinType(
+                12345, false, -1, false, true, "not-a-number", true),
+            std::runtime_error);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_negative_rejected)
+    {
+        BOOST_CHECK_THROW(
+            ResolveBip44RecoveryCoinType(
+                -1, false, -1, false, false, "", false),
+            std::runtime_error);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_hardened_boundary_rejected)
+    {
+        BOOST_CHECK_THROW(
+            ResolveBip44RecoveryCoinType(
+                CHDChain::BIP44_HARDENED_LIMIT,
+                false,
+                -1,
+                false,
+                false,
+                "",
+                false),
+            std::runtime_error);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_max_valid_boundary)
+    {
+        const uint32_t result =
+            ResolveBip44RecoveryCoinType(
+                CHDChain::BIP44_HARDENED_LIMIT - 1U,
+                false,
+                -1,
+                false,
+                false,
+                "",
+                false);
+
+        BOOST_CHECK_EQUAL(
+            result,
+            CHDChain::BIP44_HARDENED_LIMIT - 1U);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_gui_cli_conflict_rejected)
+    {
+        BOOST_CHECK_THROW(
+            ResolveBip44RecoveryCoinType(
+                12345,
+                true,
+                CHDChain::LEGACY_ABRS_COIN_TYPE,
+                true,
+                true,
+                "10000",
+                true),
+            std::runtime_error);
+    }
+
+
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_cli_negative_rejected)
+    {
+        BOOST_CHECK_THROW(
+            ResolveBip44RecoveryCoinType(
+                12345,
+                false,
+                -1,
+                false,
+                true,
+                "-1",
+                true),
+            std::runtime_error);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_cli_hardened_boundary_rejected)
+    {
+        BOOST_CHECK_THROW(
+            ResolveBip44RecoveryCoinType(
+                12345,
+                false,
+                -1,
+                false,
+                true,
+                "2147483648",
+                true),
+            std::runtime_error);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_gui_negative_rejected)
+    {
+        BOOST_CHECK_THROW(
+            ResolveBip44RecoveryCoinType(
+                12345,
+                true,
+                -2,
+                true,
+                false,
+                "",
+                false),
+            std::runtime_error);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_recovery_cointype_gui_hardened_boundary_rejected)
+    {
+        BOOST_CHECK_THROW(
+            ResolveBip44RecoveryCoinType(
+                12345,
+                true,
+                CHDChain::BIP44_HARDENED_LIMIT,
+                true,
+                false,
+                "",
+                false),
+            std::runtime_error);
+    }
+
 
 BOOST_AUTO_TEST_SUITE_END()

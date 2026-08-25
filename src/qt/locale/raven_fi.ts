@@ -62,12 +62,12 @@
         <translation>Vastaanotto-osoitteet</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Nämä ovat Raven-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
+        <source>These are your Aurora Borealis addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Nämä ovat Aurora Borealis-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tässä ovat Raven vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
+        <source>These are your Aurora Borealis addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Tässä ovat Aurora Borealis vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Vahvista lompakon salaaminen</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RAVENS&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI RAVENISI&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ABRS&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI AURORA BOREALISISI&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -180,7 +180,7 @@
         <translation>Lompakko salattiin</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ravens from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ABRS from being stolen by malware infecting your computer.</source>
         <translation>%1 sulkeutuu lopettaakseen salausprosessin. Muista, että salattukaan lompakko ei täysin suojaa sitä haittaohjelmien aiheuttamilta varkauksilta.</translation>
     </message>
     <message>
@@ -428,8 +428,8 @@
         <translation>Muokkaa lähettävää osoitetta</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Raven address.</source>
-        <translation>Antamasi osoite "%1" ei ole kelvollinen Raven-osoite.</translation>
+        <source>The entered address "%1" is not a valid Aurora Borealis address.</source>
+        <translation>Antamasi osoite "%1" ei ole kelvollinen Aurora Borealis-osoite.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -711,8 +711,8 @@
         <translation>&amp;Käytä varmistamattomia vaihtorahoja</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa Raven-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
+        <source>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa Aurora Borealis-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -720,7 +720,7 @@
     </message>
     <message>
         <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä Raven-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
+        <translation>Yhdistä Aurora Borealis-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -756,7 +756,7 @@
     </message>
     <message>
         <source>Connect to the Aurora Borealis network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Yhdistä Raven-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
+        <translation>Yhdistä Aurora Borealis-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -788,11 +788,11 @@
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>Yksikkö jona raven-määrät näytetään</translation>
+        <translation>Yksikkö jona Aurora Borealis-määrät näytetään</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Valitse mitä yksikköä käytetään ensisijaisesti raven-määrien näyttämiseen.</translation>
+        <translation>Valitse mitä yksikköä käytetään ensisijaisesti Aurora Borealis-määrien näyttämiseen.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -843,7 +843,7 @@
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Raven-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
+        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Aurora Borealis-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -879,7 +879,7 @@
     </message>
     <message>
         <source>Your current total balance</source>
-        <translation>Tililläsi tällä hetkellä olevien Ravenien määrä</translation>
+        <translation>Tililläsi tällä hetkellä olevien Aurora Borealisien määrä</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -931,8 +931,8 @@
         <translation>Määrä</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation>Syötä Raven-osoite (esim. %1)</translation>
+        <source>Enter a Aurora Borealis address (e.g. %1)</source>
+        <translation>Syötä Aurora Borealis-osoite (esim. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1359,8 +1359,8 @@
         <translation>Ladataan lohkoindeksiä...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Lähetä kolikoita Raven-osoitteeseen</translation>
+        <source>Send coins to a Aurora Borealis address</source>
+        <translation>Lähetä kolikoita Aurora Borealis-osoitteeseen</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1379,8 +1379,8 @@
         <translation>Varmista &amp;viesti...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1400,19 +1400,19 @@
     </message>
     <message>
         <source>Show or hide the main Window</source>
-        <translation>Näytä tai piilota Raven-ikkuna</translation>
+        <translation>Näytä tai piilota Aurora Borealis-ikkuna</translation>
     </message>
     <message>
         <source>Encrypt the private keys that belong to your wallet</source>
         <translation>Suojaa yksityiset avaimet, jotka kuuluvat lompakkoosi</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Allekirjoita viestisi omalla Raven -osoitteellasi todistaaksesi, että omistat ne</translation>
+        <source>Sign messages with your Aurora Borealis addresses to prove you own them</source>
+        <translation>Allekirjoita viestisi omalla Aurora Borealis -osoitteellasi todistaaksesi, että omistat ne</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Raven -osoitteella</translation>
+        <source>Verify messages to ensure they were signed with specified Aurora Borealis addresses</source>
+        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Aurora Borealis -osoitteella</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1479,8 +1479,8 @@
         <translation>Rahansiirtohistoria on ajan tasalla</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Raven command-line options</source>
-        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Ravenin komentorivivalinnoista</translation>
+        <source>Show the %1 help message to get a list with possible Aurora Borealis command-line options</source>
+        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Aurora Borealisin komentorivivalinnoista</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -1549,8 +1549,8 @@
         <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;lukittuna&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Raven can no longer continue safely and will quit.</source>
-        <translation>Peruuttamaton virhe on tapahtunut. Raven ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
+        <source>A fatal error occurred. Aurora Borealis can no longer continue safely and will quit.</source>
+        <translation>Peruuttamaton virhe on tapahtunut. Aurora Borealis ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
     </message>
 </context>
 <context>
@@ -1577,7 +1577,7 @@
     </message>
     <message>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aurora Borealis network.</source>
-        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Raven-verkkoon.</translation>
+        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Aurora Borealis-verkkoon.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1711,7 +1711,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Lähetä Raveneja</translation>
+        <translation>Lähetä Aurora Borealiseja</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -1889,8 +1889,8 @@
         <translation>Tämä on normaali maksu.</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>Raven-osoite johon maksu lähetetään</translation>
+        <source>The Aurora Borealis address to send the payment to</source>
+        <translation>Aurora Borealis-osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1909,7 +1909,7 @@
         <translation>Poista tämä alkio</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less ravens than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less ABRS than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän raveneja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
     </message>
     <message>
@@ -1934,7 +1934,7 @@
     </message>
     <message>
         <source>A message that was attached to the auroraborealis: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aurora Borealis network.</source>
-        <translation>Viesti joka liitettiin auroraborealis: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Raven-verkkoon.</translation>
+        <translation>Viesti joka liitettiin auroraborealis: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Aurora Borealis-verkkoon.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -1970,8 +1970,8 @@
         <translation>&amp;Allekirjoita viesti</translation>
     </message>
     <message>
-        <source>The Raven address to sign the message with</source>
-        <translation>Raven-osoite jolla viesti allekirjoitetaan</translation>
+        <source>The Aurora Borealis address to sign the message with</source>
+        <translation>Aurora Borealis-osoite jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2002,8 +2002,8 @@
         <translation>Kopioi tämänhetkinen allekirjoitus leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Raven-osoitteen</translation>
+        <source>Sign the message to prove you own this Aurora Borealis address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Aurora Borealis-osoitteen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2022,12 +2022,12 @@
         <translation>&amp;Varmista viesti</translation>
     </message>
     <message>
-        <source>The Raven address the message was signed with</source>
-        <translation>Raven-osoite jolla viesti on allekirjoitettu</translation>
+        <source>The Aurora Borealis address the message was signed with</source>
+        <translation>Aurora Borealis-osoite jolla viesti on allekirjoitettu</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Raven-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified Aurora Borealis address</source>
+        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Aurora Borealis-osoitteella</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2376,7 +2376,7 @@
     </message>
     <message>
         <source>Aurora Borealis Core</source>
-        <translation>Raven-ydin</translation>
+        <translation>Aurora Borealis-ydin</translation>
     </message>
     <message>
         <source>The %s developers</source>

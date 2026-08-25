@@ -62,12 +62,12 @@
         <translation>Mottaksadresser</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dette er dine Raven-adresser for sending av betalinger. Sjekk alltid beløpet og mottakeradressen før sending av mynter.</translation>
+        <source>These are your Aurora Borealis addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dette er dine Aurora Borealis-adresser for sending av betalinger. Sjekk alltid beløpet og mottakeradressen før sending av mynter.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dette er dine Raven-adresser for å sende betalinger med. Det er anbefalt å bruke en ny mottaksadresse for hver transaksjon.</translation>
+        <source>These are your Aurora Borealis addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dette er dine Aurora Borealis-adresser for å sende betalinger med. Det er anbefalt å bruke en ny mottaksadresse for hver transaksjon.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Bekreft kryptering av lommebok</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RAVENS&lt;/b&gt;!</source>
-        <translation>Advarsel: Hvis du krypterer lommeboken og mister adgangsfrasen, så vil du &lt;b&gt;MISTE ALLE DINE RAVENS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ABRS&lt;/b&gt;!</source>
+        <translation>Advarsel: Hvis du krypterer lommeboken og mister adgangsfrasen, så vil du &lt;b&gt;MISTE ALLE DINE ABRS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -180,8 +180,8 @@
         <translation>Lommebok kryptert</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ravens from being stolen by malware infecting your computer.</source>
-        <translation>%1 vil nå lukkes for å fullføre krypteringsprosessen. Husk at kryptering av lommeboken ikke fullt ut kan beskytte dine ravens fra å bli stjålet om skadevare infiserer datamaskinen din.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ABRS from being stolen by malware infecting your computer.</source>
+        <translation>%1 vil nå lukkes for å fullføre krypteringsprosessen. Husk at kryptering av lommeboken ikke fullt ut kan beskytte dine ABRS fra å bli stjålet om skadevare infiserer datamaskinen din.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -485,8 +485,8 @@
         <translation>per kilobyte</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
-        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter Raven-transaksjoner enn nettverket kan behandle.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
+        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter Aurora Borealis-transaksjoner enn nettverket kan behandle.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -609,8 +609,8 @@
         <translation>Betalingsforespørsel utgått.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Advarsel: Ugyldig Ravenadresse</translation>
+        <source>Warning: Invalid Aurora Borealis address</source>
+        <translation>Advarsel: Ugyldig Aurora Borealisadresse</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -906,7 +906,7 @@
     </message>
     <message>
         <source>The ABRS address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-        <translation>RVN adressen som skal eie aktivumet. (Du må eie denne adressen). La stå tom for å lage ny adresse.</translation>
+        <translation>ABRS adressen som skal eie aktivumet. (Du må eie denne adressen). La stå tom for å lage ny adresse.</translation>
     </message>
     <message>
         <source>Warning:</source>
@@ -973,8 +973,8 @@
         <translation>per kilobyte</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
-        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter Raven-transaksjoner enn nettverket kan behandle.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
+        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter Aurora Borealis-transaksjoner enn nettverket kan behandle.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -1081,8 +1081,8 @@
         <translation>IPFS/Txid hash ikke gyldig. Vennligst bruk en gyldig verdi.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Advarsel: Ugyldig Ravenadresse</translation>
+        <source>Warning: Invalid Aurora Borealis address</source>
+        <translation>Advarsel: Ugyldig Aurora Borealisadresse</translation>
     </message>
     <message>
         <source>Valid Asset</source>
@@ -1387,8 +1387,8 @@
         <translation>Bruk en egendefinert datamappe:</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1655,8 +1655,8 @@
         <translation>&amp;Bruk ubekreftet veksel</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Åpne automatisk Raven klientporten på ruteren. Dette virker kun om din ruter støtter UPnP og dette er påslått.</translation>
+        <source>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Åpne automatisk Aurora Borealis klientporten på ruteren. Dette virker kun om din ruter støtter UPnP og dette er påslått.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1672,7 +1672,7 @@
     </message>
     <message>
         <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
-        <translation>Koble til Raven-nettverket gjennom en SOCKS5 proxy.</translation>
+        <translation>Koble til Aurora Borealis-nettverket gjennom en SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1708,7 +1708,7 @@
     </message>
     <message>
         <source>Connect to the Aurora Borealis network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Koble til Raven-nettverket gjennom en separat SOCKS5 mellomtjener for Tor skjulte tjenester.</translation>
+        <translation>Koble til Aurora Borealis-nettverket gjennom en separat SOCKS5 mellomtjener for Tor skjulte tjenester.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1748,7 +1748,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Velg standard delt enhet for visning i grensesnittet og for sending av ravens.</translation>
+        <translation>Velg standard delt enhet for visning i grensesnittet og for sending av ABRS.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1819,7 +1819,7 @@
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informasjonen som vises kan være foreldet. Din lommebok synkroniseres automatisk med Raven-nettverket etter at tilkobling er opprettet, men denne prosessen er ikke ferdig enda.</translation>
+        <translation>Informasjonen som vises kan være foreldet. Din lommebok synkroniseres automatisk med Aurora Borealis-nettverket etter at tilkobling er opprettet, men denne prosessen er ikke ferdig enda.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1961,8 +1961,8 @@
         <translation>Beløp</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation>Oppgi en Raven-adresse (f.eks. %1)</translation>
+        <source>Enter a Aurora Borealis address (e.g. %1)</source>
+        <translation>Oppgi en Aurora Borealis-adresse (f.eks. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2406,7 +2406,7 @@
     </message>
     <message>
         <source>Aurora Borealis Market Price</source>
-        <translation>Ravencoin markedspris</translation>
+        <translation>Aurora Borealis Coin markedspris</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -2429,8 +2429,8 @@
         <translation>Reindekserer blokker på harddisk...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Send til en Raven-adresse</translation>
+        <source>Send coins to a Aurora Borealis address</source>
+        <translation>Send til en Aurora Borealis-adresse</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -2449,8 +2449,8 @@
         <translation>&amp;Verifiser melding...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2477,12 +2477,12 @@
         <translation>Krypter de private nøklene som tilhører lommeboken din</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Signer en melding med Raven-adressene dine for å bevise at du eier dem</translation>
+        <source>Sign messages with your Aurora Borealis addresses to prove you own them</source>
+        <translation>Signer en melding med Aurora Borealis-adressene dine for å bevise at du eier dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Bekreft meldinger for å være sikker på at de ble signert av en angitt Raven-adresse</translation>
+        <source>Verify messages to ensure they were signed with specified Aurora Borealis addresses</source>
+        <translation>Bekreft meldinger for å være sikker på at de ble signert av en angitt Aurora Borealis-adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -2599,8 +2599,8 @@
         <translation>Lommeboken er &lt;b&gt;kryptert&lt;/b&gt; og for tiden &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Raven can no longer continue safely and will quit.</source>
-        <translation>En fatal feil har inntruffet. Raven kan ikke lenger trygt fortsette, og må derfor avslutte.</translation>
+        <source>A fatal error occurred. Aurora Borealis can no longer continue safely and will quit.</source>
+        <translation>En fatal feil har inntruffet. Aurora Borealis kan ikke lenger trygt fortsette, og må derfor avslutte.</translation>
     </message>
 </context>
 <context>
@@ -2627,7 +2627,7 @@
     </message>
     <message>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aurora Borealis network.</source>
-        <translation>En valgfri melding å tilknytte betalingsetterspørringen, som vil bli vist når forespørselen er åpnet. Meldingen vil ikke bli sendt med betalingen over Raven-nettverket.</translation>
+        <translation>En valgfri melding å tilknytte betalingsetterspørringen, som vil bli vist når forespørselen er åpnet. Meldingen vil ikke bli sendt med betalingen over Aurora Borealis-nettverket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2819,8 +2819,8 @@
         <translation>Hvis den egendefinerte avgiften er satt til 1000 satoshis og transaksjonen bare er 250 bytes, da vil "per kilobyte" bare betale 250 satoshis i gebyr, mens "minstebeløp" betaler 1000 satoshis. For transaksjoner større enn en kilobyte vil begge betale for antall kilobyte.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
-        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter Raven-transaksjoner enn nettverket kan behandle.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
+        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter Aurora Borealis-transaksjoner enn nettverket kan behandle.</translation>
     </message>
     <message>
         <source>Recommended:</source>
@@ -2878,7 +2878,7 @@
     </message>
     <message>
         <source>A message that was attached to the auroraborealis: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aurora Borealis network.</source>
-        <translation>En melding som var tilknyttet ravenen: URI vil bli lagret med transaksjonen for din oversikt. Denne meldingen vil ikke bli sendt over Raven-nettverket.</translation>
+        <translation>En melding som var tilknyttet ravenen: URI vil bli lagret med transaksjonen for din oversikt. Denne meldingen vil ikke bli sendt over Aurora Borealis-nettverket.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -2901,8 +2901,8 @@
         <translation>Aktivum</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>Raven-adressen det skal overføres til</translation>
+        <source>The Aurora Borealis address to send the payment to</source>
+        <translation>Aurora Borealis-adressen det skal overføres til</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2985,7 +2985,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send Ravens</translation>
+        <translation>Send ABRS</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -3068,8 +3068,8 @@
         <translation>Skjul</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
-        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter Raven-transaksjoner enn nettverket kan behandle.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
+        <translation>Betaling av bare minimumsavgiften går helt fint så lenge det er mindre transaksjonsvolum enn plass i blokkene. Men vær klar over at dette kan ende opp i en transaksjon som aldri blir bekreftet når det er mer etterspørsel etter Aurora Borealis-transaksjoner enn nettverket kan behandle.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -3208,8 +3208,8 @@
         <translation>Betal kun nødvendig gebyr %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Advarsel: Ugyldig Ravenadresse</translation>
+        <source>Warning: Invalid Aurora Borealis address</source>
+        <translation>Advarsel: Ugyldig Aurora Borealisadresse</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -3247,8 +3247,8 @@
         <translation>Dette er en normal betaling.</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>Raven-adressen betalingen skal sendes til</translation>
+        <source>The Aurora Borealis address to send the payment to</source>
+        <translation>Aurora Borealis-adressen betalingen skal sendes til</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -3267,8 +3267,8 @@
         <translation>Fjern denne oppføringen</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less ravens than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Gebyret vil bli trukket fra beløpet som blir sendt. Mottakeren vil motta mindre ravens enn det du skriver inn i beløpsfeltet. Hvis det er valgt flere mottakere, deles gebyret likt.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less ABRS than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Gebyret vil bli trukket fra beløpet som blir sendt. Mottakeren vil motta mindre ABRS enn det du skriver inn i beløpsfeltet. Hvis det er valgt flere mottakere, deles gebyret likt.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -3300,7 +3300,7 @@
     </message>
     <message>
         <source>A message that was attached to the auroraborealis: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aurora Borealis network.</source>
-        <translation>En melding som var tilknyttet ravenen: URI vil bli lagret med transaksjonen for din oversikt. Denne meldingen vil ikke bli sendt over Raven-nettverket.</translation>
+        <translation>En melding som var tilknyttet ravenen: URI vil bli lagret med transaksjonen for din oversikt. Denne meldingen vil ikke bli sendt over Aurora Borealis-nettverket.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -3340,12 +3340,12 @@
         <translation>&amp;Signer Melding</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive ravens sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Du kan signere meldinger/avtaler med adresser for å bevise at du kan motta ravens sendt til dem. Vær forsiktig med å signere noe vagt eller tilfeldig, siden phishing-angrep kan prøve å lure deg til å signere din identitet over til dem. Bare signer fullt detaljerte utsagn som du er enig i.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive ABRS sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Du kan signere meldinger/avtaler med adresser for å bevise at du kan motta ABRS sendt til dem. Vær forsiktig med å signere noe vagt eller tilfeldig, siden phishing-angrep kan prøve å lure deg til å signere din identitet over til dem. Bare signer fullt detaljerte utsagn som du er enig i.</translation>
     </message>
     <message>
-        <source>The Raven address to sign the message with</source>
-        <translation>Raven-adressen meldingen skal signeres med</translation>
+        <source>The Aurora Borealis address to sign the message with</source>
+        <translation>Aurora Borealis-adressen meldingen skal signeres med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3376,8 +3376,8 @@
         <translation>Kopier valgt signatur til utklippstavle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Signer meldingen for å bevise at du eier denne Raven-adressen</translation>
+        <source>Sign the message to prove you own this Aurora Borealis address</source>
+        <translation>Signer meldingen for å bevise at du eier denne Aurora Borealis-adressen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3400,12 +3400,12 @@
         <translation>Skriv inn mottakerens adresse, melding (forsikre deg om at du kopier linjeskift, mellomrom, faner osv. nøyaktig) og underskrift nedenfor for å bekrefte meldingen. Vær forsiktig så du ikke leser mer ut av signaturen enn hva som er i den signerte meldingen i seg selv, for å unngå å bli lurt av et man-in-the-middle-angrep. Merk at dette bare beviser at den som signerer kan motta med adressen, dette beviser ikke hvem som har sendt transaksjoner!</translation>
     </message>
     <message>
-        <source>The Raven address the message was signed with</source>
-        <translation>Raven-adressen meldingen ble signert med</translation>
+        <source>The Aurora Borealis address the message was signed with</source>
+        <translation>Aurora Borealis-adressen meldingen ble signert med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Verifiser meldingen for å være sikker på at den ble signert av den angitte Raven-adressen</translation>
+        <source>Verify the message to ensure it was signed with the specified Aurora Borealis address</source>
+        <translation>Verifiser meldingen for å være sikker på at den ble signert av den angitte Aurora Borealis-adressen</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>

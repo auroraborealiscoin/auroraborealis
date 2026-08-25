@@ -62,11 +62,11 @@
         <translation>Адреси за получаване</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Aurora Borealis addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Това са адресите на получателите на плащания. Винаги проверявайте размера на сумата и адреса на получателя, преди да изпратите монети.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Aurora Borealis addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Това са Вашите Биткойн адреси,благодарение на които ще получавате плащания.Препоръчително е да използвате нови адреси за получаване на всяка транзакция.</translation>
     </message>
     <message>
@@ -168,7 +168,7 @@
         <translation>Потвърдете на шифрирането на портфейла</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RAVENS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ABRS&lt;/b&gt;!</source>
         <translation>ВНИМАНИЕ: Ако шифрирате вашият портфейл и изгубите паролата си, &lt;b&gt;ЩЕ ИЗГУБИТЕ ВСИЧКИТЕ СИ БИТКОИНИ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -405,7 +405,7 @@
         <translation>Избери...</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
         <translation>Плащане на минимална такса би било достатъчно при слаб трафик и обем на транзакциите по-малък от големината на блока. Бъдете внимателни, транзакцията може да не бъде потвърдена и изпълнена ако заявените Рейвън транзакции са повече от възможността на мрежата да обработи</translation>
     </message>
     <message>
@@ -429,7 +429,7 @@
         <translation>Заплати само изискуемата такса от %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid Aurora Borealis address</source>
         <translation>Внимание! Невалиден Рейвън адрес</translation>
     </message>
     <message>
@@ -676,7 +676,7 @@
         <translation>Редактиране на адрес за изпращане</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Raven address.</source>
+        <source>The entered address "%1" is not a valid Aurora Borealis address.</source>
         <translation>"%1" не е валиден Биткоин адрес.</translation>
     </message>
     <message>
@@ -829,8 +829,8 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Използване на директория ръчно</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1005,8 +1005,8 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Похарчете непотвърденото ресто</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматично отваряне на входящия Raven порт. Работи само с рутери поддържащи UPnP.</translation>
+        <source>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматично отваряне на входящия Aurora Borealis порт. Работи само с рутери поддържащи UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1257,7 +1257,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Сума</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
+        <source>Enter a Aurora Borealis address (e.g. %1)</source>
         <translation>Въведете Биткойн адрес (например: %1)</translation>
     </message>
     <message>
@@ -1602,7 +1602,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
     </message>
     <message>
         <source>Aurora Borealis Market Price</source>
-        <translation>Пазарна цена на Ravencoin</translation>
+        <translation>Пазарна цена на Aurora Borealis Coin</translation>
     </message>
     <message>
         <source>Brought to you by binance.com</source>
@@ -1629,7 +1629,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Повторно индексиране на блоковете на диска...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
+        <source>Send coins to a Aurora Borealis address</source>
         <translation>Изпращане към Биткоин адрес</translation>
     </message>
     <message>
@@ -1649,7 +1649,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Проверка на съобщение...</translation>
     </message>
     <message>
-        <source>Raven</source>
+        <source>Aurora Borealis</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -1677,11 +1677,11 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Шифроване на личните ключове,които принадлежат на портфейла Ви.</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
+        <source>Sign messages with your Aurora Borealis addresses to prove you own them</source>
         <translation>Пишете съобщения със своя Биткойн адрес за да докажете,че е ваш.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
+        <source>Verify messages to ensure they were signed with specified Aurora Borealis addresses</source>
         <translation>Потвърждаване на съобщения  за да се знае,че са написани с дадените Биткойн адреси.</translation>
     </message>
     <message>
@@ -1749,7 +1749,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Синхронизиран</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Raven command-line options</source>
+        <source>Show the %1 help message to get a list with possible Aurora Borealis command-line options</source>
         <translation>Покажи %1 помощно съобщение за да получиш лист с възможни Биткойн команди</translation>
     </message>
     <message>
@@ -2224,7 +2224,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Заявката за плащане е изтекла.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid Aurora Borealis address</source>
         <translation>Внимание: Невалиден Биткойн адрес</translation>
     </message>
     <message>
@@ -2340,7 +2340,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Копиране на текущия подпис</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
+        <source>Sign the message to prove you own this Aurora Borealis address</source>
         <translation>Подпишете съобщение като доказателство, че притежавате определен адрес</translation>
     </message>
     <message>
@@ -2356,7 +2356,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Провери</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
+        <source>Verify the message to ensure it was signed with the specified Aurora Borealis address</source>
         <translation>Проверете съобщение, за да сте сигурни че е подписано с определен Биткоин адрес</translation>
     </message>
     <message>

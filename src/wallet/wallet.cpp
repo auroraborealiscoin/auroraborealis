@@ -56,6 +56,12 @@ const uint32_t BIP32_HARDENED_KEY_LIMIT = 0x80000000;
 std::string my_words;
 std::string my_passphrase;
 
+// Temporary explicit BIP44 mnemonic-recovery coin-type override.
+// Valid values are below the BIP44 hardened-bit boundary.
+// -1 means no GUI recovery override is active.
+int64_t my_recovery_coin_type = -1;
+bool my_recovery_coin_type_set = false;
+
 /**
  * Fees smaller than this (in satoshi) are considered zero fee (for transaction creation)
  * Override with -mintxfee
@@ -201,6 +207,11 @@ void CWallet::DeriveNewChildKey(CWalletDB &walletdb, CKeyMetadata& metadata, CKe
         masterKey.SetSeed(g_vchSeed.data(), g_vchSeed.size());
     }
 
+    const uint32_t coinType = hdChain.GetCoinType();
+
+    if (hdChain.IsBip44() && !CHDChain::IsValidCoinType(coinType))
+        throw std::runtime_error(std::string(__func__) + ": invalid or uninitialized BIP44 coin type");
+
     // Select which chain we are using depending on if this is a change address or not
     uint32_t& nChildIndex = internal ? hdChain.nInternalChainCounter : hdChain.nExternalChainCounter;
 
@@ -213,7 +224,7 @@ void CWallet::DeriveNewChildKey(CWalletDB &walletdb, CKeyMetadata& metadata, CKe
 				// derive m/purpose'
 				masterKey.Derive(purposeKey, 44 | BIP32_HARDENED_KEY_LIMIT);
 				// derive m/purpose'/coin_type'
-				purposeKey.Derive(coinTypeKey, GetParams().ExtCoinType() | BIP32_HARDENED_KEY_LIMIT);
+				purposeKey.Derive(coinTypeKey, coinType | BIP32_HARDENED_KEY_LIMIT);
 				// derive m/purpose'/coin_type'/account'
 				coinTypeKey.Derive(accountKey, nAccountIndex | BIP32_HARDENED_KEY_LIMIT);
 				// derive m/purpose'/coin_type'/account'/change
@@ -240,7 +251,7 @@ void CWallet::DeriveNewChildKey(CWalletDB &walletdb, CKeyMetadata& metadata, CKe
     secret = childKey.key;
 
     if(hdChain.IsBip44())
-        metadata.hdKeypath = strprintf("m/44'/%d'/%d'/%d/%d", GetParams().ExtCoinType(), nAccountIndex, internal, nChildIndex - 1);
+        metadata.hdKeypath = strprintf("m/44'/%u'/%d'/%d/%d", coinType, nAccountIndex, internal, nChildIndex - 1);
     else
         metadata.hdKeypath = strprintf("m/%d'/%d'/%d'", nAccountIndex, internal, nChildIndex - 1);
 
@@ -1522,6 +1533,52 @@ CAmount CWallet::GetChange(const CTransaction& tx) const
     return nChange;
 }
 
+uint32_t ResolveBip44RecoveryCoinType(
+    int64_t defaultCoinType,
+    bool guiRecoveryCoinTypeSet,
+    int64_t guiRecoveryCoinType,
+    bool guiMnemonicPresent,
+    bool cliRecoveryCoinTypeSet,
+    const std::string& cliRecoveryCoinTypeValue,
+    bool cliMnemonicPresent)
+{
+    if (guiRecoveryCoinTypeSet && cliRecoveryCoinTypeSet)
+        throw std::runtime_error(
+            "conflicting GUI and CLI BIP44 recovery coin type overrides");
+
+    int64_t selectedCoinType = defaultCoinType;
+
+    if (cliRecoveryCoinTypeSet) {
+        if (!cliMnemonicPresent)
+            throw std::runtime_error(
+                "-mnemoniccointype requires -mnemonic");
+
+        int64_t parsedCoinType = -1;
+        if (!ParseInt64(cliRecoveryCoinTypeValue, &parsedCoinType))
+            throw std::runtime_error(
+                "invalid -mnemoniccointype value");
+
+        selectedCoinType = parsedCoinType;
+    }
+
+    if (guiRecoveryCoinTypeSet) {
+        if (!guiMnemonicPresent)
+            throw std::runtime_error(
+                "GUI recovery coin type override requires mnemonic words");
+
+        selectedCoinType = guiRecoveryCoinType;
+    }
+
+    if (selectedCoinType < 0 ||
+        static_cast<uint64_t>(selectedCoinType) >=
+            CHDChain::BIP44_HARDENED_LIMIT)
+        throw std::runtime_error(
+            "invalid BIP44 recovery/default coin type");
+
+    return static_cast<uint32_t>(selectedCoinType);
+}
+
+
 CPubKey CWallet::GenerateNewSeed()
 {
     // If bip44 is not set to true on wallet creation
@@ -1534,6 +1591,34 @@ CPubKey CWallet::GenerateNewSeed()
 
     CHDChain newHdChain(this);
 	newHdChain.UseBip44(hdChain.IsBip44());
+
+    const std::string cliMnemonic =
+        gArgs.GetArg("-mnemonic", "");
+
+    const bool cliRecoveryCoinTypeSet =
+        gArgs.IsArgSet("-mnemoniccointype");
+
+    // Consume GUI recovery state before the resolver or any later
+    // wallet-creation operation can throw.
+    const bool guiRecoveryCoinTypeSet =
+        my_recovery_coin_type_set;
+    const int64_t guiRecoveryCoinType =
+        my_recovery_coin_type;
+
+    my_recovery_coin_type_set = false;
+    my_recovery_coin_type = -1;
+
+    const uint32_t selectedCoinType =
+        ResolveBip44RecoveryCoinType(
+            GetParams().ExtCoinType(),
+            guiRecoveryCoinTypeSet,
+            guiRecoveryCoinType,
+            !my_words.empty(),
+            cliRecoveryCoinTypeSet,
+            gArgs.GetArg("-mnemoniccointype", ""),
+            !cliMnemonic.empty());
+
+    newHdChain.nCoinType = selectedCoinType;
 
 	// NOTE: empty mnemonic means "generate a new one for me"
 	std::string strMnemonic = gArgs.GetArg("-mnemonic", "");
@@ -1557,13 +1642,23 @@ CPubKey CWallet::GenerateNewSeed()
 
 	g_vchSeed = std::vector<unsigned char>(vchSeed.begin(), vchSeed.end());
 
-	CPubKey seed(vchSeed.begin(), vchSeed.end());
+	// BIP39 produces a 64-byte seed. Derive the BIP32 master key first;
+	// the HD seed identifier is the Hash160 of the BIP32 master pubkey.
+	CExtKey masterKey;
+	masterKey.SetSeed(vchSeed.data(), vchSeed.size());
+
+	CPubKey seed = masterKey.Neuter().pubkey;
+	if (!seed.IsFullyValid())
+	    throw std::runtime_error(std::string(__func__) + ": invalid BIP32 master public key");
+
 	newHdChain.seed_id = seed.GetID();
 
+    SetMinVersion(FEATURE_ABRS_BIP44_COIN_TYPE);
 	SetHDChain(newHdChain, false);
 
 	my_passphrase.clear();
 	my_words.clear();
+
 
 	return seed;
 
@@ -1613,6 +1708,19 @@ bool CWallet::SetHDSeed(const CPubKey& seed)
 bool CWallet::SetHDChain(const CHDChain& chain, bool memonly)
 {
     LOCK(cs_wallet);
+
+    // Fail closed on unsupported or malformed HD-chain metadata.
+    if (chain.nVersion < CHDChain::VERSION_HD_BASE ||
+        chain.nVersion > CHDChain::CURRENT_VERSION)
+        return false;
+
+    // v1/v2 are non-BIP44. Historical v3 BIP44 wallets resolve through
+    // GetCoinType() to LEGACY_ABRS_COIN_TYPE (10000). v4 uses its persisted
+    // nCoinType. Any BIP44 coin type with the hardened bit set is invalid.
+    if (chain.IsBip44() &&
+        !CHDChain::IsValidCoinType(chain.GetCoinType()))
+        return false;
+
     if (!memonly && !CWalletDB(*dbw).WriteHDChain(chain))
         throw std::runtime_error(std::string(__func__) + ": writing chain failed");
 

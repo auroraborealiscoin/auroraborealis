@@ -62,12 +62,12 @@
         <translation>Adresy odbioru</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Tutaj znajdują się adresy Raven na które wysyłasz płatności. Zawsze sprawdzaj ilość i adres odbiorcy przed wysyłką monet.</translation>
+        <source>These are your Aurora Borealis addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tutaj znajdują się adresy Aurora Borealis na które wysyłasz płatności. Zawsze sprawdzaj ilość i adres odbiorcy przed wysyłką monet.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>To są twoje adresy Raven do odbierania płatności. Zaleca się używanie nowych adresów odbiorczych dla każdej transakcji.</translation>
+        <source>These are your Aurora Borealis addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>To są twoje adresy Aurora Borealis do odbierania płatności. Zaleca się używanie nowych adresów odbiorczych dla każdej transakcji.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Potwierdź szyfrowanie portfela</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RAVENS&lt;/b&gt;!</source>
-        <translation>Uwaga: jeśli zaszyfrujesz swój portfel i zgubisz hasło &lt;b&gt;STRACISZ WSZYSTKIE SWOJE RAVENY&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ABRS&lt;/b&gt;!</source>
+        <translation>Uwaga: jeśli zaszyfrujesz swój portfel i zgubisz hasło &lt;b&gt;STRACISZ WSZYSTKIE SWOJE AURORA BOREALISY&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -180,8 +180,8 @@
         <translation>Portfel zaszyfrowany</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ravens from being stolen by malware infecting your computer.</source>
-        <translation>%1 zamknie się aby dokończyć proces szyfrowania. Pamiętaj, że szyfrowanie portfela nie zabezpiecza w pełni Twoich ravenów przed kradzieżą przez wirusy lub trojany mogące zainfekować Twój komputer.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ABRS from being stolen by malware infecting your computer.</source>
+        <translation>%1 zamknie się aby dokończyć proces szyfrowania. Pamiętaj, że szyfrowanie portfela nie zabezpiecza w pełni Twoich Aurora Borealisów przed kradzieżą przez wirusy lub trojany mogące zainfekować Twój komputer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -488,7 +488,7 @@
         <translation>na kilobajt</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
         <translation>Stosowanie minimalnej opłaty jest wystarczające tak długo jak objętość transakcji nie przekracza przestrzeni w bloku. Jednak proszę być świadomym, że ta oszczędność może doprowadzić do sytuacji, w której transakcja będzie oczekiwać na potwierdzenie w nieskończoność jeśli zapotrzebowanie na wykonanie transakcji przekroczy ilość, którą sieć będzie zdolna przetworzyć. </translation>
     </message>
     <message>
@@ -632,7 +632,7 @@
         <translation>Zapłać tylko kwotę wymaganej opłaty %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid Aurora Borealis address</source>
         <translation>Uwaga: Nieprawidłowy adres</translation>
     </message>
     <message>
@@ -945,7 +945,7 @@
     </message>
     <message>
         <source>The ABRS address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-        <translation>Adres RVN, na którym będzie przechowywane to aktywo.
+        <translation>Adres ABRS, na którym będzie przechowywane to aktywo.
 (Musisz być jego właścicielem). Zostaw puste miejsce jeśli chcesz utworzyć nowy adres. </translation>
     </message>
     <message>
@@ -1029,7 +1029,7 @@
         <translation>za kilobajt</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
         <translation>Stosowanie minimalnej opłaty jest wystarczające tak długo jak objętość transakcji nie przekracza przestrzeni w bloku. Jednak proszę być świadomym, że ta oszczędność może doprowadzić do sytuacji, w której transakcja będzie oczekiwać na potwierdzenie w nieskończoność jeśli zapotrzebowanie na wykonanie transakcji przekroczy ilość, którą sieć będzie zdolna przetworzyć. </translation>
     </message>
     <message>
@@ -1141,7 +1141,7 @@
         <translation>IPFS/Txid hash jest nieprawidłowy. Proszę użyć prawidłowego IPFS/Txid hash</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
+        <source>Warning: Invalid Aurora Borealis address</source>
         <translation>Uwaga: Nieprawidłowy adres</translation>
     </message>
     <message>
@@ -1260,8 +1260,8 @@
         <translation>Zmień adres wysyłania</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Raven address.</source>
-        <translation>Wprowadzony adres "%1" nie jest prawidłowym adresem Raven.</translation>
+        <source>The entered address "%1" is not a valid Aurora Borealis address.</source>
+        <translation>Wprowadzony adres "%1" nie jest prawidłowym adresem Aurora Borealis.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1477,8 +1477,8 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Użyj wybranego folderu dla danych</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1570,7 +1570,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Aurora Borealis network, as detailed below.</source>
-        <translation>Świeże transakcje mogą nie być jeszcze widoczne, a zatem saldo portfela może być nieprawidłowe. Te detale będą poprawne, gdy portfel zakończy synchronizację z siecią raven, zgodnie z poniższym opisem.</translation>
+        <translation>Świeże transakcje mogą nie być jeszcze widoczne, a zatem saldo portfela może być nieprawidłowe. Te detale będą poprawne, gdy portfel zakończy synchronizację z siecią Aurora Borealis, zgodnie z poniższym opisem.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1669,7 +1669,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
     </message>
     <message>
         <source>The asset (or ABRS) removed or added to balance.</source>
-        <translation>Aktywo (lub RVN) usunięte lub dodane do salda.</translation>
+        <translation>Aktywo (lub ABRS) usunięte lub dodane do salda.</translation>
     </message>
 </context>
 <context>
@@ -1782,8 +1782,8 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Wydaj niepotwierdzoną re&amp;sztę</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatycznie otwiera port klienta Raven na routerze. Ta opcja dzieła tylko jeśli twój router wspiera UPnP i jest ono włączone.</translation>
+        <source>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatycznie otwiera port klienta Aurora Borealis na routerze. Ta opcja dzieła tylko jeśli twój router wspiera UPnP i jest ono włączone.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1791,7 +1791,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
     </message>
     <message>
         <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
-        <translation>Połącz się z siecią Raven poprzez proxy SOCKS5.</translation>
+        <translation>Połącz się z siecią Aurora Borealis poprzez proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1827,7 +1827,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
     </message>
     <message>
         <source>Connect to the Aurora Borealis network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Połącz się z siecią Raven przy pomocy oddzielnego SOCKS5 proxy dla sieci TOR</translation>
+        <translation>Połącz się z siecią Aurora Borealis przy pomocy oddzielnego SOCKS5 proxy dla sieci TOR</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1930,7 +1930,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
-        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią raven, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
+        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią Aurora Borealis, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -2045,7 +2045,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
     </message>
     <message>
         <source>Cannot start auroraborealis: click-to-pay handler</source>
-        <translation>Nie można uruchomić protokołu raven: kliknij-by-zapłacić</translation>
+        <translation>Nie można uruchomić protokołu auroraborealis: kliknij-by-zapłacić</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -2134,7 +2134,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Kwota</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
+        <source>Enter a Aurora Borealis address (e.g. %1)</source>
         <translation>Wprowadź adres ravenowy (np. %1)</translation>
     </message>
     <message>
@@ -2594,7 +2594,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Ponowne indeksowanie bloków na dysku...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
+        <source>Send coins to a Aurora Borealis address</source>
         <translation>Wyślij monety na adres ravenowy</translation>
     </message>
     <message>
@@ -2614,8 +2614,8 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>&amp;Zweryfikuj wiadomość...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2642,11 +2642,11 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Szyfruj klucze prywatne, które są w twoim portfelu</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
+        <source>Sign messages with your Aurora Borealis addresses to prove you own them</source>
         <translation>Podpisz wiadomości swoim adresem aby udowodnić jego posiadanie</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
+        <source>Verify messages to ensure they were signed with specified Aurora Borealis addresses</source>
         <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana podanym adresem ravenowym.</translation>
     </message>
     <message>
@@ -2671,7 +2671,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
     </message>
     <message>
         <source>Open a auroraborealis: URI or payment request</source>
-        <translation>Otwórz URI raven: lub żądanie zapłaty</translation>
+        <translation>Otwórz URI auroraborealis: lub żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -2714,7 +2714,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Aktualny</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Raven command-line options</source>
+        <source>Show the %1 help message to get a list with possible Aurora Borealis command-line options</source>
         <translation>Pokaż pomoc %1 aby zobaczyć listę wszystkich opcji lnii poleceń.</translation>
     </message>
     <message>
@@ -2788,8 +2788,8 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Portfel jest &lt;b&gt;zaszyfrowany&lt;/b&gt; i obecnie &lt;b&gt;zablokowany&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Raven can no longer continue safely and will quit.</source>
-        <translation>Wystąpił krytyczny błąd. Raven nie jest w stanie kontynuować bezpiecznie i zostanie zamknięty.</translation>
+        <source>A fatal error occurred. Aurora Borealis can no longer continue safely and will quit.</source>
+        <translation>Wystąpił krytyczny błąd. Aurora Borealis nie jest w stanie kontynuować bezpiecznie i zostanie zamknięty.</translation>
     </message>
 </context>
 <context>
@@ -2816,7 +2816,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
     </message>
     <message>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aurora Borealis network.</source>
-        <translation>Opcjonalna wiadomość do dołączenia do żądania płatności, która będzie wyświetlana, gdy żądanie zostanie otwarte. Uwaga: wiadomość ta nie zostanie wysłana wraz z płatnością w sieci Raven.</translation>
+        <translation>Opcjonalna wiadomość do dołączenia do żądania płatności, która będzie wyświetlana, gdy żądanie zostanie otwarte. Uwaga: wiadomość ta nie zostanie wysłana wraz z płatnością w sieci Aurora Borealis.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -3230,8 +3230,8 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Aktywo:</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>Adres Raven dla przesłania płatności</translation>
+        <source>The Aurora Borealis address to send the payment to</source>
+        <translation>Adres Aurora Borealis dla przesłania płatności</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3357,7 +3357,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Ukryj</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
         <translation>Zapłacenie tylko minimalnej opłaty jest nadal wystarczające, dopóki jest mniejszy wolumen transakcji niż miejsca w blokach. Należy jednak mieć świadomość, że może skończyć się to niezatwierdzeniem nigdy transakcji, gdy jest większe zapotrzebowanie na transakcje ravena niż sieć może przetworzyć.</translation>
     </message>
     <message>
@@ -3493,8 +3493,8 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Zapłać tylko wymaganą opłatę w wysokości %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Ostrzeżenie: nieprawidłowy adres Raven</translation>
+        <source>Warning: Invalid Aurora Borealis address</source>
+        <translation>Ostrzeżenie: nieprawidłowy adres Aurora Borealis</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -3524,8 +3524,8 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>To jest standardowa płatność</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>Adres Raven gdzie wysłać płatność</translation>
+        <source>The Aurora Borealis address to send the payment to</source>
+        <translation>Adres Aurora Borealis gdzie wysłać płatność</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -3544,8 +3544,8 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Usuń ten wpis</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less ravens than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Opłata zostanie odjęta od kwoty wysyłane.Odbiorca otrzyma mniej niż ravens wpisz w polu kwoty. Jeśli wybrano kilku odbiorców, opłata jest podzielona równo.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less ABRS than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Opłata zostanie odjęta od kwoty wysyłane.Odbiorca otrzyma mniej niż ABRS wpisz w polu kwoty. Jeśli wybrano kilku odbiorców, opłata jest podzielona równo.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -3569,7 +3569,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
     </message>
     <message>
         <source>A message that was attached to the auroraborealis: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aurora Borealis network.</source>
-        <translation>Wiadomość, która została dołączona do URI raven:, która będzie przechowywana wraz z transakcją w celach informacyjnych. Uwaga: Ta wiadomość nie będzie rozsyłana w sieci Raven.</translation>
+        <translation>Wiadomość, która została dołączona do URI auroraborealis:, która będzie przechowywana wraz z transakcją w celach informacyjnych. Uwaga: Ta wiadomość nie będzie rozsyłana w sieci Aurora Borealis.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -3609,12 +3609,12 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Podpi&amp;sz Wiadomość</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive ravens sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive ABRS sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Możesz podpisywać wiadomości swoimi adresami aby udowodnić, że jesteś ich właścicielem. Uważaj, aby nie podpisywać niczego co wzbudza Twoje podejrzenia, ponieważ ktoś może stosować phishing próbując nakłonić Cię do ich podpisania. Akceptuj i podpisuj tylko w pełni zrozumiałe komunikaty i wiadomości.</translation>
     </message>
     <message>
-        <source>The Raven address to sign the message with</source>
-        <translation>Adres Raven, za pomocą którego podpisać wiadomość</translation>
+        <source>The Aurora Borealis address to sign the message with</source>
+        <translation>Adres Aurora Borealis, za pomocą którego podpisać wiadomość</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3645,7 +3645,7 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
         <translation>Kopiuje aktualny podpis do schowka systemowego</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
+        <source>Sign the message to prove you own this Aurora Borealis address</source>
         <translation>Podpisz wiadomość aby dowieść, że ten adres jest twój</translation>
     </message>
     <message>
@@ -3670,12 +3670,12 @@ Zalecane działanie: Zsynchronizuj całkowicie portfel zanim wyślesz transakcj�
 Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadawca posiada klucz do adresu, natomiast nie potwierdza to, że poprawne wysłanie jakiejkolwiek transakcji! </translation>
     </message>
     <message>
-        <source>The Raven address the message was signed with</source>
-        <translation>Adres Raven, którym została podpisana wiadomość</translation>
+        <source>The Aurora Borealis address the message was signed with</source>
+        <translation>Adres Aurora Borealis, którym została podpisana wiadomość</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana odpowiednim adresem Raven.</translation>
+        <source>Verify the message to ensure it was signed with the specified Aurora Borealis address</source>
+        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana odpowiednim adresem Aurora Borealis.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -4172,7 +4172,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     </message>
     <message>
         <source>Aurora Borealis Core</source>
-        <translation>Rdzeń Ravena</translation>
+        <translation>Rdzeń Aurora Borealisa</translation>
     </message>
     <message>
         <source>The %s developers</source>

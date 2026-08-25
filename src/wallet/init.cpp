@@ -30,6 +30,7 @@ std::string GetWalletHelpString(bool showDebug)
     strUsage += HelpMessageOpt("-mintxfee=<amt>", strprintf(_("Fees (in %s/kB) smaller than this are considered zero fee for transaction creation (default: %s)"), CURRENCY_UNIT, FormatMoney(DEFAULT_TRANSACTION_MINFEE)));
     strUsage += HelpMessageOpt("-mnemonic=<word-list>", strprintf(_("A space separated list of 12-words used to import a bip44 wallet")));
     strUsage += HelpMessageOpt("-mnemonicpassphrase=<passphrase>", strprintf(_("Passphrase securing your 12-word mnemonic word-list")));
+    strUsage += HelpMessageOpt("-mnemoniccointype=<n>", strprintf(_("Explicit BIP44 coin type to use only when recovering a wallet with -mnemonic. Use this when the historical wallet coin type is known.")));
     strUsage += HelpMessageOpt("-paytxfee=<amt>", strprintf(_("Fee (in %s/kB) to add to transactions you send (default: %s)"), CURRENCY_UNIT, FormatMoney(payTxFee.GetFeePerK())));
     strUsage += HelpMessageOpt("-rescan", _("Rescan the block chain for missing wallet transactions on startup"));
     strUsage += HelpMessageOpt("-salvagewallet", _("Attempt to recover private keys from a corrupt wallet on startup"));

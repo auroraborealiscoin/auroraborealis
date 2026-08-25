@@ -46,6 +46,22 @@ extern bool fWalletRbf;
 extern std::string my_words;
 extern std::string my_passphrase;
 
+// Temporary explicit BIP44 mnemonic-recovery coin-type override.
+// -1 means no GUI recovery override is active.
+extern int64_t my_recovery_coin_type;
+extern bool my_recovery_coin_type_set;
+
+// Resolve the BIP44 coin type for new-wallet creation or explicit mnemonic
+// recovery. No ArgsManager state is modified by this function.
+uint32_t ResolveBip44RecoveryCoinType(
+    int64_t defaultCoinType,
+    bool guiRecoveryCoinTypeSet,
+    int64_t guiRecoveryCoinType,
+    bool guiMnemonicPresent,
+    bool cliRecoveryCoinTypeSet,
+    const std::string& cliRecoveryCoinTypeValue,
+    bool cliMnemonicPresent);
+
 static const unsigned int DEFAULT_KEYPOOL_SIZE = 1000;
 //! -paytxfee default
 static const CAmount DEFAULT_TRANSACTION_FEE = 0;
@@ -101,6 +117,9 @@ enum WalletFeature
     FEATURE_HD_SPLIT = 10000, // Wallet with HD chain split (change outputs will use m/0'/1'/k)
 
     FEATURE_NO_DEFAULT_KEY = 10000, // Wallet without a default key written
+
+    // ABRS CHDChain v4: persistent BIP44 coin type.
+    FEATURE_ABRS_BIP44_COIN_TYPE = 4060200,
 
     FEATURE_LATEST = FEATURE_COMPRPUBKEY // HD is optional, use FEATURE_COMPRPUBKEY as latest version
 };

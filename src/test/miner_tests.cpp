@@ -311,86 +311,53 @@ BOOST_FIXTURE_TEST_SUITE(miner_tests, TestingSetup)
         // Simple block creation, nothing special yet:
         BOOST_CHECK(pblocktemplate = AssemblerForTest(chainparams).CreateNewBlock(scriptPubKey));
 
-        // We can't make transactions until we have inputs
-        // Therefore, load 100 blocks :)
+        // ABRS:
+        //
+        // The historical Raven test replayed a table of hard-coded MAIN
+        // block nonces after replacing each generated coinbase with a
+        // single-output coinbase. That replay cannot represent Aurora
+        // Borealis mainnet block #1 because ABRS consensus requires the
+        // Founder and Treasury premine outputs at height 1.
+        //
+        // This test already relies on CreateNewBlock() performing its own
+        // template self-validation. Verify the returned ABRS height-1
+        // template explicitly at the same pre-mining stage used by
+        // CreateNewBlock(): PoW and final Merkle-root checks are deferred
+        // until IncrementExtraNonce()/mining finalizes the block.
+        BOOST_REQUIRE(pblocktemplate);
+        BOOST_REQUIRE_EQUAL(chainActive.Height(), 0);
+
+        {
+            CValidationState state;
+
+            BOOST_CHECK(
+                TestBlockValidity(
+                    state,
+                    chainparams,
+                    pblocktemplate->block,
+                    chainActive.Tip(),
+                    false,
+                    false
+                )
+            );
+        }
+
+        BOOST_REQUIRE(!pblocktemplate->block.vtx.empty());
+        BOOST_REQUIRE(
+            pblocktemplate->block.vtx[0]->vout.size() >= 3U
+        );
+
+        // Detailed Founder/Treasury amounts, scripts and fail-closed
+        // rejection reasons are covered by the dedicated ABRS premine
+        // regression tests below.
+
+        // Kept only because historical code below the return is still
+        // compiled by C++ even though it is unreachable at runtime.
         int baseheight = 0;
         std::vector<CTransactionRef> txFirst;
 
-
-        for (unsigned int i = 0; i < sizeof(blockinfo) / sizeof(*blockinfo); ++i)
-        {
-            CBlock *pblock = &pblocktemplate->block; // pointer for convenience
-            pblock->nVersion = 1;
-            pblock->nTime = chainActive.Tip()->GetMedianTimePast() + 1;
-            CMutableTransaction txCoinbase(*pblock->vtx[0]);
-            txCoinbase.nVersion = 1;
-            txCoinbase.vin[0].scriptSig = CScript();
-            txCoinbase.vin[0].scriptSig.push_back(blockinfo[i].extranonce);
-            txCoinbase.vin[0].scriptSig.push_back(chainActive.Height());
-            txCoinbase.vout.resize(1); // Ignore the (optional) segwit commitment added by CreateNewBlock (as the hardcoded nonces don't account for this)
-            txCoinbase.vout[0].scriptPubKey = CScript();
-            pblock->vtx[0] = MakeTransactionRef(std::move(txCoinbase));
-            if (txFirst.size() == 0)
-                baseheight = chainActive.Height();
-            if (txFirst.size() < 4)
-                txFirst.push_back(pblock->vtx[0]);
-            pblock->hashMerkleRoot = BlockMerkleRoot(*pblock);
-            pblock->nNonce = blockinfo[i].nonce;
-            std::shared_ptr<const CBlock> shared_pblock = std::make_shared<const CBlock>(*pblock);
-            //BOOST_TEST_MESSAGE("Before process block");
-            BOOST_CHECK(ProcessNewBlock(chainparams, shared_pblock, true, nullptr));
-            pblock->hashPrevBlock = pblock->GetHash();
-        }
-
-//   while(true) {
-//		CBlock *pblock = &pblocktemplate->block; // pointer for convenience
-//		pblock->nVersion = 1;
-//		pblock->nTime = chainActive.Tip()->GetMedianTimePast()+1;
-////		CMutableTransaction txCoinbase(*pblock->vtx[0]);
-//		bool processBlock = false;
-//		unsigned int a = 17000000;
-//		while(!processBlock) {
-//			pblock->nNonce = a++;
-//			if(a % 1000000 == 0) {
-//				std::cout << "at count " << a << std::endl;
-//			}
-//
-//		for(int j=1; j<7; j++) {
-////			CBlock *pblock = &pblocktemplate->block; // pointer for convenience
-////			pblock->nVersion = 1;
-////			pblock->nTime = chainActive.Tip()->GetMedianTimePast()+1;
-//			CMutableTransaction txCoinbase(*pblock->vtx[0]);
-//			txCoinbase.nVersion = 1;
-//			txCoinbase.vin[0].scriptSig = CScript();
-//			txCoinbase.vin[0].scriptSig.push_back(j); //blockinfo[i].extranonce);
-//			txCoinbase.vin[0].scriptSig.push_back(chainActive.Height());
-//			txCoinbase.vout.resize(1); // Ignore the (optional) segwit commitment added by CreateNewBlock (as the hardcoded nonces don't account for this)
-//			txCoinbase.vout[0].scriptPubKey = CScript();
-//			pblock->vtx[0] = MakeTransactionRef(std::move(txCoinbase));
-//			if (txFirst.size() == 0)
-//				baseheight = chainActive.Height();
-//			if (txFirst.size() < 4)
-//				txFirst.push_back(pblock->vtx[0]);
-//			pblock->hashMerkleRoot = BlockMerkleRoot(*pblock);
-//			//pblock->nNonce = blockinfo[i].nonce;
-//			std::shared_ptr<const CBlock> shared_pblock = std::make_shared<const CBlock>(*pblock);
-//			processBlock = ProcessNewBlock(chainparams, shared_pblock, true, nullptr);
-//			//BOOST_CHECK(processBlock);
-//				if(processBlock) {
-//                    std::cout << "nounce is " << shared_pblock->nNonce << std::endl;
-//				    std::cout << "extra nounce is " << j << std::endl;
-//					break;
-//				}
-//		 }
-//		}
-//		  //  std::shared_ptr<const CBlock> shared_pblock = std::make_shared<const CBlock>(*pblock);
-//		  //  bool processBlock = ProcessNewBlock(chainparams, shared_pblock, true, nullptr);
-//		 //   BOOST_CHECK(ProcessNewBlock(chainparams, shared_pblock, true, nullptr));
-//			pblock->hashPrevBlock = pblock->GetHash();
-//	}
-
-
         return;
+
         //Just to make sure we can still make simple blocks
         BOOST_CHECK(pblocktemplate = AssemblerForTest(chainparams).CreateNewBlock(scriptPubKey));
 

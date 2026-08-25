@@ -357,7 +357,7 @@ UniValue distributereward(const JSONRPCRequest& request) {
     if (request.params.size() > 5) {
         change_address = request.params[5].get_str();
         if (!change_address.empty() && !IsValidDestinationString(change_address))
-            throw JSONRPCError(RPC_INVALID_PARAMETER, std::string("Invalid change address: Use a valid RVN address"));
+            throw JSONRPCError(RPC_INVALID_PARAMETER, std::string("Invalid change address: Use a valid ABRS address"));
     }
 
     AssetType ownershipAssetType;

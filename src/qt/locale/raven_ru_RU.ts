@@ -340,7 +340,7 @@
     </message>
     <message>
         <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
-        <translation>Подключится к сети Raven через SOCKS5 прокси.</translation>
+        <translation>Подключится к сети Aurora Borealis через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -411,8 +411,8 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation>Введите Raven-адрес (напр. %1)</translation>
+        <source>Enter a Aurora Borealis address (e.g. %1)</source>
+        <translation>Введите Aurora Borealis-адрес (напр. %1)</translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -583,7 +583,7 @@
         <translation>&amp;Проверить сообщение...</translation>
     </message>
     <message>
-        <source>Raven</source>
+        <source>Aurora Borealis</source>
         <translation>Aurora Borealis Core</translation>
     </message>
     <message>
@@ -830,7 +830,7 @@
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
-        <translation>raven-core</translation>
+        <translation>Aurora Borealis-core</translation>
     </message>
     <message>
         <source>Information</source>

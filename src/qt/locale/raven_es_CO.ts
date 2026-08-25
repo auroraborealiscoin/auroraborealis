@@ -215,8 +215,8 @@
         <translation>Abrir &amp;URL...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Enviando monedas a una dirección de Raven</translation>
+        <source>Send coins to a Aurora Borealis address</source>
+        <translation>Enviando monedas a una dirección de Aurora Borealis</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
@@ -231,8 +231,8 @@
         <translation>&amp;Verificar Mensaje...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>

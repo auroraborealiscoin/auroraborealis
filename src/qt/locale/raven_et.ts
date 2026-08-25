@@ -62,12 +62,12 @@
         <translation>Vastuvõtvad aadressid</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu Raven aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
+        <source>These are your Aurora Borealis addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Need on sinu Aurora Borealis aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Need on sinu Raven aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
+        <source>These are your Aurora Borealis addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Need on sinu Aurora Borealis aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Kinnita rahakoti krüpteerimine.</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RAVENS&lt;/b&gt;!</source>
-        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA RAVENID&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ABRS&lt;/b&gt;!</source>
+        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA AURORA BOREALISID&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -384,8 +384,8 @@
         <translation>Muuda saatvat aadressi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Raven address.</source>
-        <translation>Sisestatud aadress "%1" ei ole korrektne Raven aadress.</translation>
+        <source>The entered address "%1" is not a valid Aurora Borealis address.</source>
+        <translation>Sisestatud aadress "%1" ei ole korrektne Aurora Borealis aadress.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -535,8 +535,8 @@
         <translation>Ekspert</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Raveni kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Aurora Borealisi kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -903,8 +903,8 @@
         <translation>Kettal olevate blokkide re-indekseerimine...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Saada münte Raveni aadressile</translation>
+        <source>Send coins to a Aurora Borealis address</source>
+        <translation>Saada münte Aurora Borealisi aadressile</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -923,8 +923,8 @@
         <translation>&amp;Kontrolli sõnumit...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -951,12 +951,12 @@
         <translation>Krüpteeri oma rahakoti privaatvõtmed</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Raveni aadressiga</translation>
+        <source>Sign messages with your Aurora Borealis addresses to prove you own them</source>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Aurora Borealisi aadressiga</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Raveni aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified Aurora Borealis addresses</source>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Aurora Borealisi aadressiga</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1314,8 +1314,8 @@
         <translation>Maksepäring aegunud.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Hoiatus: Ebakorrektne Raven aadress</translation>
+        <source>Warning: Invalid Aurora Borealis address</source>
+        <translation>Hoiatus: Ebakorrektne Aurora Borealis aadress</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1386,8 +1386,8 @@
         <translation>&amp;Allkirjastamise teade</translation>
     </message>
     <message>
-        <source>The Raven address to sign the message with</source>
-        <translation>Raven aadress millega sõnum allkirjastada</translation>
+        <source>The Aurora Borealis address to sign the message with</source>
+        <translation>Aurora Borealis aadress millega sõnum allkirjastada</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1418,8 +1418,8 @@
         <translation>Kopeeri praegune signatuur vahemällu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Allkirjasta sõnum Raveni aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this Aurora Borealis address</source>
+        <translation>Allkirjasta sõnum Aurora Borealisi aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1438,12 +1438,12 @@
         <translation>&amp;Kinnita Sõnum</translation>
     </message>
     <message>
-        <source>The Raven address the message was signed with</source>
-        <translation>Raven aadress millega sõnum on allkirjastatud</translation>
+        <source>The Aurora Borealis address the message was signed with</source>
+        <translation>Aurora Borealis aadress millega sõnum on allkirjastatud</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Raveni aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified Aurora Borealis address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Aurora Borealisi aadressiga.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1728,7 +1728,7 @@
     </message>
     <message>
         <source>Aurora Borealis Core</source>
-        <translation>Raveni tuumik</translation>
+        <translation>Aurora Borealisi tuumik</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

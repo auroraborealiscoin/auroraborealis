@@ -62,12 +62,12 @@
         <translation>Alım adresleri</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödemeleri göndermek için kullanacağınız Raven adreslerinizdir. Raven yollamadan önce tutarı ve alıcının alım adresini her zaman kontrol ediniz.</translation>
+        <source>These are your Aurora Borealis addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödemeleri göndermek için kullanacağınız Aurora Borealis adreslerinizdir. Aurora Borealis yollamadan önce tutarı ve alıcının alım adresini her zaman kontrol ediniz.</translation>
     </message>
     <message>
-        <source>These are your Raven addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Bunlar ödemeleri almak için kullanacağınız Raven adreslerinizdir. Her işlem için yeni bir alım adresi kullanmanız tavsiye edilir.</translation>
+        <source>These are your Aurora Borealis addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Bunlar ödemeleri almak için kullanacağınız Aurora Borealis adreslerinizdir. Her işlem için yeni bir alım adresi kullanmanız tavsiye edilir.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Cüzdan şifrelemesini onayla</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RAVENS&lt;/b&gt;!</source>
-        <translation>Uyarı: Eğer cüzdanınızı şifreler ve parolanızı kaybederseniz &lt;b&gt;TÜM RAVENCOINLERİNİZİ KAYBEDECEKSİNİZ&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ABRS&lt;/b&gt;!</source>
+        <translation>Uyarı: Eğer cüzdanınızı şifreler ve parolanızı kaybederseniz &lt;b&gt;TÜM AURORA BOREALIS COINLERİNİZİ KAYBEDECEKSİNİZ&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -180,7 +180,7 @@
         <translation>Cüzdan şifrelendi</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ravens from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ABRS from being stolen by malware infecting your computer.</source>
         <translation>Şifreleme işleminin bitirilmesi için %1 kapatılacak. Her ne kadar cüzdanınızı şifreleseniz de şifrelemenin ravenlerinizi bilgisayarınıza bulaşan zararlılardan tam olarak koruyamayacağını unutmayın.</translation>
     </message>
     <message>
@@ -485,8 +485,8 @@
         <translation>per kilobyte</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
-        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
+        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -637,8 +637,8 @@
         <translation><numerusform>Estimated to begin confirmation within %n block.</numerusform><numerusform>Estimated to begin confirmation within %n blocks.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Warning: Invalid Raven address</translation>
+        <source>Warning: Invalid Aurora Borealis address</source>
+        <translation>Warning: Invalid Aurora Borealis address</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -739,7 +739,7 @@
     <name>CoinControlDialog</name>
     <message>
         <source>Coin Selection</source>
-        <translation>Raven Seçimi</translation>
+        <translation>Aurora Borealis Seçimi</translation>
     </message>
     <message>
         <source>Quantity:</source>
@@ -1053,8 +1053,8 @@
         <translation>per kilobyte</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
-        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
+        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -1177,8 +1177,8 @@
         <translation>IPFS/Txid hash is not valid. Please use a valid IPFS/Txid hash</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Warning: Invalid Raven address</translation>
+        <source>Warning: Invalid Aurora Borealis address</source>
+        <translation>Warning: Invalid Aurora Borealis address</translation>
     </message>
     <message>
         <source>Warning: Restricted Assets Reissuance requires an address</source>
@@ -1300,8 +1300,8 @@
         <translation>Gönderi adresini düzenle</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Raven address.</source>
-        <translation>Girilen "%1" adresi geçerli bir Raven adresi değildir.</translation>
+        <source>The entered address "%1" is not a valid Aurora Borealis address.</source>
+        <translation>Girilen "%1" adresi geçerli bir Aurora Borealis adresi değildir.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1529,8 +1529,8 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Özel bir veri klasörü kullan:</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -1541,8 +1541,8 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Approximately %1 GB of data will be stored in this directory.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Raven block chain.</source>
-        <translation>%1 will download and store a copy of the Raven block chain.</translation>
+        <source>%1 will download and store a copy of the Aurora Borealis block chain.</source>
+        <translation>%1 will download and store a copy of the Aurora Borealis block chain.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1583,8 +1583,8 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Select the type of wallet to create.</translation>
     </message>
     <message>
-        <source>Since no wallet.dat file was found in the Raven block chain data directory, a wallet file will be created.</source>
-        <translation>Since no wallet.dat file was found in the Raven block chain data directory, a wallet file will be created.</translation>
+        <source>Since no wallet.dat file was found in the Aurora Borealis block chain data directory, a wallet file will be created.</source>
+        <translation>Since no wallet.dat file was found in the Aurora Borealis block chain data directory, a wallet file will be created.</translation>
     </message>
     <message>
         <source>Please choose what you would like to do:</source>
@@ -1723,7 +1723,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Aurora Borealis network, as detailed below.</source>
-        <translation>Son işlemler henüz görünmeyebilir ve bu nedenle cüzdanınızın bakiyesi yanlış olabilir. Bu bilgiler, aşağıda detaylandırıldığı gibi, cüzdanınız raven ağı ile senkronizasyonunu tamamladığında doğru olacaktır. </translation>
+        <translation>Son işlemler henüz görünmeyebilir ve bu nedenle cüzdanınızın bakiyesi yanlış olabilir. Bu bilgiler, aşağıda detaylandırıldığı gibi, cüzdanınız Aurora Borealis ağı ile senkronizasyonunu tamamladığında doğru olacaktır. </translation>
     </message>
     <message>
         <source>Attempting to spend ABRS that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -1971,8 +1971,8 @@ They are not recoverable !!</translation>
         <translation>Doğrulanmamış para üstünü &amp;harca</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Yönlendiricide Raven istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
+        <source>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Yönlendiricide Aurora Borealis istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1988,7 +1988,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>Connect to the Aurora Borealis network through a SOCKS5 proxy.</source>
-        <translation>Raven ağına bir SOCKS5 vekil sunucusu aracılığıyla bağlan.</translation>
+        <translation>Aurora Borealis ağına bir SOCKS5 vekil sunucusu aracılığıyla bağlan.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -2024,7 +2024,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>Connect to the Aurora Borealis network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Raven ağına gizli Tor servisleri için ayrı bir SOCKS5 vekil sunucusu aracılığıyla bağlan.</translation>
+        <translation>Aurora Borealis ağına gizli Tor servisleri için ayrı bir SOCKS5 vekil sunucusu aracılığıyla bağlan.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -2060,7 +2060,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Raven gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
+        <translation>Aurora Borealis gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -2147,7 +2147,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Aurora Borealis network after a connection is established, but this process has not completed yet.</source>
-        <translation>Görüntülenen bilgiler güncel olmayabilir. Bağlantı kurulduğunda cüzdanınız otomatik olarak Raven ağı ile senkronize olur ancak bu işlem henüz tamamlanmamıştır.</translation>
+        <translation>Görüntülenen bilgiler güncel olmayabilir. Bağlantı kurulduğunda cüzdanınız otomatik olarak Aurora Borealis ağı ile senkronize olur ancak bu işlem henüz tamamlanmamıştır.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -2262,7 +2262,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>Cannot start auroraborealis: click-to-pay handler</source>
-        <translation>Raven başlatılamadı: tıkla-ve-öde yöneticisi</translation>
+        <translation>Aurora Borealis başlatılamadı: tıkla-ve-öde yöneticisi</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -2277,8 +2277,8 @@ They are not recoverable !!</translation>
         <translation>%1 ödeme adresi geçersizdir</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Raven address or malformed URI parameters.</source>
-        <translation>URI ayrıştırılamıyor! Bunun nedeni geçersiz bir Raven adresi veya hatalı biçimlendirilmiş URI değişkenleri olabilir.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Aurora Borealis address or malformed URI parameters.</source>
+        <translation>URI ayrıştırılamıyor! Bunun nedeni geçersiz bir Aurora Borealis adresi veya hatalı biçimlendirilmiş URI değişkenleri olabilir.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -2379,8 +2379,8 @@ They are not recoverable !!</translation>
         <translation>Tutar</translation>
     </message>
     <message>
-        <source>Enter a Raven address (e.g. %1)</source>
-        <translation>Bir Raven adresi giriniz (mesela %1)</translation>
+        <source>Enter a Aurora Borealis address (e.g. %1)</source>
+        <translation>Bir Aurora Borealis adresi giriniz (mesela %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -3015,8 +3015,8 @@ They are not recoverable !!</translation>
         <translation>Diskteki bloklar yeniden indeksleniyor...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Bir raven adresine raven gönder</translation>
+        <source>Send coins to a Aurora Borealis address</source>
+        <translation>Bir Aurora Borealis adresine Aurora Borealis gönder</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -3035,8 +3035,8 @@ They are not recoverable !!</translation>
         <translation>İletiyi &amp;kontrol et...</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -3063,12 +3063,12 @@ They are not recoverable !!</translation>
         <translation>Cüzdanınıza ait özel anahtarları şifreleyin</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
-        <translation>İletileri adreslerin size ait olduğunu ispatlamak için Raven adresleri ile imzala</translation>
+        <source>Sign messages with your Aurora Borealis addresses to prove you own them</source>
+        <translation>İletileri adreslerin size ait olduğunu ispatlamak için Aurora Borealis adresleri ile imzala</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Raven addresses</source>
-        <translation>Belirtilen Raven adresleri ile imzalandıklarından emin olmak için iletileri kontrol et</translation>
+        <source>Verify messages to ensure they were signed with specified Aurora Borealis addresses</source>
+        <translation>Belirtilen Aurora Borealis adresleri ile imzalandıklarından emin olmak için iletileri kontrol et</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -3080,7 +3080,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
-        <translation>Ödeme talep et (QR kodu ve raven URI'si oluşturur)</translation>
+        <translation>Ödeme talep et (QR kodu ve Aurora Borealis URI'si oluşturur)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -3092,7 +3092,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>Open a auroraborealis: URI or payment request</source>
-        <translation>Bir raven: bağlantısı ya da ödeme talebi aç</translation>
+        <translation>Bir auroraborealis: bağlantısı ya da ödeme talebi aç</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -3143,8 +3143,8 @@ They are not recoverable !!</translation>
         <translation>Güncel</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Raven command-line options</source>
-        <translation>Olası Raven komut satırı seçeneklerinin listesini görmek için %1 yardım mesajını göster</translation>
+        <source>Show the %1 help message to get a list with possible Aurora Borealis command-line options</source>
+        <translation>Olası Aurora Borealis komut satırı seçeneklerinin listesini görmek için %1 yardım mesajını göster</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -3221,8 +3221,8 @@ They are not recoverable !!</translation>
         <translation>Cüzdan &lt;b&gt;şifrelenmiştir&lt;/b&gt; ve şu anda &lt;b&gt;kilitlidir&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Raven can no longer continue safely and will quit.</source>
-        <translation>Ölümcül bir hata oluştu. Raven yazılımı artık güvenli bir şekilde çalışmaya devam edemediği için kapatılacaktır.</translation>
+        <source>A fatal error occurred. Aurora Borealis can no longer continue safely and will quit.</source>
+        <translation>Ölümcül bir hata oluştu. Aurora Borealis yazılımı artık güvenli bir şekilde çalışmaya devam edemediği için kapatılacaktır.</translation>
     </message>
 </context>
 <context>
@@ -3249,7 +3249,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Aurora Borealis network.</source>
-        <translation>Talep açıldığında gösterilecek, isteğinize dayalı, ödeme talebi ile ilişkilendirilecek bir ileti. Not: Bu ileti ödeme ile birlikte Raven ağı üzerinden gönderilmeyecektir.</translation>
+        <translation>Talep açıldığında gösterilecek, isteğinize dayalı, ödeme talebi ile ilişkilendirilecek bir ileti. Not: Bu ileti ödeme ile birlikte Aurora Borealis ağı üzerinden gönderilmeyecektir.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -3557,8 +3557,8 @@ They are not recoverable !!</translation>
         <translation>per kilobyte</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
-        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
+        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -3653,16 +3653,16 @@ They are not recoverable !!</translation>
         <translation>Quantity is to large. Max is 21,000,000,000</translation>
     </message>
     <message>
-        <source>Invalid Raven Destination Address</source>
-        <translation>Invalid Raven Destination Address</translation>
+        <source>Invalid Aurora Borealis Destination Address</source>
+        <translation>Invalid Aurora Borealis Destination Address</translation>
     </message>
     <message>
         <source>Warning: Restricted Assets Issuance requires an address</source>
         <translation>Warning: Restricted Assets Issuance requires an address</translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Warning: Invalid Raven address</translation>
+        <source>Warning: Invalid Aurora Borealis address</source>
+        <translation>Warning: Invalid Aurora Borealis address</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -3919,8 +3919,8 @@ They are not recoverable !!</translation>
         <translation>Asset:</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>The Raven address to send the payment to</translation>
+        <source>The Aurora Borealis address to send the payment to</source>
+        <translation>The Aurora Borealis address to send the payment to</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4023,7 +4023,7 @@ They are not recoverable !!</translation>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Raven yolla</translation>
+        <translation>Aurora Borealis yolla</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -4106,8 +4106,8 @@ They are not recoverable !!</translation>
         <translation>Gizle</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for raven transactions than the network can process.</source>
-        <translation>Gerekli olan en az ücreti ödemek, bloklarda boşluktan daha az işlem hacmi olduğu sürece bir sorun çıkarmaz. Fakat ağın işleyecebileceğinden daha çok raven işlemi talebi olduğunda bunun asla doğrulanmayan bir işlem olabileceğinin farkında olmalısınız.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Aurora Borealis transactions than the network can process.</source>
+        <translation>Gerekli olan en az ücreti ödemek, bloklarda boşluktan daha az işlem hacmi olduğu sürece bir sorun çıkarmaz. Fakat ağın işleyecebileceğinden daha çok Aurora Borealis işlemi talebi olduğunda bunun asla doğrulanmayan bir işlem olabileceğinin farkında olmalısınız.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -4223,7 +4223,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>Confirm send coins</source>
-        <translation>Raven gönderimini onaylayın</translation>
+        <translation>Aurora Borealis gönderimini onaylayın</translation>
     </message>
     <message>
         <source>The recipient address is not valid. Please recheck.</source>
@@ -4270,8 +4270,8 @@ They are not recoverable !!</translation>
         <translation><numerusform>Estimated to begin confirmation within %n block.</numerusform><numerusform>Estimated to begin confirmation within %n blocks.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Raven address</source>
-        <translation>Uyarı: geçersiz Raven adresi</translation>
+        <source>Warning: Invalid Aurora Borealis address</source>
+        <translation>Uyarı: geçersiz Aurora Borealis adresi</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -4309,8 +4309,8 @@ They are not recoverable !!</translation>
         <translation>Bu, normal bir ödemedir.</translation>
     </message>
     <message>
-        <source>The Raven address to send the payment to</source>
-        <translation>Ödemenin yollanacağı Raven adresi</translation>
+        <source>The Aurora Borealis address to send the payment to</source>
+        <translation>Ödemenin yollanacağı Aurora Borealis adresi</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -4329,8 +4329,8 @@ They are not recoverable !!</translation>
         <translation>Bu ögeyi kaldır</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less ravens than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Ücret yollanan tutardan alınacaktır. Alıcı tutar alanına girdiğinizden daha az raven alacaktır. Eğer birden çok alıcı seçiliyse ücret eşit olarak bölünecektir.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less ABRS than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Ücret yollanan tutardan alınacaktır. Alıcı tutar alanına girdiğinizden daha az Aurora Borealis alacaktır. Eğer birden çok alıcı seçiliyse ücret eşit olarak bölünecektir.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -4358,7 +4358,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>A message that was attached to the auroraborealis: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Aurora Borealis network.</source>
-        <translation>Referans için auroraborealis: URI'siyle iliştirilmiş işlemle birlikte depolanacak bir ileti. Not: Bu mesaj Raven ağı üzerinden gönderilmeyecektir.</translation>
+        <translation>Referans için auroraborealis: URI'siyle iliştirilmiş işlemle birlikte depolanacak bir ileti. Not: Bu mesaj Aurora Borealis ağı üzerinden gönderilmeyecektir.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -4398,12 +4398,12 @@ They are not recoverable !!</translation>
         <translation>İleti &amp;imzala</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive ravens sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive ABRS sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Adreslerinize yollanan ravenleri alabileceğiniz ispatlamak için adreslerinizle iletiler/anlaşmalar imzalayabilirsiniz. Oltalama saldırılarının kimliğinizi imzanızla elde etmeyi deneyebilecekleri için belirsiz ya da rastgele hiçbir şey imzalamamaya dikkat ediniz. Sadece ayrıntılı açıklaması olan ve tümüne katıldığınız ifadeleri imzalayınız.</translation>
     </message>
     <message>
-        <source>The Raven address to sign the message with</source>
-        <translation>İletinin imzalanmasında kullanılacak Raven adresi</translation>
+        <source>The Aurora Borealis address to sign the message with</source>
+        <translation>İletinin imzalanmasında kullanılacak Aurora Borealis adresi</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4434,8 +4434,8 @@ They are not recoverable !!</translation>
         <translation>Güncel imzayı sistem panosuna kopyala</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
-        <translation>Bu Raven adresinin sizin olduğunu ispatlamak için iletiyi imzalayın</translation>
+        <source>Sign the message to prove you own this Aurora Borealis address</source>
+        <translation>Bu Aurora Borealis adresinin sizin olduğunu ispatlamak için iletiyi imzalayın</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -4458,12 +4458,12 @@ They are not recoverable !!</translation>
         <translation>Alıcının adresini, iletiyi (satır sonları, boşluklar, sekmeler vs. karakterleri tam olarak kopyaladığınızdan emin olunuz) ve imzayı aşağıya giriniz. Bir ortadaki adam saldırısı tarafından kandırılmaya engel olmak için imzadan, imzalı iletinin içeriğini aşan bir anlam çıkarmamaya dikkat ediniz. Bunun sadece imzalayan tarafın adres ile alım yapabildiğini ispatladığını ve herhangi bir işlemin gönderi tarafını kanıtlayamayacağını unutmayınız!</translation>
     </message>
     <message>
-        <source>The Raven address the message was signed with</source>
-        <translation>İletinin imzalanmasında kullanılan Raven adresi</translation>
+        <source>The Aurora Borealis address the message was signed with</source>
+        <translation>İletinin imzalanmasında kullanılan Aurora Borealis adresi</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Raven address</source>
-        <translation>Belirtilen Raven adresi ile imzalandığını doğrulamak için iletiyi kontrol et</translation>
+        <source>Verify the message to ensure it was signed with the specified Aurora Borealis address</source>
+        <translation>Belirtilen Aurora Borealis adresi ile imzalandığını doğrulamak için iletiyi kontrol et</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -4688,7 +4688,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Oluşturulan raven'lerin harcanabilmelerinden önce %1 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda, blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu "kabul edilmedi" olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
+        <translation>Oluşturulan Aurora Borealis'lerin harcanabilmelerinden önce %1 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda, blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu "kabul edilmedi" olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
     </message>
     <message>
         <source>Net ABRS amount</source>
@@ -5078,7 +5078,7 @@ They are not recoverable !!</translation>
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Raveni Gönder</translation>
+        <translation>Aurora Borealisi Gönder</translation>
     </message>
     </context>
 <context>
@@ -5180,7 +5180,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>Aurora Borealis Core</source>
-        <translation>Raven Çekirdeği</translation>
+        <translation>Aurora Borealis Çekirdeği</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -5264,7 +5264,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Bu kararlı sürümden önceki bir deneme sürümüdür. - risklerini bilerek kullanma sorumluluğu sizdedir - raven oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
+        <translation>Bu kararlı sürümden önceki bir deneme sürümüdür. - risklerini bilerek kullanma sorumluluğu sizdedir - Aurora Borealis oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
     </message>
     <message>
         <source>This is the transaction fee you may discard if change is smaller than dust at this level</source>
@@ -5728,7 +5728,7 @@ They are not recoverable !!</translation>
     </message>
     <message>
         <source>The transaction amount is too small to pay the fee</source>
-        <translation>İşlemdeki raven tutarı ücreti ödemek için çok düşük</translation>
+        <translation>İşlemdeki Aurora Borealis tutarı ücreti ödemek için çok düşük</translation>
     </message>
     <message>
         <source>This is experimental software.</source>

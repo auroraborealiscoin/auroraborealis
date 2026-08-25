@@ -211,7 +211,7 @@
         <translation>Құпия сөзді өзгерту</translation>
     </message>
     <message>
-        <source>Raven</source>
+        <source>Aurora Borealis</source>
         <translation>Биткоин</translation>
     </message>
     <message>

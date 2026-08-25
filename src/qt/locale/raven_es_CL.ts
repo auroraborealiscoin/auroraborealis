@@ -216,8 +216,8 @@
         <translation>experto</translation>
     </message>
     <message>
-        <source>Automatically open the Raven client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abre automáticamente el puerto del cliente Raven en el router. Esto funciona solo cuando tu router es compatible con UPnP y está habilitado.</translation>
+        <source>Automatically open the Aurora Borealis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abre automáticamente el puerto del cliente Aurora Borealis en el router. Esto funciona solo cuando tu router es compatible con UPnP y está habilitado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -462,8 +462,8 @@
         <translation>Cargando el index de bloques...</translation>
     </message>
     <message>
-        <source>Send coins to a Raven address</source>
-        <translation>Enviar monedas a una dirección raven</translation>
+        <source>Send coins to a Aurora Borealis address</source>
+        <translation>Enviar monedas a una dirección Aurora Borealis</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -482,8 +482,8 @@
         <translation>Verificar mensaje....</translation>
     </message>
     <message>
-        <source>Raven</source>
-        <translation>Raven</translation>
+        <source>Aurora Borealis</source>
+        <translation>Aurora Borealis</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -502,7 +502,7 @@
         <translation>&amp;Mostrar/Ocultar</translation>
     </message>
     <message>
-        <source>Sign messages with your Raven addresses to prove you own them</source>
+        <source>Sign messages with your Aurora Borealis addresses to prove you own them</source>
         <translation>Firmar un mensaje para provar que usted es dueño de esta dirección</translation>
     </message>
     <message>
@@ -515,7 +515,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and auroraborealis: URIs)</source>
-        <translation>Pide pagos (genera codigos QR and raven: URls)</translation>
+        <translation>Pide pagos (genera codigos QR and auroraborealis: URls)</translation>
     </message>
     <message>
         <source>Error</source>
@@ -704,7 +704,7 @@
         <translation>Firma</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Raven address</source>
+        <source>Sign the message to prove you own this Aurora Borealis address</source>
         <translation>Firmar un mensjage para probar que usted es dueño de esta dirección</translation>
     </message>
     <message>
@@ -790,7 +790,7 @@
     </message>
     <message>
         <source>Aurora Borealis Core</source>
-        <translation>raven core</translation>
+        <translation>Aurora Borealis core</translation>
     </message>
     <message>
         <source>Error loading block database</source>

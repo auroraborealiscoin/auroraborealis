@@ -221,6 +221,25 @@ void MnemonicDialog3::on_acceptButton_clicked()
     std::string my_passphrase;
     int my_languageSelected;
 #endif
+    const int recoveryProfile =
+        ui->recoveryCoinTypeCombo->currentIndex();
+
+    if (recoveryProfile == 0) {
+        QMessageBox::warning(
+            this,
+            tr("Recovery profile required"),
+            tr("Select which Aurora Borealis wallet profile created this mnemonic before continuing."));
+        return;
+    }
+
+    if (recoveryProfile != 1 && recoveryProfile != 2) {
+        QMessageBox::critical(
+            this,
+            tr("Invalid recovery profile"),
+            tr("The selected wallet recovery profile is invalid."));
+        return;
+    }
+
     my_words = words;
     my_passphrase = passphrase;
     int my_languageSelected = languageSelected;
@@ -245,8 +264,18 @@ void MnemonicDialog3::on_acceptButton_clicked()
          
         my_words.clear();
         my_passphrase.clear();
+        my_recovery_coin_type_set = false;
+        my_recovery_coin_type = -1;
         return;
     }
+
+    // Publish recovery state only after mnemonic validation.
+    // GenerateNewSeed consumes and clears it immediately.
+    my_recovery_coin_type_set = (recoveryProfile == 2);
+    my_recovery_coin_type =
+        my_recovery_coin_type_set
+            ? CHDChain::LEGACY_ABRS_COIN_TYPE
+            : -1;
 
     Q_EMIT allCloseRequested();
 };

@@ -11,6 +11,8 @@
 #include "util.h"
 #include "utilstrencodings.h"
 #include "test/test_raven.h"
+#include "wallet/walletdb.h"
+#include "streams.h"
 
 #include <string>
 #include <vector>
@@ -173,6 +175,189 @@ BOOST_FIXTURE_TEST_SUITE(bip32_tests, BasicTestingSetup)
     {
         BOOST_TEST_MESSAGE("Running BIP32 Test 3");
         RunTest(test3);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_bip39_master_pubkey_seed_id_regression)
+    {
+        BOOST_TEST_MESSAGE("ABRS BIP39 seed_id regression: Hash160(BIP32 master pubkey)");
+
+        // Synthetic 64-byte inputs only. These are not real wallet seeds.
+        const std::vector<unsigned char> seedA = ParseHex(
+            "000102030405060708090a0b0c0d0e0f"
+            "101112131415161718191a1b1c1d1e1f"
+            "202122232425262728292a2b2c2d2e2f"
+            "303132333435363738393a3b3c3d3e3f");
+
+        const std::vector<unsigned char> seedB = ParseHex(
+            "fffefdfcfbfaf9f8f7f6f5f4f3f2f1f0"
+            "efeeedecebeae9e8e7e6e5e4e3e2e1e0"
+            "dfdedddcdbdad9d8d7d6d5d4d3d2d1d0"
+            "cfcecdcccbcac9c8c7c6c5c4c3c2c1c0");
+
+        BOOST_REQUIRE_EQUAL(seedA.size(), 64U);
+        BOOST_REQUIRE_EQUAL(seedB.size(), 64U);
+        BOOST_REQUIRE(seedA != seedB);
+
+        CExtKey masterA;
+        CExtKey masterB;
+
+        masterA.SetSeed(seedA.data(), seedA.size());
+        masterB.SetSeed(seedB.data(), seedB.size());
+
+        const CPubKey pubA = masterA.Neuter().pubkey;
+        const CPubKey pubB = masterB.Neuter().pubkey;
+
+        BOOST_REQUIRE(pubA.IsFullyValid());
+        BOOST_REQUIRE(pubB.IsFullyValid());
+
+        const CKeyID idA = pubA.GetID();
+        const CKeyID idB = pubB.GetID();
+
+        BOOST_CHECK(idA != idB);
+
+        const std::string brokenConstant =
+            "cb9f3b7c6fb1cf2c13a40637c189bdd066a272b4";
+
+        BOOST_CHECK(idA.GetHex() != brokenConstant);
+        BOOST_CHECK(idB.GetHex() != brokenConstant);
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_chdchain_v3_legacy_coin_type_deserialize)
+    {
+        BOOST_TEST_MESSAGE("ABRS CHDChain v3 compatibility: implicit legacy coin type 10000");
+
+        CHDChain legacy(nullptr);
+        legacy.nVersion = CHDChain::VERSION_HD_BIP44_BIP39;
+        legacy.nExternalChainCounter = 17;
+        legacy.nInternalChainCounter = 9;
+        legacy.UseBip44(true);
+
+        CDataStream encoded(SER_DISK, CLIENT_VERSION);
+        encoded << legacy;
+
+        // Build the exact historical v3 byte representation manually.
+        CDataStream expected(SER_DISK, CLIENT_VERSION);
+        expected << legacy.nVersion;
+        expected << legacy.nExternalChainCounter;
+        expected << legacy.seed_id;
+        expected << legacy.nInternalChainCounter;
+        expected << legacy.bUse_bip44;
+
+        BOOST_CHECK_EQUAL_COLLECTIONS(
+            encoded.begin(), encoded.end(),
+            expected.begin(), expected.end());
+
+        CHDChain decoded(nullptr);
+        decoded.nCoinType = 0xA5A5A5A5U;
+
+        encoded >> decoded;
+
+        BOOST_CHECK_EQUAL(decoded.nVersion, CHDChain::VERSION_HD_BIP44_BIP39);
+        BOOST_CHECK_EQUAL(decoded.nExternalChainCounter, 17U);
+        BOOST_CHECK_EQUAL(decoded.nInternalChainCounter, 9U);
+        BOOST_CHECK(decoded.IsBip44());
+
+        // v3 has no serialized coin-type field. Compatibility logic must
+        // resolve every historical ABRS BIP44 v3 wallet to legacy 10000.
+        BOOST_CHECK_EQUAL(
+            decoded.GetCoinType(),
+            CHDChain::LEGACY_ABRS_COIN_TYPE);
+
+        // Deserializing v3 must not consume or invent a v4 coin-type field.
+        BOOST_CHECK_EQUAL(decoded.nCoinType, 0xA5A5A5A5U);
+        BOOST_CHECK(encoded.empty());
+    }
+
+    BOOST_AUTO_TEST_CASE(abrs_chdchain_v4_coin_type_roundtrip)
+    {
+        BOOST_TEST_MESSAGE("ABRS CHDChain v4 compatibility: persistent BIP44 coin type");
+
+        CHDChain original(nullptr);
+        original.nVersion = CHDChain::VERSION_HD_BIP44_COIN_TYPE;
+        original.nExternalChainCounter = 23;
+        original.nInternalChainCounter = 11;
+        original.UseBip44(true);
+        original.nCoinType = 424242U;
+
+        CDataStream v4(SER_DISK, CLIENT_VERSION);
+        v4 << original;
+
+        // Serialize the same logical state as historical v3.
+        CHDChain legacy(nullptr);
+        legacy.nVersion = CHDChain::VERSION_HD_BIP44_BIP39;
+        legacy.nExternalChainCounter = original.nExternalChainCounter;
+        legacy.nInternalChainCounter = original.nInternalChainCounter;
+        legacy.seed_id = original.seed_id;
+        legacy.UseBip44(true);
+
+        CDataStream v3(SER_DISK, CLIENT_VERSION);
+        v3 << legacy;
+
+        // v4 adds exactly one uint32_t coin-type field.
+        BOOST_CHECK_EQUAL(v4.size(), v3.size() + sizeof(uint32_t));
+
+        CHDChain decoded(nullptr);
+        v4 >> decoded;
+
+        BOOST_CHECK_EQUAL(decoded.nVersion, CHDChain::VERSION_HD_BIP44_COIN_TYPE);
+        BOOST_CHECK_EQUAL(decoded.nExternalChainCounter, 23U);
+        BOOST_CHECK_EQUAL(decoded.nInternalChainCounter, 11U);
+        BOOST_CHECK(decoded.IsBip44());
+        BOOST_CHECK_EQUAL(decoded.nCoinType, 424242U);
+        BOOST_CHECK_EQUAL(decoded.GetCoinType(), 424242U);
+        BOOST_CHECK(v4.empty());
+    }
+
+
+    BOOST_AUTO_TEST_CASE(abrs_chdchain_coin_type_fail_closed_boundaries)
+    {
+        BOOST_TEST_MESSAGE("ABRS CHDChain coin type fail-closed sentinel and boundaries");
+
+        CHDChain unset(nullptr);
+        unset.nVersion = CHDChain::VERSION_HD_BIP44_COIN_TYPE;
+        unset.UseBip44(true);
+
+        // A fresh v4 CHDChain must never silently resolve to coin type 0.
+        BOOST_CHECK_EQUAL(
+            unset.nCoinType,
+            CHDChain::BIP44_COIN_TYPE_UNSET);
+
+        BOOST_CHECK_EQUAL(
+            unset.GetCoinType(),
+            CHDChain::BIP44_COIN_TYPE_UNSET);
+
+        BOOST_CHECK(
+            !CHDChain::IsValidCoinType(
+                CHDChain::BIP44_COIN_TYPE_UNSET));
+
+        // BIP44 child-number space is valid only below the hardened bit.
+        BOOST_CHECK(CHDChain::IsValidCoinType(0U));
+        BOOST_CHECK(
+            CHDChain::IsValidCoinType(
+                CHDChain::BIP44_HARDENED_LIMIT - 1U));
+
+        BOOST_CHECK(
+            !CHDChain::IsValidCoinType(
+                CHDChain::BIP44_HARDENED_LIMIT));
+
+        BOOST_CHECK(
+            !CHDChain::IsValidCoinType(0xffffffffU));
+
+        // Historical v3 BIP44 wallets remain explicitly mapped to
+        // the ABRS legacy coin type, despite having no persisted field.
+        CHDChain legacy(nullptr);
+        legacy.nVersion = CHDChain::VERSION_HD_BIP44_BIP39;
+        legacy.UseBip44(true);
+
+        BOOST_CHECK_EQUAL(
+            legacy.GetCoinType(),
+            CHDChain::LEGACY_ABRS_COIN_TYPE);
+
+        BOOST_CHECK(
+            CHDChain::IsValidCoinType(
+                legacy.GetCoinType()));
     }
 
 BOOST_AUTO_TEST_SUITE_END()
