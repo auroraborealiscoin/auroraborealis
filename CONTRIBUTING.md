@@ -95,5 +95,11 @@ Ticker: ABRS
 Website:
 https://auroraborealiscoin.com/
 
-Pool / Explorer:
-https://auroraborealiscoin.org/
+Explorer:
+https://explorer.auroraborealiscoin.com/
+
+Mining Pool:
+https://pool.auroraborealiscoin.com/
+
+Faucet:
+https://faucet.auroraborealiscoin.com/

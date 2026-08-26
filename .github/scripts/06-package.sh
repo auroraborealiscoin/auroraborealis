@@ -34,9 +34,9 @@ echo "GITHUB_BASE_REF: ${GITHUB_BASE_REF}"
 echo "----------------------------------------"
 
 if [[ ${GITHUB_BASE_REF} =~ "release" ]]; then
-    DISTNAME="raven-${VERSION}"
+    DISTNAME="auroraborealis-${VERSION}"
 else
-    DISTNAME="raven-${VERSION}-${SHORTHASH}"
+    DISTNAME="auroraborealis-${VERSION}-${SHORTHASH}"
 fi
 
 echo "----------------------------------------"
@@ -123,7 +123,7 @@ elif [[ ${OS} == "osx" ]]; then
 
     make deploy
 
-    ${GITHUB_WORKSPACE}/depends/x86_64-apple-darwin14/native/bin/dmg dmg "Raven-Core.dmg" ${RELEASE_LOCATION}/${DISTNAME}-osx-unsigned.dmg
+    ${GITHUB_WORKSPACE}/depends/x86_64-apple-darwin14/native/bin/dmg dmg "AuroraBorealis-Core.dmg" ${RELEASE_LOCATION}/${DISTNAME}-osx-unsigned.dmg
 
     cd ${STAGE_DIR}
     find . -name "lib*.la" -delete

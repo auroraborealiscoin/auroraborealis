@@ -1,14 +1,17 @@
-name: Build Raven
+name: Build Aurora Borealis Core
 
 on:
   push:
     branches:
+      - main
+      - abrs-v0.1.0
       - release*
   pull_request:
     branches:
-      - master
-      - develop
+      - main
+      - abrs-v0.1.0
       - release*
+  workflow_dispatch:
 #    paths-ignore:
 #      - 'binaries/**'
 #      - 'community/**'
@@ -93,7 +96,7 @@ jobs:
       run: ${SCRIPTS}/04-configure-build.sh ${{ MATRIX.OS }} ${{ GITHUB.WORKSPACE }}
 
     - if: ${{ needs.check-jobs.outputs.should_skip != 'true' }}
-      name: Build Raven
+      name: Build Aurora Borealis Core
       run: make -j2
 
     - if: ${{ needs.check-jobs.outputs.should_skip != 'true' }}

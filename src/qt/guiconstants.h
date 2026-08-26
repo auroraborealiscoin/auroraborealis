@@ -115,12 +115,12 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "AuroraBorealis"
-#define QAPP_ORG_DOMAIN "raven.org"
+#define QAPP_ORG_DOMAIN "auroraborealiscoin.com"
 #define QAPP_APP_NAME_DEFAULT "AuroraBorealis-Qt"
 #define QAPP_APP_NAME_TESTNET "AuroraBorealis-Qt-testnet"
 
 /* Default third party browser urls */
-// ABRS official pool/explorer: https://auroraborealiscoin.org/
+// ABRS official services: https://auroraborealiscoin.com/
 #define DEFAULT_THIRD_PARTY_BROWSERS ""
 
 /* Default IPFS viewer */

@@ -9,7 +9,9 @@
 **Ticker:** ABRS
 **Core:** Aurora Borealis Core
 **Official website:** https://auroraborealiscoin.com/
-**Pool / Explorer:** https://auroraborealiscoin.org/
+**Explorer:** https://explorer.auroraborealiscoin.com/
+**Mining Pool:** https://pool.auroraborealiscoin.com/
+**Faucet:** https://faucet.auroraborealiscoin.com/
 
 ---
 
@@ -33,7 +35,7 @@ Aurora Borealis Core provides:
 
 ## Current Release
 
-### Aurora Borealis Core v0.1.1
+### Aurora Borealis Core 4.6.2
 
 The current Linux x86-64 release includes:
 
@@ -79,6 +81,14 @@ Treasury address:
 
 `AeQqDnuyPc1dZt4HRLapm9Vv3zxuBj6pDx`
 
+Consensus-derived supply figures:
+
+- Mining emission: approximately **3,779,999,999.727 ABRS**
+- Total theoretical created supply: approximately **4,199,999,999.727 ABRS**
+- Unspendable genesis output: **900 ABRS**
+- Maximum spendable supply: approximately **4,199,999,099.727 ABRS**
+- Premine: approximately **10.000002%** of maximum spendable supply
+
 ---
 
 ## Building
@@ -87,3 +97,24 @@ Treasury address:
 ./autogen.sh
 ./configure
 make
+---
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for security reporting guidance.
+
+## Roadmap
+
+See [ROADMAP.md](ROADMAP.md).
+
+## Whitepaper
+
+The official Aurora Borealis Coin whitepaper will be maintained in this repository.
+
+## Open-Source Lineage
+
+Aurora Borealis Core contains code derived from earlier open-source blockchain projects, including Ravencoin Core and Bitcoin Core.
+
+Aurora Borealis Coin is an independent network with its own consensus parameters, chain history, network identity, infrastructure and economic parameters.
+
+Upstream copyright and license notices are retained where required.
