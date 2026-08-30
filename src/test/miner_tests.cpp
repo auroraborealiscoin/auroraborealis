@@ -872,4 +872,79 @@ BOOST_FIXTURE_TEST_SUITE(miner_tests, TestingSetup)
         }
     }
 
+
+BOOST_AUTO_TEST_CASE(abrs_kawpow_nheight_consensus_test)
+{
+    BOOST_TEST_MESSAGE("Testing ABRS KAWPOW serialized nHeight consensus validation");
+
+    auto chainParams = CreateChainParams(CBaseChainParams::MAIN);
+    CChainParams& chainparams = *chainParams;
+
+    const CScript minerScript =
+        CScript() << ParseHex(
+            "04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb"
+            "649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f"
+        ) << OP_CHECKSIG;
+
+    LOCK(cs_main);
+
+    // TestingSetup mainnet begins at genesis.
+    BOOST_REQUIRE_EQUAL(chainActive.Height(), 0);
+
+    std::unique_ptr<CBlockTemplate> blockTemplate =
+        AssemblerForTest(chainparams).CreateNewBlock(minerScript);
+
+    BOOST_REQUIRE(blockTemplate);
+
+    const CBlock validBlock = blockTemplate->block;
+
+    // The template for block #1 must declare height 1.
+    BOOST_REQUIRE_EQUAL(validBlock.nHeight, 1U);
+
+    // Baseline: correct serialized nHeight must pass contextual validation.
+    {
+        CValidationState state;
+
+        BOOST_CHECK(
+            TestBlockValidity(
+                state,
+                chainparams,
+                validBlock,
+                chainActive.Tip(),
+                false,
+                false
+            )
+        );
+
+        BOOST_CHECK(
+            state.GetRejectReason() != "bad-kawpow-height"
+        );
+    }
+
+    // Regression: a KAWPOW block claiming the wrong serialized height
+    // must be rejected by the consensus rule.
+    {
+        CBlock badHeightBlock = validBlock;
+        badHeightBlock.nHeight = validBlock.nHeight + 1;
+
+        CValidationState state;
+
+        BOOST_CHECK(
+            !TestBlockValidity(
+                state,
+                chainparams,
+                badHeightBlock,
+                chainActive.Tip(),
+                false,
+                false
+            )
+        );
+
+        BOOST_CHECK_EQUAL(
+            state.GetRejectReason(),
+            "bad-kawpow-height"
+        );
+    }
+}
+
 BOOST_AUTO_TEST_SUITE_END()

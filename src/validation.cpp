@@ -4168,6 +4168,15 @@ static bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationSta
     assert(pindexPrev != nullptr);
     const int nHeight = pindexPrev->nHeight + 1;
 
+    // KAWPOW consensus: the serialized block height must match
+    // the height implied by the previous block.
+    if (block.nTime >= nKAWPOWActivationTime &&
+        block.nHeight != static_cast<uint32_t>(nHeight)) {
+        return state.DoS(100, false, REJECT_INVALID,
+                         "bad-kawpow-height", false,
+                         "KAWPOW block height does not match expected chain height");
+    }
+
     //If this is a reorg, check that it is not too deep
     int nMaxReorgDepth = gArgs.GetArg("-maxreorg", GetParams().MaxReorganizationDepth());
     int nMinReorgPeers = gArgs.GetArg("-minreorgpeers", GetParams().MinReorganizationPeers());
