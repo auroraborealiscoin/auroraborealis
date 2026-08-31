@@ -59,7 +59,7 @@ ABRS does not rely on promises of market value, price appreciation or guaranteed
 | Mainnet P2P port | 17333 |
 | Mainnet RPC port | 17332 |
 | Payment URI | auroraborealis: |
-| Core version | 4.6.2 |
+| Core version | 4.6.3 |
 | Protocol version | 70028 |
 
 ---

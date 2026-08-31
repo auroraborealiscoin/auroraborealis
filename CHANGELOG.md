@@ -4,6 +4,13 @@ This file records Aurora Borealis-specific public milestones and release-level p
 
 ## 2026 - Pre-launch
 
+### Aurora Borealis Core 4.6.3
+
+- added consensus validation requiring the serialized KAWPOW block height to match the height implied by the previous block;
+- added a dedicated regression test for invalid serialized KAWPOW `nHeight`;
+- verified compatibility with the existing ABRS mainnet chain;
+- completed fresh-sync and full-reindex validation with the updated consensus rule.
+
 ### Aurora Borealis Core 4.6.2
 
 - finalized Aurora Borealis network identity and branding;
