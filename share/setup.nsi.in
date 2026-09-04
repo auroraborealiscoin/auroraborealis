@@ -50,9 +50,9 @@ Var StartMenuGroup
 # Installer attributes
 OutFile @abs_top_srcdir@/@PACKAGE_TARNAME@-${VERSION}-win@WINDOWS_BITS@-setup.exe
 !if "@WINDOWS_BITS@" == "64"
-InstallDir $PROGRAMFILES64\Aurora Borealis Core
+InstallDir "$PROGRAMFILES64\Aurora Borealis Core"
 !else
-InstallDir $PROGRAMFILES\Aurora Borealis Core
+InstallDir "$PROGRAMFILES\Aurora Borealis Core"
 !endif
 CRCCheck on
 XPStyle on
