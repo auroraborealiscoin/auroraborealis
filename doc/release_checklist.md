@@ -1,30 +1,35 @@
-**Steps to be performed before any Pull Request is accepted into the master branch**
+# Aurora Borealis Core Release Checklist
 
-  1. Check PROTOCOL_VERSION in the following location: src/version.h
+## Source
 
-  2. Check Ravend Version in the following locations: configure.ac, src/version.h
+- [ ] Confirm target version in `configure.ac`.
+- [ ] Confirm generated version headers match the target version.
+- [ ] Confirm release notes match the target release.
+- [ ] Confirm `git diff --check` passes.
+- [ ] Confirm no unintended consensus changes are present.
+- [ ] Confirm no unintended premine/founder/treasury changes are present.
 
-  3. All unit and functional tests pass
+## Build
 
-  4. Check PROTOCOL_VERSION in the iOS app located at ravenwallet-ios
+- [ ] Build `auroraborealisd`.
+- [ ] Build `auroraborealis-cli`.
+- [ ] Build `auroraborealis-qt`.
+- [ ] Run available unit/integration tests.
+- [ ] Verify runtime version output.
+- [ ] Verify generated manpages.
 
-  5. Check PROTOCOL_VERSION is the android app located at ravenwallet-android
+## Packaging
 
-  6. Check the Javascript stack (ravencore) for any block serialization or rpc changes
-  
-  7. Build release notes for all new features and bug fixes
+- [ ] Verify Linux package names.
+- [ ] Verify Windows installer names and URI handler.
+- [ ] Verify macOS application identity and URI handler.
+- [ ] Verify Debian metadata.
+- [ ] Verify release archives contain no local backup files.
 
-**If hard fork:**
+## Release
 
-  1. Notify all exchanges, pools, and wallets of release of critical update
-
-**Post Release :**
-
-  1. Update ravencoin.org with correct popup version
-  
-  2. Update ravencoin.org with correct release download urls for each platform (Windows, Linux, Mac)
-
-**Build Process**
-
-  1. Verify that the release build doesn't say ***dirty*** in the commit message
-
+- [ ] Verify release commit.
+- [ ] Verify tag target.
+- [ ] Generate checksums.
+- [ ] Publish only verified artifacts.
+- [ ] Update official website download references after release publication.

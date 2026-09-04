@@ -1907,14 +1907,6 @@ They are not recoverable !!</translation>
         <translation>Pencere kapatıldığında uygulamadan çıkmak yerine uygulamayı küçültür. Bu seçenek etkinleştirildiğinde, uygulama sadece menüden çıkış seçildiğinde kapanacaktır.</translation>
     </message>
     <message>
-        <source>&amp;Currency Unit:</source>
-        <translation>&amp;Currency Unit:</translation>
-    </message>
-    <message>
-        <source>Choose which currency to display the realtime value of ABRS in (ie: BTC/ABRS).</source>
-        <translation>Choose which currency to display the realtime value of ABRS in (ie: BTC/ABRS).</translation>
-    </message>
-    <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>İşlemler sekmesinde bağlam menüsü unsurları olarak görünen üçüncü taraf bağlantıları (mesela bir blok tarayıcısı). URL'deki %s, işlem hash değeri ile değiştirilecektir. Birden çok bağlantılar düşey çubuklar | ile ayrılacaktır.</translation>
     </message>
@@ -2985,10 +2977,6 @@ They are not recoverable !!</translation>
     <message>
         <source>&amp;Wallet</source>
         <translation>&amp;Wallet</translation>
-    </message>
-    <message>
-        <source>Aurora Borealis Market Price</source>
-        <translation>Aurora Borealis Market Price</translation>
     </message>
     <message>
         <source>Brought to you by binance.com</source>

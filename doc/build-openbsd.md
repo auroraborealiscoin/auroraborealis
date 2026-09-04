@@ -2,7 +2,7 @@ OpenBSD build guide
 ======================
 (updated for OpenBSD 6.7)
 
-This guide describes how to build ravend and command-line utilities on OpenBSD.
+This guide describes how to build auroraborealisd and the Aurora Borealis Core command-line utilities on OpenBSD.
 
 As OpenBSD is most common as a server OS, we will not bother with the GUI.
 
@@ -18,7 +18,7 @@ pkg_add autoconf # (select highest version, e.g. 2.69)
 pkg_add automake # (select highest version, e.g. 1.16)
 pkg_add python # (select highest version, e.g. 3.8)
 
-git clone https://github.com/RavenProject/Ravencoin.git
+git clone https://github.com/auroraborealiscoin/auroraborealis.git
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.
@@ -53,7 +53,7 @@ Do not use `pkg_add boost`! The boost version installed thus is compiled using t
     ...
     Segmentation fault (core dumped)
 
-This makes it necessary to build boost, or at least the parts used by Raven Core, manually:
+This makes it necessary to build boost, or at least the parts used by Aurora Borealis Core, manually:
 
 ```
 # Pick some path to install boost to, here we create a directory within the raven directory
@@ -122,7 +122,7 @@ The change will only affect the current shell and processes spawned by it. To
 make the change system-wide, change `datasize-cur` and `datasize-max` in
 `/etc/login.conf`, and reboot.
 
-### Building Raven Core
+### Building Aurora Borealis Core
 
 **Important**: use `gmake`, not `make`. The non-GNU `make` will exit with a horrible error.
 

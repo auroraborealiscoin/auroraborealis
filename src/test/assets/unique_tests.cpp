@@ -12,6 +12,11 @@
 
 BOOST_FIXTURE_TEST_SUITE(unique_tests, BasicTestingSetup)
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(unique_from_transaction_test)
     {
         BOOST_TEST_MESSAGE("Running Unique From Transaction Test");
@@ -37,6 +42,7 @@ BOOST_FIXTURE_TEST_SUITE(unique_tests, BasicTestingSetup)
         BOOST_CHECK_MESSAGE(address == GetParams().GlobalBurnAddress(), "Unique Tests: Failed address check");
         BOOST_CHECK_MESSAGE(fetched_asset.nReissuable == unique_asset.nReissuable, "Unique Tests: Failed reissuable check");
     }
+#endif
 
     BOOST_AUTO_TEST_CASE(unique_from_transaction_fail_test)
     {

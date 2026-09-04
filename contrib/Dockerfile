@@ -1,10 +1,9 @@
 FROM amd64/ubuntu:20.04 AS base
 
-#If you found this docker image helpful please donate RVN to the maintainer
-LABEL maintainer="RV9zdNeUTQUToZUcRp9uNF8gwH5LzDFtan"
+LABEL org.opencontainers.image.authors="Aurora Borealis Coin <auroraborealiscoin@gmail.com>"
 
-EXPOSE 8766/tcp
-EXPOSE 8767/tcp
+EXPOSE 17332/tcp
+EXPOSE 17333/tcp
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -31,33 +30,33 @@ RUN apt-get update && \
 	apt-get clean
 
 #Copy source dir
-COPY . /home/raven/build/Ravencoin/
-WORKDIR /home/raven/build/Ravencoin
+COPY . /home/auroraborealis/build/auroraborealis/
+WORKDIR /home/auroraborealis/build/auroraborealis
 
 #build db4 from source
-WORKDIR /home/raven/build/Ravencoin/contrib
+WORKDIR /home/auroraborealis/build/auroraborealis/contrib
 RUN ./install_db4.sh ../../
 
-# build Ravencore
-WORKDIR /home/raven/build/Ravencoin
-RUN ./autogen.sh && ./configure --disable-tests BDB_LIBS="-L/home/raven/build/db4/lib -ldb_cxx-4.8" BDB_CFLAGS="-I/home/raven/build/db4/include" --with-gui=no  && make -j4
+# build Aurora Borealis Core
+WORKDIR /home/auroraborealis/build/auroraborealis
+RUN ./autogen.sh && ./configure --disable-tests BDB_LIBS="-L/home/auroraborealis/build/db4/lib -ldb_cxx-4.8" BDB_CFLAGS="-I/home/auroraborealis/build/db4/include" --with-gui=no  && make -j4
 
 FROM base AS final
 
 #Add our service account user
-RUN useradd -ms /bin/bash raven && \
-	mkdir /var/lib/raven && \
-	chown raven:raven /var/lib/raven && \
-	ln -s /var/lib/raven /home/raven/.raven && \
-	chown -h raven:raven /home/raven/.raven
+RUN useradd -ms /bin/bash auroraborealis && \
+	mkdir /var/lib/auroraborealis && \
+	chown auroraborealis:auroraborealis /var/lib/auroraborealis && \
+	ln -s /var/lib/auroraborealis /home/auroraborealis/.auroraborealis && \
+	chown -h auroraborealis:auroraborealis /home/auroraborealis/.auroraborealis
 
-VOLUME /var/lib/raven
+VOLUME /var/lib/auroraborealis
 
 #Copy the compiled binaries from the build
-COPY --from=build /home/raven/build/Ravencoin/src/ravend /usr/local/bin/ravend
-COPY --from=build /home/raven/build/Ravencoin/src/raven-cli /usr/local/bin/raven-cli
+COPY --from=build /home/auroraborealis/build/auroraborealis/src/auroraborealisd /usr/local/bin/auroraborealisd
+COPY --from=build /home/auroraborealis/build/auroraborealis/src/auroraborealis-cli /usr/local/bin/auroraborealis-cli
 
-WORKDIR /home/raven
-USER raven
+WORKDIR /home/auroraborealis
+USER auroraborealis
 
-CMD /usr/local/bin/ravend -datadir=/var/lib/raven -printtoconsole -onlynet=ipv4
+CMD /usr/local/bin/auroraborealisd -datadir=/var/lib/auroraborealis -printtoconsole -onlynet=ipv4

@@ -1,4 +1,4 @@
-Raven Core
+Aurora Borealis Core
 =============
 
 Intro
@@ -11,13 +11,13 @@ with each other, with the help of a P2P network to check for double-spending.
 
 Setup
 -----
-Unpack the files into a directory and run raven-qt.exe.
+Unpack the files into a directory and run auroraborealis-qt.exe.
 
-Raven Core is the original Raven client and it builds the backbone of the network.
+Aurora Borealis Core is the reference client and provides the core software used to participate in the Aurora Borealis Coin network.
 However, it downloads and stores the entire history of Raven transactions;
 depending on the speed of your computer and network connection, the synchronization
 process can take anywhere from a few hours to a day or more.
 
 See the raven wiki at:
-  https://raven.wiki/wiki/Ravencoin_Wiki
+  https://auroraborealiscoin.com/
 for more help and information.

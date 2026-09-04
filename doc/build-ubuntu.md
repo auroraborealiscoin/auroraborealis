@@ -1,4 +1,4 @@
-Build instructions for Ravencoin 
+Build instructions for Aurora Borealis Coin
 =================================
 
 This will install most of the dependencies from ubuntu.
@@ -7,7 +7,7 @@ The only one we build, is Berkeley DB 4.8.
 
 Ubuntu 21.10 - Impish Indri - Install dependencies:
 ---------------------------
-`$ sudo apt install 
+`$ sudo apt install
 build-essential
 libssl-dev
 libboost-chrono1.74-dev
@@ -48,7 +48,7 @@ protobuf-compiler
 
 Ubuntu 21.04 - Hirsute Hippo - Install dependencies:
 ----------------------------
-`$ sudo apt install 
+`$ sudo apt install
 build-essential
 libssl-dev
 libboost-chrono1.71-dev
@@ -89,7 +89,7 @@ protobuf-compiler
 
 Ubuntu 18.04 - Bionic Beaver - Install dependencies:
 ----------------------------
-`$ sudo apt install 
+`$ sudo apt install
 build-essential
 libssl-dev
 libboost-chrono-dev
@@ -130,12 +130,12 @@ protobuf-compiler
 
 Directory structure
 ------------------
-Ravencoin sources in `$HOME/src`
+Aurora Borealis Coin sources in `$HOME/src`
 
 Berkeley DB will be installed to `$HOME/src/db4`
 
 
-Ravencoin
+Aurora Borealis Coin
 ------------------
 
 Start in $HOME
@@ -146,11 +146,11 @@ Make the directory for sources and go into it.
 
 `cd src`
 
-__Download Ravencoin source.__
+__Download Aurora Borealis Coin source.__
 
-`git clone https://github.com/RavenProject/Ravencoin`
+`git clone https://github.com/auroraborealiscoin/auroraborealis`
 
-`cd Ravencoin`
+`cd auroraborealis`
 
 `git checkout develop` # this checks out the develop branch.
 
@@ -164,18 +164,18 @@ __The build process:__
 
 `export BDB_PREFIX=$HOME/src/db4`
 
-`./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" --prefix=/usr/local` 
+`./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" --prefix=/usr/local`
 
 _Adjust to own needs. This will install the binaries to `/usr/local/bin`_
 
 
 `make -j8`  # 8 for 8 build threads, adjust to fit your setup.
 
-You can now start raven-qt from the build directory.
+You can now start auroraborealis-qt from the build directory.
 
-`src/qt/raven-qt`
+`src/qt/auroraborealis-qt`
 
-ravend and raven-cli are in `src/`
+auroraborealisd and auroraborealis-cli are in `src/`
 
 
 __Optional:__

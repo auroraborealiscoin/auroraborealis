@@ -1,12 +1,21 @@
-Sample configuration files for:
-```
-SystemD: ravend.service
-Upstart: ravend.conf
-OpenRC:  ravend.openrc
-         ravend.openrcconf
-CentOS:  ravend.init
-OS X:    org.raven.ravend.plist
-```
-have been made available to assist packagers in creating node packages here.
+Aurora Borealis Core init examples
+==================================
 
-See doc/init.md for more information.
+Sample service definitions are provided for packagers and node operators:
+
+    systemd: auroraborealisd.service
+    Upstart: auroraborealisd.conf
+    OpenRC:  auroraborealisd.openrc
+             auroraborealisd.openrcconf
+    CentOS:  auroraborealisd.init
+    macOS:   com.auroraborealiscoin.auroraborealisd.plist
+
+Default Linux packaging layout:
+
+    daemon:  /usr/bin/auroraborealisd
+    config:  /etc/auroraborealis/auroraborealis.conf
+    data:    /var/lib/auroraborealis
+    runtime: /run/auroraborealis
+
+These files are packaging examples. See doc/init.md for additional
+information about running Aurora Borealis Core.

@@ -8,7 +8,7 @@ Current document:
 
 - Version 1.0
 - Pre-launch edition
-- Official public launch: 16 September 2026
+- Official public launch: 1 September 2026
 
 Authoritative project resources:
 

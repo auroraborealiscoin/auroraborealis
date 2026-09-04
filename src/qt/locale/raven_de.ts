@@ -1801,14 +1801,6 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Minimiert die Anwendung anstatt sie zu beenden wenn das Fenster geschlossen wird. Wenn dies aktiviert ist, müssen Sie die Anwendung über "Beenden" im Menü schließen.</translation>
     </message>
     <message>
-        <source>&amp;Currency Unit:</source>
-        <translation>&amp;Währungseinheit:</translation>
-    </message>
-    <message>
-        <source>Choose which currency to display the realtime value of ABRS in (ie: BTC/ABRS).</source>
-        <translation>Wählen Sie, in welcher Währung der Echtzeitwert von ABRS angezeigt wird (z.B.: BTC/ABRS).</translation>
-    </message>
-    <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>Externe URLs (z.B. ein Block-Explorer), die im Kontextmenü des Transaktionsverlaufs eingefügt werden. In der URL wird %s durch den Transaktionshash ersetzt. Bei Angabe mehrerer URLs müssen diese durch "|" voneinander getrennt werden.</translation>
     </message>
@@ -2775,10 +2767,6 @@ Sie sind nicht wiederherstellbar!</translation>
     <message>
         <source>&amp;Wallet</source>
         <translation>&amp;Wallet</translation>
-    </message>
-    <message>
-        <source>Aurora Borealis Market Price</source>
-        <translation>Aurora Borealis Coin Marktpreis</translation>
     </message>
     <message>
         <source>Brought to you by binance.com</source>

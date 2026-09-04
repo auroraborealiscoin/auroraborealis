@@ -34,7 +34,7 @@ Pool Stratum and production Faucet payouts remain intentionally locked until go-
 
 ## Phase 3 - Official Public Launch
 
-Target: **16 September 2026**
+Original target: **16 September 2026** — officially launched **1 September 2026**
 
 - activate public Pool Stratum;
 - verify controlled GPU miner connection;

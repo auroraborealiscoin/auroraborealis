@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.raven.RavenPayment</string>
+      <string>com.auroraborealiscoin.AuroraBorealisPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>raven</string>
@@ -58,7 +58,7 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.raven.paymentrequest</string>
+      <string>com.auroraborealiscoin.paymentrequest</string>
       <key>UTTypeDescription</key>
       <string>Raven payment request</string>
       <key>UTTypeConformsTo</key>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-raven-payment-request</string>
+        <string>application/auroraborealis-paymentrequest</string>
         <key>public.filename-extension</key>
         <array>
-          <string>ravenpaymentrequest</string>
+          <string>auroraborealispaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.raven.paymentrequest</string>
+        <string>com.auroraborealiscoin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

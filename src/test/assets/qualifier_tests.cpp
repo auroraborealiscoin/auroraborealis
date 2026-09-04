@@ -12,6 +12,11 @@
 
 BOOST_FIXTURE_TEST_SUITE(qualifier_tests, BasicTestingSetup)
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(qualifier_from_transaction_test)
     {
         BOOST_TEST_MESSAGE("Running Qualifier From Transaction Test");
@@ -36,6 +41,7 @@ BOOST_FIXTURE_TEST_SUITE(qualifier_tests, BasicTestingSetup)
         BOOST_CHECK_MESSAGE(fetched_asset.nAmount== qualifier_asset.nAmount, "Qualifier Tests: Failed amount check");
         BOOST_CHECK_MESSAGE(address == GetParams().GlobalBurnAddress(), "Qualifier Tests: Failed address check");
     }
+#endif
 
     BOOST_AUTO_TEST_CASE(qualifier_from_transaction__fail_test)
     {
@@ -60,6 +66,11 @@ BOOST_FIXTURE_TEST_SUITE(qualifier_tests, BasicTestingSetup)
     }
 
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(verify_new_qualifier_transaction_test)
     {
         BOOST_TEST_MESSAGE("Running Verify New Qualifier From Transaction Test");
@@ -82,7 +93,13 @@ BOOST_FIXTURE_TEST_SUITE(qualifier_tests, BasicTestingSetup)
         std::string error;
         BOOST_CHECK_MESSAGE(tx.VerifyNewQualfierAsset(error), "Failed to Verify New Qualifier Asset" + error);
     }
+#endif
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(verify_new_sub_qualifier_transaction_test)
     {
         BOOST_TEST_MESSAGE("Running Verify New Sub Qualifier From Transaction Test");
@@ -114,8 +131,6 @@ BOOST_FIXTURE_TEST_SUITE(qualifier_tests, BasicTestingSetup)
         tx.VerifyNewQualfierAsset(strError);
         BOOST_CHECK_MESSAGE(tx.VerifyNewQualfierAsset(strError), "Failed to Verify New Sub Qualifier Asset " + strError);
     }
-
-
-
+#endif
 
 BOOST_AUTO_TEST_SUITE_END()

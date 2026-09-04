@@ -19,12 +19,14 @@ import random
 from binascii import b2a_hex
 
 # key types
-PUBKEY_ADDRESS = 0
-SCRIPT_ADDRESS = 5
-PUBKEY_ADDRESS_TEST = 111
-SCRIPT_ADDRESS_TEST = 196
-PRIVKEY = 128
-PRIVKEY_TEST = 239
+# Aurora Borealis Coin Base58 prefixes.
+# Keep these synchronized with src/chainparams.cpp.
+PUBKEY_ADDRESS = 23
+SCRIPT_ADDRESS = 25
+PUBKEY_ADDRESS_TEST = 65
+SCRIPT_ADDRESS_TEST = 66
+PRIVKEY = 176
+PRIVKEY_TEST = 177
 
 metadata_keys = ['isPrivkey', 'isTestnet', 'addrType', 'isCompressed']
 # templates for valid sequences
@@ -47,8 +49,8 @@ def is_valid(v):
     if result is None:
         return False
     for template in templates:
-        prefix = str(bytearray(template[0]))
-        suffix = str(bytearray(template[2]))
+        prefix = bytes(bytearray(template[0]))
+        suffix = bytes(bytearray(template[2]))
         if result.startswith(prefix) and result.endswith(suffix):
             if (len(result) - len(prefix) - len(suffix)) == template[1]:
                 return True
@@ -58,20 +60,20 @@ def gen_valid_vectors():
     '''Generate valid test vectors'''
     while True:
         for template in templates:
-            prefix = str(bytearray(template[0]))
+            prefix = bytes(bytearray(template[0]))
             payload = os.urandom(template[1]) 
-            suffix = str(bytearray(template[2]))
+            suffix = bytes(bytearray(template[2]))
             rv = b58encode_chk(prefix + payload + suffix)
             assert is_valid(rv)
             metadata = dict([(x,y) for (x,y) in zip(metadata_keys,template[3]) if y is not None])
-            yield (rv, b2a_hex(payload), metadata)
+            yield (rv, b2a_hex(payload).decode('ascii'), metadata)
 
 def gen_invalid_vector(template, corrupt_prefix, randomize_payload_size, corrupt_suffix):
     '''Generate possibly invalid vector'''
     if corrupt_prefix:
         prefix = os.urandom(1)
     else:
-        prefix = str(bytearray(template[0]))
+        prefix = bytes(bytearray(template[0]))
     
     if randomize_payload_size:
         payload = os.urandom(max(int(random.expovariate(0.5)), 50))
@@ -81,7 +83,7 @@ def gen_invalid_vector(template, corrupt_prefix, randomize_payload_size, corrupt
     if corrupt_suffix:
         suffix = os.urandom(len(template[2]))
     else:
-        suffix = str(bytearray(template[2]))
+        suffix = bytes(bytearray(template[2]))
 
     return b58encode_chk(prefix + payload + suffix)
 

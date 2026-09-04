@@ -1903,10 +1903,6 @@
         <translation>&amp;Monedero</translation>
     </message>
     <message>
-        <source>Aurora Borealis Market Price</source>
-        <translation>Precio de mercado de Aurora Borealis Coin</translation>
-    </message>
-    <message>
         <source>Brought to you by binance.com</source>
         <translation>Patrocinado por binance.com</translation>
     </message>

@@ -35,7 +35,7 @@ Aurora Borealis Core provides:
 
 ## Current Release
 
-### Aurora Borealis Core 4.6.2
+### Aurora Borealis Core 4.6.3
 
 The current Linux x86-64 release includes:
 

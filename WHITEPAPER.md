@@ -4,7 +4,7 @@
 
 **Version 1.0 - Pre-launch Edition**
 
-**Official public launch: 16 September 2026**
+**Official public launch: 1 September 2026**
 
 Website: https://auroraborealiscoin.com/
 
@@ -373,6 +373,6 @@ https://faucet.auroraborealiscoin.com/
 
 ## 20. Document Status
 
-This document is the Aurora Borealis Coin Technical Whitepaper, Version 1.0, prepared for the public launch scheduled for 16 September 2026.
+This document is the Aurora Borealis Coin Technical Whitepaper, Version 1.0, prepared for the official public launch, which took place on 1 September 2026.
 
 Technical parameters should always be verified against the current consensus source code and active network state.

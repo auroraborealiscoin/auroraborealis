@@ -79,10 +79,6 @@ void OptionsModel::Init(bool resetSettings)
         settings.setValue("nDisplayUnit", RavenUnits::RVN);
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
     
-    if (!settings.contains("nDisplayCurrencyIndex"))
-        settings.setValue("nDisplayCurrencyIndex", 0);
-    nDisplayCurrencyIndex = settings.value("nDisplayCurrencyIndex", 0).toInt();
-
     if (!settings.contains("strThirdPartyTxUrls"))
         settings.setValue("strThirdPartyTxUrls", DEFAULT_THIRD_PARTY_BROWSERS);
     strThirdPartyTxUrls = settings.value("strThirdPartyTxUrls", "").toString();
@@ -281,8 +277,6 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
 #endif
         case DisplayUnit:
             return nDisplayUnit;
-        case DisplayCurrencyIndex:
-            return nDisplayCurrencyIndex;
         case ThirdPartyTxUrls:
             return strThirdPartyTxUrls;
         case IpfsUrl:
@@ -419,9 +413,6 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
         case DisplayUnit:
             setDisplayUnit(value);
             break;
-        case DisplayCurrencyIndex:
-            setDisplayCurrencyIndex(value);
-            break;
         case ThirdPartyTxUrls:
             if (strThirdPartyTxUrls != value.toString()) {
                 strThirdPartyTxUrls = value.toString();
@@ -493,18 +484,6 @@ void OptionsModel::setDisplayUnit(const QVariant &value)
         nDisplayUnit = value.toInt();
         settings.setValue("nDisplayUnit", nDisplayUnit);
         Q_EMIT displayUnitChanged(nDisplayUnit);
-    }
-}
-
-/** Updates current currency unit in memory and settings */
-void OptionsModel::setDisplayCurrencyIndex(const QVariant &value)
-{
-    if (!value.isNull() && value.toInt() != nDisplayCurrencyIndex)
-    {
-        QSettings settings;
-        nDisplayCurrencyIndex = value.toInt();
-        settings.setValue("nDisplayCurrencyIndex", nDisplayCurrencyIndex);
-        Q_EMIT displayCurrencyIndexChanged(nDisplayCurrencyIndex);
     }
 }
 

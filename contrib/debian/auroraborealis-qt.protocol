@@ -1,6 +1,6 @@
 [Protocol]
-exec=raven-qt '%u'
-protocol=raven
+exec=auroraborealis-qt '%u'
+protocol=auroraborealis
 input=none
 output=none
 helper=true

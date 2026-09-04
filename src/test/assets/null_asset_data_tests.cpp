@@ -12,6 +12,11 @@
 
 BOOST_FIXTURE_TEST_SUITE(null_asset_data_tests, BasicTestingSetup)
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(null_data_from_script_test)
     {
         BOOST_TEST_MESSAGE("Running Null data from script");
@@ -28,6 +33,7 @@ BOOST_FIXTURE_TEST_SUITE(null_asset_data_tests, BasicTestingSetup)
         BOOST_CHECK_MESSAGE(AssetNullDataFromScript(nullDataScript, fetchedData, fetchedAddress), "Null Data From Script Test 1: Failed to get NullDataFromScript");
 
     }
+#endif
 
     BOOST_AUTO_TEST_CASE(null_data_from_script_fail_test)
     {

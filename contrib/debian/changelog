@@ -1,3 +1,13 @@
+auroraborealis (4.6.3-1) unstable; urgency=medium
+
+  * Finalize Aurora Borealis Core 4.6.3 packaging.
+  * Migrate Debian package names, binaries, configuration and manpages
+    to Aurora Borealis Coin.
+  * Remove obsolete raven-tx packaging.
+  * Update project metadata and service integration.
+
+ -- Aurora Borealis Coin <auroraborealiscoin@gmail.com>  Fri, 04 Sep 2026 14:20:58 +0200
+
 raven (0.14.1-trusty4) trusty; urgency=medium
 
   * Re-enable UPnP support.

@@ -1,0 +1,29 @@
+# /etc/conf.d/auroraborealisd
+
+# Configuration file
+#AURORABOREALISD_CONFIGFILE="/etc/auroraborealis/auroraborealis.conf"
+
+# Runtime PID directory
+#AURORABOREALISD_PIDDIR="/run/auroraborealis"
+
+# PID file
+#AURORABOREALISD_PIDFILE="${AURORABOREALISD_PIDDIR}/auroraborealisd.pid"
+
+# Blockchain and wallet data
+#AURORABOREALISD_DATADIR="/var/lib/auroraborealis"
+
+# System user and group
+#AURORABOREALISD_USER="auroraborealis"
+#AURORABOREALISD_GROUP="auroraborealis"
+
+# Daemon executable
+#AURORABOREALISD_BIN="/usr/bin/auroraborealisd"
+
+# Nice value
+#AURORABOREALISD_NICE=0
+
+# Additional daemon options
+#AURORABOREALISD_OPTS=""
+
+# SIGTERM timeout
+AURORABOREALISD_SIGTERM_TIMEOUT=60

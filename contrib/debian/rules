@@ -1,9 +1,6 @@
 #!/usr/bin/make -f
 # -*- mode: makefile; coding: utf-8 -*-
 
-#DEB_MAKE_CHECK_TARGET = test_raven
-#build/ravend::
-#	$(if $(filter nocheck,$(DEB_BUILD_OPTIONS)),,src/test_raven)
 
 %:
 	dh --with bash-completion $@

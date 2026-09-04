@@ -1,0 +1,32 @@
+[Unit]
+Description=Aurora Borealis Core daemon
+After=network.target
+
+[Service]
+User=auroraborealis
+Group=auroraborealis
+
+Type=forking
+RuntimeDirectory=auroraborealis
+RuntimeDirectoryMode=0750
+
+PIDFile=/run/auroraborealis/auroraborealisd.pid
+
+ExecStart=/usr/bin/auroraborealisd \
+ -daemon \
+ -pid=/run/auroraborealis/auroraborealisd.pid \
+ -conf=/etc/auroraborealis/auroraborealis.conf \
+ -datadir=/var/lib/auroraborealis \
+ -disablewallet
+
+Restart=on-failure
+RestartSec=5
+
+PrivateTmp=true
+NoNewPrivileges=true
+
+TimeoutStopSec=60s
+TimeoutStartSec=60s
+
+[Install]
+WantedBy=multi-user.target

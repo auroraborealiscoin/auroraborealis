@@ -107,14 +107,6 @@ const QString RavenGUI::DEFAULT_WALLET = "~Default";
 
 /* Bit of a bodge, c++ really doesn't want you to predefine values
  * in only header files, so we do one-time value assignment here. */
-std::array<CurrencyUnitDetails, 5> CurrencyUnits::CurrencyOptions = { {
-    { "BTC",    "RVNBTC"  , 1,          8},
-    { "mBTC",   "RVNBTC"  , 1000,       5},
-    { "µBTC",   "RVNBTC"  , 1000000,    2},
-    { "Satoshi","RVNBTC"  , 100000000,  0},
-    { "USDT",   "RVNUSDT" , 1,          5}
-} };
-
 static bool ThreadSafeMessageBox(RavenGUI *gui, const std::string& message, const std::string& caption, unsigned int style);
 
 RavenGUI::RavenGUI(const PlatformStyle *_platformStyle, const NetworkStyle *networkStyle, QWidget *parent) :
@@ -172,12 +164,7 @@ RavenGUI::RavenGUI(const PlatformStyle *_platformStyle, const NetworkStyle *netw
     }
 
     /** RVN START */
-    labelCurrentMarket = new QLabel();
-    labelCurrentPrice = new QLabel();
     headerWidget = new QWidget();
-    pricingTimer = new QTimer();
-    networkManager = new QNetworkAccessManager();
-    request = new QNetworkRequest();
     labelVersionUpdate = new QLabel();
     networkVersionManager = new QNetworkAccessManager();
     versionRequest = new QNetworkRequest();
@@ -702,40 +689,17 @@ void RavenGUI::createToolBars()
         headerWidget->setGraphicsEffect(GUIUtil::getShadowEffect());
         headerWidget->setFixedHeight(75);
 
-        QFont currentMarketFont;
-        currentMarketFont.setFamily("Open Sans");
-        currentMarketFont.setWeight(QFont::Weight::Normal);
-        currentMarketFont.setLetterSpacing(QFont::SpacingType::AbsoluteSpacing, -0.6);
-        currentMarketFont.setPixelSize(18);
+        QFont versionUpdateFont;
+        versionUpdateFont.setFamily("Open Sans");
+        versionUpdateFont.setWeight(QFont::Weight::Normal);
+        versionUpdateFont.setLetterSpacing(QFont::SpacingType::AbsoluteSpacing, -0.6);
+        versionUpdateFont.setPixelSize(18);
 
-        // Set the pricing information
-        QHBoxLayout* priceLayout = new QHBoxLayout(headerWidget);
-        priceLayout->setContentsMargins(0,0,0,25);
-        priceLayout->setDirection(QBoxLayout::LeftToRight);
-        priceLayout->setAlignment(Qt::AlignVCenter);
-        labelCurrentMarket->setContentsMargins(50,0,0,0);
-        labelCurrentMarket->setAlignment(Qt::AlignVCenter);
-        labelCurrentMarket->setStyleSheet(STRING_LABEL_COLOR);
-        labelCurrentMarket->setFont(currentMarketFont);
-        labelCurrentMarket->setText(tr("Aurora Borealis Market Price"));
-
-        QString currentPriceStyleSheet = ".QLabel{color: %1;}";
-        labelCurrentPrice->setContentsMargins(25,0,0,0);
-        labelCurrentPrice->setAlignment(Qt::AlignVCenter);
-        labelCurrentPrice->setStyleSheet(currentPriceStyleSheet.arg(COLOR_LABELS.name()));
-        labelCurrentPrice->setFont(currentMarketFont);
-
-        comboRvnUnit = new QComboBox(headerWidget);
-        QStringList list;
-        for(int unitNum = 0; unitNum < CurrencyUnits::count(); unitNum++) {
-            list.append(QString(CurrencyUnits::CurrencyOptions[unitNum].Header));
-        }
-        comboRvnUnit->addItems(list);
-        comboRvnUnit->setFixedHeight(26);
-        comboRvnUnit->setContentsMargins(5,0,0,0);
-        comboRvnUnit->setStyleSheet(STRING_LABEL_COLOR);
-        comboRvnUnit->setFont(currentMarketFont);
-
+        // Header layout reserved for wallet version notifications.
+        QHBoxLayout* headerLayout = new QHBoxLayout(headerWidget);
+        headerLayout->setContentsMargins(0,0,0,25);
+        headerLayout->setDirection(QBoxLayout::LeftToRight);
+        headerLayout->setAlignment(Qt::AlignVCenter);
         labelVersionUpdate->setText("<a href=\"https://github.com/auroraborealiscoin/auroraborealis/releases\">New Wallet Version Available</a>");
         labelVersionUpdate->setTextFormat(Qt::RichText);
         labelVersionUpdate->setTextInteractionFlags(Qt::TextBrowserInteraction);
@@ -743,15 +707,12 @@ void RavenGUI::createToolBars()
         labelVersionUpdate->setContentsMargins(0,0,15,0);
         labelVersionUpdate->setAlignment(Qt::AlignVCenter);
         labelVersionUpdate->setStyleSheet(STRING_LABEL_COLOR);
-        labelVersionUpdate->setFont(currentMarketFont);
+        labelVersionUpdate->setFont(versionUpdateFont);
         labelVersionUpdate->hide();
 
-        priceLayout->setGeometry(headerWidget->rect());
-        priceLayout->addWidget(labelCurrentMarket, 0, Qt::AlignVCenter | Qt::AlignLeft);
-        priceLayout->addWidget(labelCurrentPrice, 0,  Qt::AlignVCenter | Qt::AlignLeft);
-        priceLayout->addWidget(comboRvnUnit, 0 , Qt::AlignBottom| Qt::AlignLeft);
-        priceLayout->addStretch();
-        priceLayout->addWidget(labelVersionUpdate, 0 , Qt::AlignVCenter | Qt::AlignRight);
+        headerLayout->setGeometry(headerWidget->rect());
+        headerLayout->addStretch();
+        headerLayout->addWidget(labelVersionUpdate, 0 , Qt::AlignVCenter | Qt::AlignRight);
 
         // Create the layout for widget to the right of the tool bar
         QVBoxLayout* mainFrameLayout = new QVBoxLayout(mainWalletWidget);
@@ -772,152 +733,127 @@ void RavenGUI::createToolBars()
         containerWidget->setLayout(layout);
         setCentralWidget(containerWidget);
 
-        // Network request code for the header widget
-        QObject::connect(networkManager, &QNetworkAccessManager::finished,
-                         this, [=](QNetworkReply *reply) {
-                    if (reply->error()) {
-                        labelCurrentPrice->setText("");
-                        qDebug() << reply->errorString();
-                        return;
-                    }
-                    // Get the data from the network request
-                    QString answer = reply->readAll();
-
-                    // Create regex expression to find the value with 8 decimals
-                    QRegExp rx("\\d*.\\d\\d\\d\\d\\d\\d\\d\\d");
-                    rx.indexIn(answer);
-
-                    // List the found values
-                    QStringList list = rx.capturedTexts();
-
-                    QString currentPriceStyleSheet = ".QLabel{color: %1;}";
-                    // Evaluate the current and next numbers and assign a color (green for positive, red for negative)
-                    bool ok;
-                    if (!list.isEmpty()) {
-                        double next = list.first().toDouble(&ok) * this->currentPriceDisplay->Scalar;
-                        if (!ok) {
-                            labelCurrentPrice->setStyleSheet(currentPriceStyleSheet.arg(COLOR_LABELS.name()));
-                            labelCurrentPrice->setText("");
-                        } else {
-                            double current = labelCurrentPrice->text().toDouble(&ok);
-                            if (!ok) {
-                                current = 0.00000000;
-                            } else {
-                                if (next < current && !this->unitChanged)
-                                    labelCurrentPrice->setStyleSheet(currentPriceStyleSheet.arg("red"));
-                                else if (next > current && !this->unitChanged)
-                                    labelCurrentPrice->setStyleSheet(currentPriceStyleSheet.arg("green"));
-                                else
-                                    labelCurrentPrice->setStyleSheet(currentPriceStyleSheet.arg(COLOR_LABELS.name()));
-                            }
-                            this->unitChanged = false;
-                            labelCurrentPrice->setText(QString("%1").arg(QString().setNum(next, 'f', this->currentPriceDisplay->Decimals)));
-                            labelCurrentPrice->setToolTip(tr("Brought to you by binance.com"));
-                        }
-                    }
-                }
-        );
-
         connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
 
 
-        // Signal change of displayed price units, must get new conversion ratio
-        connect(comboRvnUnit, SIGNAL(activated(int)), this, SLOT(currencySelectionChanged(int)));
-        // Create the timer
-        connect(pricingTimer, SIGNAL(timeout()), this, SLOT(getPriceInfo()));
-        pricingTimer->start(10000);
-        getPriceInfo();
-        /** RVN END */
 
-        // Get the latest Ravencoin release and let the user know if they are using the latest version
-        // Network request code for the header widget
+
+        // Check GitHub for the newest stable Aurora Borealis Core release.
+        // Draft releases, prereleases and malformed version tags are ignored.
         QObject::connect(networkVersionManager, &QNetworkAccessManager::finished,
                          this, [=](QNetworkReply *reply) {
                     if (reply->error()) {
-                        qDebug() << reply->errorString();
+                        qDebug() << "ABRS update check failed:" << reply->errorString();
+                        reply->deleteLater();
                         return;
                     }
 
-                    // Get the data from the network request
-                    QString answer = reply->readAll();
+                    const QString answer = reply->readAll();
+                    reply->deleteLater();
 
                     UniValue releases(UniValue::VARR);
-                    releases.read(answer.toStdString());
-
-                    if (!releases.isArray()) {
+                    if (!releases.read(answer.toStdString()) || !releases.isArray()) {
+                        qDebug() << "ABRS update check returned invalid JSON";
                         return;
                     }
 
-                    if (!releases.size()) {
+                    int latestMajor = -1;
+                    int latestMinor = -1;
+                    int latestRevision = -1;
+                    std::string latestVersion;
+
+                    const QRegExp versionRx("^v(\\d+)\\.(\\d+)\\.(\\d+)$");
+
+                    for (unsigned int i = 0; i < releases.size(); ++i) {
+                        const UniValue& release = releases[i];
+
+                        if (!release.isObject()) {
+                            continue;
+                        }
+
+                        const UniValue& draftValue = release["draft"];
+                        const UniValue& prereleaseValue = release["prerelease"];
+                        const UniValue& tagValue = release["tag_name"];
+
+                        if (!draftValue.isBool() ||
+                            !prereleaseValue.isBool() ||
+                            !tagValue.isStr()) {
+                            continue;
+                        }
+
+                        if (draftValue.get_bool() || prereleaseValue.get_bool()) {
+                            continue;
+                        }
+
+                        const std::string tag = tagValue.get_str();
+                        const QString qTag = QString::fromStdString(tag);
+
+                        if (versionRx.exactMatch(qTag) == false) {
+                            continue;
+                        }
+
+                        const int major = versionRx.cap(1).toInt();
+                        const int minor = versionRx.cap(2).toInt();
+                        const int revision = versionRx.cap(3).toInt();
+
+                        const bool newerThanCandidate =
+                                latestMajor < 0 ||
+                                major > latestMajor ||
+                                (major == latestMajor && minor > latestMinor) ||
+                                (major == latestMajor &&
+                                 minor == latestMinor &&
+                                 revision > latestRevision);
+
+                        if (newerThanCandidate) {
+                            latestMajor = major;
+                            latestMinor = minor;
+                            latestRevision = revision;
+                            latestVersion = tag;
+                        }
+                    }
+
+                    if (latestMajor < 0) {
+                        qDebug() << "ABRS update check found no valid stable release";
+                        labelVersionUpdate->hide();
                         return;
                     }
 
-                    // Latest release lives in the first index of the array return from github v3 api
-                    auto latestRelease = releases[0];
+                    const bool fNewSoftwareFound =
+                            latestMajor > CLIENT_VERSION_MAJOR ||
+                            (latestMajor == CLIENT_VERSION_MAJOR &&
+                             latestMinor > CLIENT_VERSION_MINOR) ||
+                            (latestMajor == CLIENT_VERSION_MAJOR &&
+                             latestMinor == CLIENT_VERSION_MINOR &&
+                             latestRevision > CLIENT_VERSION_REVISION);
 
-                    auto keys = latestRelease.getKeys();
-                    for (auto key : keys) {
-                       if (key == "tag_name") {
-                           auto latestVersion = latestRelease["tag_name"].get_str();
+                    if (fNewSoftwareFound) {
+                        labelVersionUpdate->setToolTip(
+                                QString::fromStdString(
+                                        strprintf("Currently running: %s\nLatest version: %s",
+                                                  FormatFullVersion(),
+                                                  latestVersion)));
 
-                           QRegExp rx("v(\\d+).(\\d+).(\\d+)");
-                           rx.indexIn(QString::fromStdString(latestVersion));
+                        labelVersionUpdate->show();
 
-                           // List the found values
-                           QStringList list = rx.capturedTexts();
-                           static const int CLIENT_VERSION_MAJOR_INDEX = 1;
-                           static const int CLIENT_VERSION_MINOR_INDEX = 2;
-                           static const int CLIENT_VERSION_REVISION_INDEX = 3;
-                           bool fNewSoftwareFound = false;
-                           bool fStopSearch = false;
-                           if (list.size() >= 4) {
-                               if (CLIENT_VERSION_MAJOR < list[CLIENT_VERSION_MAJOR_INDEX].toInt()) {
-                                   fNewSoftwareFound = true;
-                               } else {
-                                   if (CLIENT_VERSION_MAJOR > list[CLIENT_VERSION_MAJOR_INDEX].toInt()) {
-                                       fStopSearch = true;
-                                   }
-                               }
+                        // Display the startup notification approximately half the time.
+                        if (GetRandInt(2) == 1) {
+                            bool fRet = uiInterface.ThreadSafeQuestion(
+                                    strprintf("\nCurrently running: %s\nLatest version: %s",
+                                              FormatFullVersion(),
+                                              latestVersion) +
+                                            "\n\nWould you like to visit the releases page?",
+                                    "",
+                                    "New Wallet Version Found",
+                                    CClientUIInterface::MSG_VERSION |
+                                            CClientUIInterface::BTN_NO);
 
-                               if (!fStopSearch) {
-                                   if (CLIENT_VERSION_MINOR < list[CLIENT_VERSION_MINOR_INDEX].toInt()) {
-                                       fNewSoftwareFound = true;
-                                   } else {
-                                       if (CLIENT_VERSION_MINOR > list[CLIENT_VERSION_MINOR_INDEX].toInt()) {
-                                           fStopSearch = true;
-                                       }
-                                   }
-                               }
-
-                               if (!fStopSearch) {
-                                   if (CLIENT_VERSION_REVISION < list[CLIENT_VERSION_REVISION_INDEX].toInt()) {
-                                       fNewSoftwareFound = true;
-                                   }
-                               }
-                           }
-
-                           if (fNewSoftwareFound) {
-                               labelVersionUpdate->setToolTip(QString::fromStdString(strprintf("Currently running: %s\nLatest version: %s", FormatFullVersion(),
-                                                                                               latestVersion)));
-                               labelVersionUpdate->show();
-
-                               // Only display the message on startup to the user around 1/2 of the time
-                               if (GetRandInt(2) == 1) {
-                                   bool fRet = uiInterface.ThreadSafeQuestion(
-                                           strprintf("\nCurrently running: %s\nLatest version: %s", FormatFullVersion(),
-                                                     latestVersion) + "\n\nWould you like to visit the releases page?",
-                                           "",
-                                           "New Wallet Version Found",
-                                           CClientUIInterface::MSG_VERSION | CClientUIInterface::BTN_NO);
-                                   if (fRet) {
-                                       QString link = "https://github.com/auroraborealiscoin/auroraborealis/releases";
-                                       QDesktopServices::openUrl(QUrl(link));
-                                   }
-                               }
-                           } else {
-                               labelVersionUpdate->hide();
-                           }
-                       }
+                            if (fRet) {
+                                QDesktopServices::openUrl(
+                                        QUrl("https://github.com/auroraborealiscoin/auroraborealis/releases"));
+                            }
+                        }
+                    } else {
+                        labelVersionUpdate->hide();
                     }
                 }
         );
@@ -985,11 +921,9 @@ void RavenGUI::setClientModel(ClientModel *_clientModel)
             // initialize the disable state of the tray icon with the current value in the model.
             setTrayIconVisible(optionsModel->getHideTrayIcon());
 
-            // Signal to notify the settings have updated the display currency
-            connect(optionsModel,SIGNAL(displayCurrencyIndexChanged(int)), this, SLOT(onCurrencyChange(int)));
+            // Signal to notify the GUI that display settings have changed
 
             // Init the currency display from settings
-            this->onCurrencyChange(optionsModel->getDisplayCurrencyIndex());
 
             // Signal to update toolbar on iconsonly checkbox clicked.
             connect(optionsModel, SIGNAL(updateIconsOnlyToolbar(bool)), this, SLOT(updateIconsOnlyToolbar(bool)));
@@ -1868,37 +1802,6 @@ void UnitDisplayStatusBarControl::onMenuSelection(QAction* action)
     }
 }
 
-/** Triggered only when the user changes the combobox on the main GUI */
-void RavenGUI::currencySelectionChanged(int unitIndex)
-{
-    if(clientModel && clientModel->getOptionsModel())
-    {
-        clientModel->getOptionsModel()->setDisplayCurrencyIndex(unitIndex);
-    }
-}
-
-/** Triggered when the options model's display currency is updated */
-void RavenGUI::onCurrencyChange(int newIndex)
-{
-    qDebug() << "RavenGUI::onPriceUnitChange: " + QString::number(newIndex);
-
-    if(newIndex < 0 || newIndex >= CurrencyUnits::count()){
-        return;
-    }
-
-    this->unitChanged = true;
-    this->currentPriceDisplay = &CurrencyUnits::CurrencyOptions[newIndex];
-    //Update the main GUI box in case this was changed from the settings screen
-    //This will fire the event again, but the options model prevents the infinite loop
-    this->comboRvnUnit->setCurrentIndex(newIndex);
-    this->getPriceInfo();
-}
-
-void RavenGUI::getPriceInfo()
-{
-    request->setUrl(QUrl(QString("https://api.binance.com/api/v1/ticker/price?symbol=%1").arg(this->currentPriceDisplay->Ticker)));
-    networkManager->get(*request);
-}
 
 #ifdef ENABLE_WALLET
 void RavenGUI::mnemonic()

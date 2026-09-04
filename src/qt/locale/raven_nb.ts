@@ -2405,10 +2405,6 @@
         <translation>Lommebok</translation>
     </message>
     <message>
-        <source>Aurora Borealis Market Price</source>
-        <translation>Aurora Borealis Coin markedspris</translation>
-    </message>
-    <message>
         <source>Click to disable network activity.</source>
         <translation>Klikk for å deaktivere nettverksaktivitet</translation>
     </message>

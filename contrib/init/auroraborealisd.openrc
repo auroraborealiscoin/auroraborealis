@@ -1,0 +1,57 @@
+#!/sbin/openrc-run
+
+name="Aurora Borealis Core Daemon"
+description="Aurora Borealis Coin P2P network daemon"
+
+AURORABOREALISD_CONFIGFILE="${AURORABOREALISD_CONFIGFILE:-/etc/auroraborealis/auroraborealis.conf}"
+AURORABOREALISD_PIDDIR="${AURORABOREALISD_PIDDIR:-/run/auroraborealis}"
+AURORABOREALISD_PIDFILE="${AURORABOREALISD_PIDFILE:-${AURORABOREALISD_PIDDIR}/auroraborealisd.pid}"
+AURORABOREALISD_DATADIR="${AURORABOREALISD_DATADIR:-/var/lib/auroraborealis}"
+
+AURORABOREALISD_USER="${AURORABOREALISD_USER:-auroraborealis}"
+AURORABOREALISD_GROUP="${AURORABOREALISD_GROUP:-auroraborealis}"
+
+AURORABOREALISD_BIN="${AURORABOREALISD_BIN:-/usr/bin/auroraborealisd}"
+AURORABOREALISD_NICE="${AURORABOREALISD_NICE:-0}"
+AURORABOREALISD_OPTS="${AURORABOREALISD_OPTS:-}"
+AURORABOREALISD_SIGTERM_TIMEOUT="${AURORABOREALISD_SIGTERM_TIMEOUT:-60}"
+
+command="${AURORABOREALISD_BIN}"
+
+command_args="-pid=\"${AURORABOREALISD_PIDFILE}\" \
+-conf=\"${AURORABOREALISD_CONFIGFILE}\" \
+-datadir=\"${AURORABOREALISD_DATADIR}\" \
+-daemon \
+${AURORABOREALISD_OPTS}"
+
+required_files="${AURORABOREALISD_CONFIGFILE}"
+
+start_stop_daemon_args="-u ${AURORABOREALISD_USER} \
+-N ${AURORABOREALISD_NICE}"
+
+pidfile="${AURORABOREALISD_PIDFILE}"
+retry="${AURORABOREALISD_SIGTERM_TIMEOUT}"
+
+depend() {
+    need localmount net
+}
+
+start_pre() {
+    checkpath \
+        -d \
+        --mode 0750 \
+        --owner "${AURORABOREALISD_USER}:${AURORABOREALISD_GROUP}" \
+        "${AURORABOREALISD_DATADIR}"
+
+    checkpath \
+        -d \
+        --mode 0755 \
+        --owner "${AURORABOREALISD_USER}:${AURORABOREALISD_GROUP}" \
+        "${AURORABOREALISD_PIDDIR}"
+
+    checkpath \
+        -f \
+        -o "${AURORABOREALISD_USER}:${AURORABOREALISD_GROUP}" \
+        -m 0660 \
+        "${AURORABOREALISD_CONFIGFILE}"
+}

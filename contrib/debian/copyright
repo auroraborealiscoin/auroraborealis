@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Ravencoin
-Source: https://github.com/RavenProject/Ravencoin
+Upstream-Name: Aurora Borealis Core
+Source: https://github.com/auroraborealiscoin/auroraborealis
 
 Files: *
 Copyright: 2009-2017, Bitcoin Core Developers

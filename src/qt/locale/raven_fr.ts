@@ -835,10 +835,6 @@
         <translation>Minimiser au lieu de quitter l'application lorsque la fenêtre est fermée. Si cette option est activée, l'application ne sera fermée qu'en sélectionnant Quitter dans le menu.</translation>
     </message>
     <message>
-        <source>&amp;Currency Unit:</source>
-        <translation>&amp;Device:</translation>
-    </message>
-    <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>URL de tiers (p. ex. un explorateur de blocs) apparaissant dans l'onglet des transactions comme éléments du menu contextuel. %s dans l'URL est remplacé par le hachage de la transaction. Les URL multiples sont séparées par une barre verticale |.</translation>
     </message>
@@ -1701,10 +1697,6 @@
     <message>
         <source>Open &amp;URI...</source>
         <translation>Ouvrir une &amp;URI...</translation>
-    </message>
-    <message>
-        <source>Aurora Borealis Market Price</source>
-        <translation>Aurora Borealis Coin Prix du Marché</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>

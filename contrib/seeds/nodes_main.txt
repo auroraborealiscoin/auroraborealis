@@ -1,1 +1,3 @@
-2.228.70.198:8767
+# Aurora Borealis Coin mainnet fixed seed nodes
+2.29.2.2:17333
+49.12.240.12:17333

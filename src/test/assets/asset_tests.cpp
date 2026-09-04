@@ -220,6 +220,11 @@ BOOST_FIXTURE_TEST_SUITE(asset_tests, BasicTestingSetup)
         BOOST_CHECK(!IsAssetNameValid("$ABC#NO"));
     }
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(transfer_asset_coin_test)
     {
         BOOST_TEST_MESSAGE("Running Transfer Asset Coin Test");
@@ -240,7 +245,13 @@ BOOST_FIXTURE_TEST_SUITE(asset_tests, BasicTestingSetup)
 
         BOOST_CHECK_MESSAGE(coin.IsAsset(), "Transfer Asset Coin isn't as asset");
     }
+#endif
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(new_asset_coin_test)
     {
         BOOST_TEST_MESSAGE("Running Asset Coin Test");
@@ -260,6 +271,7 @@ BOOST_FIXTURE_TEST_SUITE(asset_tests, BasicTestingSetup)
 
         BOOST_CHECK_MESSAGE(coin.IsAsset(), "New Asset Coin isn't as asset");
     }
+#endif
 
     BOOST_AUTO_TEST_CASE(new_asset_is_null_test)
     {
@@ -687,6 +699,11 @@ BOOST_FIXTURE_TEST_SUITE(asset_tests, BasicTestingSetup)
         }
     }
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(tag_address_burn_check)
     {
         BOOST_TEST_MESSAGE("Tag Address Burn Check");
@@ -729,6 +746,6 @@ BOOST_FIXTURE_TEST_SUITE(asset_tests, BasicTestingSetup)
         CTransaction txWithDoubleFee(muttx);
         BOOST_CHECK_MESSAGE(!txWithDoubleFee.CheckAddingTagBurnFee(1), "CheckAddingTagBurnFee: Test 3 Didn't fail with double burn fee");
     }
-
+#endif
 
 BOOST_AUTO_TEST_SUITE_END()

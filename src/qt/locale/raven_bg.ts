@@ -1601,10 +1601,6 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Wallet</translation>
     </message>
     <message>
-        <source>Aurora Borealis Market Price</source>
-        <translation>Пазарна цена на Aurora Borealis Coin</translation>
-    </message>
-    <message>
         <source>Brought to you by binance.com</source>
         <translation>Допринесено от binance.com</translation>
     </message>

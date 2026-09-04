@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Aurora Borealis Core
+Comment=Connect to the Aurora Borealis P2P Network
+Exec=auroraborealis-qt %u
+Terminal=false
+Type=Application
+Icon=raven128
+MimeType=x-scheme-handler/auroraborealis;
+Categories=Office;Finance;

@@ -1,21 +1,31 @@
-
 Debian
 ====================
-This directory contains files used to package ravend/raven-qt
-for Debian-based Linux systems. If you compile ravend/raven-qt yourself, there are some useful files here.
 
-## raven: URI support ##
+This directory contains files used to package Aurora Borealis Core
+for Debian-based Linux systems.
 
+The primary executables are:
 
-raven-qt.desktop  (Gnome / Open Desktop)
-To install:
+- auroraborealisd
+- auroraborealis-cli
+- auroraborealis-qt
 
-	sudo desktop-file-install raven-qt.desktop
-	sudo update-desktop-database
+## auroraborealis: URI support
 
-If you build yourself, you will either need to modify the paths in
-the .desktop file or copy or symlink your raven-qt binary to `/usr/bin`
-and the `../../share/pixmaps/raven128.png` to `/usr/share/pixmaps`
+auroraborealis-qt.desktop provides desktop integration for the
+auroraborealis: URI scheme.
 
-raven-qt.protocol (KDE)
+To install the desktop entry manually:
 
+    sudo desktop-file-install auroraborealis-qt.desktop
+    sudo update-desktop-database
+
+If building manually, ensure auroraborealis-qt is available in
+/usr/bin or adjust the Exec path in the desktop file accordingly.
+
+The current packaging retains the existing Raven-derived icon
+filenames used internally by the build system. These filenames do
+not affect the Aurora Borealis application or URI identity.
+
+auroraborealis-qt.protocol provides KDE integration for the
+auroraborealis: URI scheme.

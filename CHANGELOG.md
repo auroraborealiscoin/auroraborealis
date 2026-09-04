@@ -48,6 +48,6 @@ This file records Aurora Borealis-specific public milestones and release-level p
 
 ### Official public launch
 
-Scheduled for **16 September 2026**.
+Originally scheduled for **16 September 2026**; the official public launch was moved forward to **1 September 2026**.
 
 Production Pool mining and Faucet payouts will be activated through the controlled go-live procedure rather than by removing multiple safety locks at once.

@@ -21,6 +21,11 @@
 
 BOOST_FIXTURE_TEST_SUITE(asset_tx_tests, BasicTestingSetup)
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(asset_tx_valid_test)
     {
         BOOST_TEST_MESSAGE("Running Asset TX Valid Test");
@@ -68,6 +73,7 @@ BOOST_FIXTURE_TEST_SUITE(asset_tx_tests, BasicTestingSetup)
         std::vector<std::pair<std::string, uint256>> vReissueAssets;
         BOOST_CHECK_MESSAGE(Consensus::CheckTxAssets(tx, state, coins, nullptr, false, vReissueAssets, true), "CheckTxAssets Failed");
     }
+#endif
 
     BOOST_AUTO_TEST_CASE(asset_tx_not_valid_test)
     {
@@ -126,6 +132,11 @@ BOOST_FIXTURE_TEST_SUITE(asset_tx_tests, BasicTestingSetup)
         BOOST_CHECK_MESSAGE(!Consensus::CheckTxAssets(tx, state, coins, nullptr, false, vReissueAssets, true), "CheckTxAssets should have failed");
     }
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(asset_tx_valid_multiple_outs_test)
     {
         BOOST_TEST_MESSAGE("Running Asset TX Valid Multiple Outs Test");
@@ -186,6 +197,7 @@ BOOST_FIXTURE_TEST_SUITE(asset_tx_tests, BasicTestingSetup)
         std::vector<std::pair<std::string, uint256>> vReissueAssets;
         BOOST_CHECK_MESSAGE(Consensus::CheckTxAssets(tx, state, coins, nullptr, false, vReissueAssets, true), "CheckTxAssets failed");
     }
+#endif
 
     BOOST_AUTO_TEST_CASE(asset_tx_multiple_outs_invalid_test)
     {
@@ -248,6 +260,11 @@ BOOST_FIXTURE_TEST_SUITE(asset_tx_tests, BasicTestingSetup)
         BOOST_CHECK_MESSAGE(!Consensus::CheckTxAssets(tx, state, coins, nullptr, false, vReissueAssets, true), "CheckTxAssets passed when it should have failed");
     }
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(asset_tx_multiple_assets_test)
     {
         BOOST_TEST_MESSAGE("Running Asset TX Multiple Assets Test");
@@ -420,6 +437,7 @@ BOOST_FIXTURE_TEST_SUITE(asset_tx_tests, BasicTestingSetup)
         // This should fail because 100 of each Asset isn't being sent to a destination (Trying to burn 100 Assets each)
         BOOST_CHECK_MESSAGE(!Consensus::CheckTxAssets(tx2, state, coins, nullptr, false, vReissueAssets, true), "CheckTxAssets should have failed");
     }
+#endif
 
     BOOST_AUTO_TEST_CASE(asset_tx_issue_units_test)
     {
@@ -482,6 +500,11 @@ BOOST_FIXTURE_TEST_SUITE(asset_tx_tests, BasicTestingSetup)
         BOOST_CHECK_MESSAGE(!CheckNewAsset(asset, error), "Test13: " + error);
     }
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(asset_tx_enforce_value_test)
     {
         BOOST_TEST_MESSAGE("Running Asset TX Enforce Value Test");
@@ -545,6 +568,13 @@ BOOST_FIXTURE_TEST_SUITE(asset_tx_tests, BasicTestingSetup)
     }
 
 #ifdef ENABLE_WALLET
+#endif
+
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(asset_tx_enforce_coinbase_test)
     {
         BOOST_TEST_MESSAGE("Running Asset TX Enforce Coinbase Test");
@@ -605,6 +635,7 @@ BOOST_FIXTURE_TEST_SUITE(asset_tx_tests, BasicTestingSetup)
         bitdb.Flush(true);
         bitdb.Reset();
     }
+#endif
 #endif
 
 BOOST_AUTO_TEST_SUITE_END()

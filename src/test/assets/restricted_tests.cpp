@@ -12,6 +12,11 @@
 
 BOOST_FIXTURE_TEST_SUITE(restricted_tests, BasicTestingSetup)
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(restricted_from_transaction_test)
     {
         BOOST_TEST_MESSAGE("Running Restricted From Transaction Test");
@@ -36,6 +41,7 @@ BOOST_FIXTURE_TEST_SUITE(restricted_tests, BasicTestingSetup)
         BOOST_CHECK_MESSAGE(fetched_asset.nAmount == restricted_asset.nAmount, "Restricted Tests: Failed amount check");
         BOOST_CHECK_MESSAGE(address == GetParams().GlobalBurnAddress(), "Restricted Tests: Failed address check");
     }
+#endif
 
     BOOST_AUTO_TEST_CASE(restricted_from_transaction_fail_test)
     {
@@ -59,6 +65,11 @@ BOOST_FIXTURE_TEST_SUITE(restricted_tests, BasicTestingSetup)
         BOOST_CHECK_MESSAGE(!RestrictedAssetFromTransaction(tx, fetched_asset, address), "should have failed to RestrictedAssetFromTransaction");
     }
 
+// ABRS v4.6.3: disabled legacy Ravencoin test case.
+// ABRS does not activate the Asset/Restricted/Messaging subsystem on
+// mainnet, testnet or regtest. Keep the inherited implementation source
+// for compatibility, but do not run positive activation-dependent tests.
+#if 0
     BOOST_AUTO_TEST_CASE(verify_new_restricted_transaction_test) {
         BOOST_TEST_MESSAGE("Running Verify New Restricted transaction");
 
@@ -182,6 +193,6 @@ BOOST_FIXTURE_TEST_SUITE(restricted_tests, BasicTestingSetup)
         BOOST_CHECK_MESSAGE(!txTest8.VerifyNewRestrictedAsset(error),"Test 8: should have failed multiple verifier tx");
         BOOST_CHECK(error == "Multiple verifier strings found in transaction");
     }
-
+#endif
 
 BOOST_AUTO_TEST_SUITE_END()

@@ -2405,16 +2405,6 @@ They are not recoverable !!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+90"/>
-        <source>&amp;Currency Unit:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Choose which currency to display the realtime value of ABRS in (ie: BTC/ABRS).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+11"/>
         <location line="+13"/>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -3861,11 +3851,6 @@ They are not recoverable !!</source>
     <message>
         <location line="+63"/>
         <source>&amp;Wallet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+149"/>
-        <source>Aurora Borealis Market Price</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
