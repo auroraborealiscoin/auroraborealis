@@ -16,9 +16,9 @@ AC_CONFIG_HEADERS([src/config/raven-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-RAVEN_DAEMON_NAME=ravend
+RAVEN_DAEMON_NAME=auroraborealisd
 RAVEN_GUI_NAME=auroraborealis-qt
-RAVEN_CLI_NAME=raven-cli
+RAVEN_CLI_NAME=auroraborealis-cli
 RAVEN_TX_NAME=raven-tx
 
 dnl Unless the user specified ARFLAGS, force it to be cr
@@ -301,13 +301,13 @@ CPPFLAGS="$CPPFLAGS -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS"
 
 AC_ARG_WITH([cli],
   [AS_HELP_STRING([--with-cli],
-  [build raven-cli (default=yes)])],
+  [build auroraborealis-cli (default=yes)])],
   [build_raven_cli=$withval],
   [build_raven_cli=yes])
 
 AC_ARG_WITH([tx],
   [AS_HELP_STRING([--with-tx],
-  [build raven-tx (default=no)])],
+  [build auroraborealis-tx (default=no)])],
   [build_raven_tx=$withval],
   [build_raven_tx=no])
 
@@ -319,7 +319,7 @@ AC_ARG_WITH([libs],
 
 AC_ARG_WITH([daemon],
   [AS_HELP_STRING([--with-daemon],
-  [build ravend daemon (default=yes)])],
+  [build auroraborealisd daemon (default=yes)])],
   [build_ravend=$withval],
   [build_ravend=yes])
 
@@ -1066,15 +1066,15 @@ AC_SUBST(UNIVALUE_LIBS)
 
 RAVEN_QT_PATH_PROGS([PROTOC], [protoc],$protoc_bin_path)
 
-AC_MSG_CHECKING([whether to build ravend])
+AC_MSG_CHECKING([whether to build auroraborealisd])
 AM_CONDITIONAL([BUILD_RAVEND], [test x$build_ravend = xyes])
 AC_MSG_RESULT($build_ravend)
 
-AC_MSG_CHECKING([whether to build raven-cli])
+AC_MSG_CHECKING([whether to build auroraborealis-cli])
 AM_CONDITIONAL([BUILD_RAVEN_CLI], [test x$build_raven_cli = xyes])
 AC_MSG_RESULT($build_raven_cli)
 
-AC_MSG_CHECKING([whether to build raven-tx])
+AC_MSG_CHECKING([whether to build auroraborealis-tx])
 AM_CONDITIONAL([BUILD_RAVEN_TX], [test x$build_raven_tx = xyes])
 AC_MSG_RESULT($build_raven_tx)
 
@@ -1175,7 +1175,7 @@ if test x$raven_enable_qt != xno; then
     AC_MSG_WARN("xgettext is required to update qt translations")
   fi
 
-  AC_MSG_CHECKING([whether to build test_raven-qt])
+  AC_MSG_CHECKING([whether to build Aurora Borealis Core Qt tests])
   if test x$use_gui_tests$raven_enable_qt_test = xyesyes; then
     AC_MSG_RESULT([yes])
     BUILD_TEST_QT="yes"
@@ -1330,8 +1330,8 @@ esac
 
 echo
 echo "Options used to compile and link:"
-echo "  build raven-cli = $build_raven_cli"
-echo "  build raven-tx  = $build_raven_tx"
+echo "  build auroraborealis-cli = $build_raven_cli"
+echo "  build auroraborealis-tx = $build_raven_tx"
 echo "  with wallet     = $enable_wallet"
 echo "  with gui / qt   = $raven_enable_qt"
 if test x$raven_enable_qt != xno; then
