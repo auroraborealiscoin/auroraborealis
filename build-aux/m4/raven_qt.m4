@@ -84,9 +84,11 @@ AC_DEFUN([RAVEN_QT_INIT],[
     [use_dbus=$withval],
     [use_dbus=auto])
 
-  dnl Android doesn't support D-Bus and certainly doesn't use it for notifications
+  dnl Android doesn't support D-Bus and certainly doesn't use it for notifications.
+  dnl Disable automatic D-Bus detection for Windows cross-builds as well.
+  dnl An explicit --with-qtdbus still overrides this default.
   case $host in
-    *android*)
+    *android*|*mingw*)
       if test "x$use_dbus" != xyes; then
         use_dbus=no
       fi
