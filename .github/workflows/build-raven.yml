@@ -79,33 +79,6 @@ jobs:
         ${{ GITHUB.WORKSPACE }}/depends/work
        key: ${{ MATRIX.OS }}
       
-    - if: ${{ needs.check-jobs.outputs.should_skip != 'true' && (matrix.OS == 'arm32v7' || matrix.OS == 'arm32v7-disable-wallet') }}
-      name: Diagnose ARM32 toolchain
-      run: |
-        echo "=== ARM32 COMPILER PATH ==="
-        command -v arm-linux-gnueabihf-gcc || true
-        command -v arm-linux-gnueabihf-g++ || true
-
-        echo "=== ARM32 COMPILER VERSION ==="
-        arm-linux-gnueabihf-gcc --version || true
-        arm-linux-gnueabihf-g++ --version || true
-
-        echo "=== GCC TARGET ==="
-        arm-linux-gnueabihf-gcc -dumpmachine || true
-        arm-linux-gnueabihf-gcc -dumpversion || true
-
-        echo "=== PREDEFINED MACROS ==="
-        printf '' | arm-linux-gnueabihf-gcc -dM -E - 2>/dev/null | grep -E '_TIME_BITS|_FILE_OFFSET_BITS|__TIMESIZE|__WORDSIZE' || true
-
-        echo "=== GLIBC TIME64 HEADER ==="
-        grep -n -E '_TIME_BITS|_FILE_OFFSET_BITS|__TIMESIZE' /usr/arm-linux-gnueabihf/include/features-time64.h || true
-
-        echo "=== GCC SPECS TIME64 ==="
-        arm-linux-gnueabihf-gcc -dumpspecs | grep -n -E -C2 '_TIME_BITS|_FILE_OFFSET_BITS' || true
-
-        echo "=== INSTALLED ARM GCC PACKAGES ==="
-        dpkg-query -W 'gcc*-arm-linux-gnueabihf' 'g++*-arm-linux-gnueabihf' 2>/dev/null || true
-
     - if: ${{ needs.check-jobs.outputs.should_skip != 'true' }}
       name: Build dependencies.
       run: ${SCRIPTS}/02-copy-build-dependencies.sh ${{ MATRIX.OS }} ${{ GITHUB.WORKSPACE }} ${{ GITHUB.BASE_REF }} ${{ GITHUB.REF }}
