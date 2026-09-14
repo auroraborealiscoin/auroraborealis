@@ -6,6 +6,7 @@
 #ifndef RAVEN_BENCH_BENCH_H
 #define RAVEN_BENCH_BENCH_H
 
+#include <cstdint>
 #include <functional>
 #include <limits>
 #include <map>
