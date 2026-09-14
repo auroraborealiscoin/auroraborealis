@@ -34,6 +34,22 @@ Security-sensitive components include:
 - official Faucet;
 - official release packaging and distribution.
 
+## Source and Security Review
+
+Aurora Borealis Coin is derived in part from the Ravencoin codebase.
+
+Security-related findings are reviewed in source context. Heuristic scanner results are not treated as proof of either maliciousness or software safety.
+
+The September 2026 ScanRepo source review is documented at:
+
+`docs/security/scanrepo-review-2026-09.md`
+
+## Release Verification
+
+Users should obtain wallet software only from official Aurora Borealis Coin release channels and verify published checksums when available.
+
+Release binary verification, source review and independent malware scanning are separate security controls.
+
 ## Responsible Disclosure
 
 Please allow maintainers reasonable time to investigate and prepare a fix before publishing technical exploit details.

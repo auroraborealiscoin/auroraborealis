@@ -55,18 +55,17 @@ def NormalizeMetaData(dict):
     return(dict)
 
 def issue_asset(asset, qty, units, reissuable = False, address='', ipfs_hash = ''):
-    cmd = cli + " " + mode + " issue " + asset + " " + str(qty) + " " + "\"" + address + "\"" + " " + "\"\"" + " " + str(units) + " "
-
-    if reissuable:
-        cmd += 'true'
-    else:
-        cmd += 'false'
+    cmd = [
+        cli, mode, "issue", asset, str(qty),
+        address, "", str(units),
+        "true" if reissuable else "false"
+    ]
 
     if len(ipfs_hash) > 0:
-        cmd = cmd + " true " + ipfs_hash
+        cmd.extend(["true", ipfs_hash])
 
-    print(cmd)
-    os.system(cmd)  
+    print(" ".join(cmd))
+    subprocess.run(cmd, check=True)
 
 def get_contract_hash(url):
     import urllib2
@@ -117,8 +116,7 @@ def add_to_ipfs(file):
 
 
 if mode == "-regtest":  #If regtest then mine our own blocks
-    import os
-    os.system(cli + " " + mode + " generate 400")
+    subprocess.run([cli, mode, "generate", "400"], check=True)
 
 with open(csv_file, "r") as csvfile:
     #print(rpc_call('getbestblockhash'))
