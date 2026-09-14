@@ -1,0 +1,14 @@
+--- a/qtbase/src/platformsupport/input/evdevtouch/qevdevtouchhandler.cpp
++++ b/qtbase/src/platformsupport/input/evdevtouch/qevdevtouchhandler.cpp
+@@ -60,0 +61,8 @@
++#ifndef input_event_sec
++#define input_event_sec time.tv_sec
++#endif
++
++#ifndef input_event_usec
++#define input_event_usec time.tv_usec
++#endif
++
+@@ -571 +579 @@
+-        m_timeStamp = data->time.tv_sec + data->time.tv_usec / 1000000.0;
++        m_timeStamp = data->input_event_sec + data->input_event_usec / 1000000.0;
