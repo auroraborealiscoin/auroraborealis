@@ -1,0 +1,6 @@
+--- a/src/3rdparty/zlib/src/gzguts.h
++++ b/src/3rdparty/zlib/src/gzguts.h
+@@ -21,0 +22,3 @@
++#  ifdef _TIME_BITS
++#    undef _TIME_BITS
++#  endif
