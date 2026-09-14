@@ -1,0 +1,12 @@
+--- a/qtbase/src/corelib/global/qendian.h
++++ b/qtbase/src/corelib/global/qendian.h
+@@ -45,0 +46 @@
++#include <limits>
+--- a/qtbase/src/corelib/tools/qbytearraymatcher.h
++++ b/qtbase/src/corelib/tools/qbytearraymatcher.h
+@@ -43,0 +44 @@
++#include <limits>
+--- a/qtbase/src/tools/moc/generator.cpp
++++ b/qtbase/src/tools/moc/generator.cpp
+@@ -41,0 +42 @@
++#include <limits>
