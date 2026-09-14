@@ -167,8 +167,7 @@ def audit(filter):
               send_notification(notification_emails, "Ravencoin Asset Audit Success", "All " + str(len(assets)) + " assets audited.")
 
 if mode == "-regtest":  #If regtest then mine our own blocks
-    import os
-    os.system(cli + " " + mode + " generate 400")
+    subprocess.run([cli, mode, "generate", "400"], check=True)
 
 #### Uncomment these lines to test e-mail notification ###
 #send_notification(notification_emails, "Test Subject", "Test Message")
