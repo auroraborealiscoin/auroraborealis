@@ -2,7 +2,7 @@
 
 ## Technical Whitepaper
 
-**Version 1.0 - Pre-launch Edition**
+**Version 1.1 - Post-launch Edition**
 
 **Official public launch: 1 September 2026**
 
@@ -243,11 +243,11 @@ Official Core deployments are configured so that RPC remains bound to localhost 
 
 Public web services are exposed through HTTPS and reverse-proxy infrastructure rather than by exposing internal application ports directly.
 
-Operational safety controls are used for pre-launch services. In particular:
+Operational safety controls are used for public network services. In particular:
 
-- Pool public Stratum remains intentionally locked until controlled go-live;
-- Faucet real payouts remain intentionally disabled until controlled go-live;
-- service activation is performed through staged checks rather than by removing multiple safety controls simultaneously.
+- the official Pool provides public Stratum access for miners;
+- the official Faucet provides controlled public ABRS distributions subject to operational limits;
+- service operation is performed through staged checks and independent safety controls.
 
 Security controls do not eliminate all risk. Network operators, miners, users and service operators remain responsible for protecting their own systems, credentials, wallets and private keys.
 
@@ -306,13 +306,13 @@ The official infrastructure is intended as project-operated infrastructure, not 
 
 The project roadmap is maintained separately in ROADMAP.md.
 
-The current development sequence includes:
+The development sequence has included:
 
 1. Core mainnet and public infrastructure;
-2. official public launch;
+2. official public launch on 1 September 2026;
 3. technical documentation and Whitepaper;
 4. official social and community channels;
-5. broader independent ecosystem participation.
+5. ongoing broader independent ecosystem participation.
 
 Future work remains subject to technical review, security analysis and development resources.
 
@@ -373,6 +373,6 @@ https://faucet.auroraborealiscoin.com/
 
 ## 20. Document Status
 
-This document is the Aurora Borealis Coin Technical Whitepaper, Version 1.0, prepared for the official public launch, which took place on 1 September 2026.
+This document is the Aurora Borealis Coin Technical Whitepaper, Version 1.1, updated following the official public launch, which took place on 1 September 2026.
 
 Technical parameters should always be verified against the current consensus source code and active network state.
