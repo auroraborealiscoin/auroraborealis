@@ -80,7 +80,7 @@ Section -Main SEC0000
     File @abs_top_srcdir@/release/@RAVEN_DAEMON_NAME@@EXEEXT@
     File @abs_top_srcdir@/release/@RAVEN_CLI_NAME@@EXEEXT@
     SetOutPath $INSTDIR\doc
-    File /r @abs_top_srcdir@/doc\*.*
+    File /r /x raven_logo_doxygen.png @abs_top_srcdir@/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd
