@@ -95,12 +95,16 @@ MnemonicDialog2::MnemonicDialog2(QWidget *parent) :
 {
     ui->setupUi(this);
     
-    std::array<LanguageDetails, NUM_LANGUAGES_BIP39_SUPPORTED> languagesDetails = CMnemonic::GetLanguagesDetails();    
-   
-    for(int langNum = 0; langNum < NUM_LANGUAGES_BIP39_SUPPORTED; langNum++) {
-        MnemonicDialog2::ui->languageSeedWords->addItem(languagesDetails[langNum].label);
-    }
-    MnemonicDialog2::ui->languageSeedWords->installEventFilter(this);
+    // New ABRS wallets use the English BIP39 wordlist only.
+    // Non-English wordlists remain available in the recovery dialog
+    // for compatibility with existing wallets.
+    std::array<LanguageDetails, NUM_LANGUAGES_BIP39_SUPPORTED> languagesDetails =
+        CMnemonic::GetLanguagesDetails();
+
+    MnemonicDialog2::ui->languageSeedWords->addItem(
+        languagesDetails[DEFAULT_LANG].label);
+    MnemonicDialog2::ui->languageSeedWords->setCurrentIndex(0);
+    MnemonicDialog2::ui->languageSeedWords->setEnabled(false);
 
 };
 
@@ -211,8 +215,23 @@ void MnemonicDialog3::on_backButton_clicked()
 
 void MnemonicDialog3::on_acceptButton_clicked()
 {
-    std::string words = MnemonicDialog3::ui->seedwordsEdit->toPlainText().toStdString();
-    std::string passphrase = MnemonicDialog3::ui->passphraseEdit->text().toStdString();
+    // Normalize mnemonic words to Unicode NFKD so visually equivalent
+    // BIP39 words (for example French accented words) are matched
+    // against the decomposed BIP39 wordlist representation.
+    //
+    // Keep the passphrase byte-compatible with previous ABRS releases.
+    // Changing legacy passphrase normalization here could derive a
+    // different wallet for existing users with Unicode passphrases.
+    const QString normalizedWords =
+        MnemonicDialog3::ui->seedwordsEdit->toPlainText().normalized(
+            QString::NormalizationForm_KD);
+
+    const QByteArray wordsUtf8 = normalizedWords.toUtf8();
+    const QByteArray passphraseUtf8 =
+        MnemonicDialog3::ui->passphraseEdit->text().toUtf8();
+
+    std::string words(wordsUtf8.constData(), wordsUtf8.size());
+    std::string passphrase(passphraseUtf8.constData(), passphraseUtf8.size());
 
     int languageSelected = MnemonicDialog3::ui->languageSeedWords->currentIndex();
 

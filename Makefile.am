@@ -72,9 +72,9 @@ dist-hook:
 
 $(RAVEN_WIN_INSTALLER): all-recursive
 	$(MKDIR_P) $(top_builddir)/release
-	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(RAVEND_BIN) $(top_builddir)/release
-	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(RAVEN_QT_BIN) $(top_builddir)/release
-	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(RAVEN_CLI_BIN) $(top_builddir)/release
+	$(INSTALL_PROGRAM) $(RAVEND_BIN) $(top_builddir)/release
+	$(INSTALL_PROGRAM) $(RAVEN_QT_BIN) $(top_builddir)/release
+	$(INSTALL_PROGRAM) $(RAVEN_CLI_BIN) $(top_builddir)/release
 	@test -f $(MAKENSIS) && $(MAKENSIS) -V2 $(top_builddir)/share/setup.nsi || \
 	  echo error: could not build $@
 	@echo built $@
