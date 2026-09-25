@@ -12,6 +12,9 @@
 **Explorer:** https://explorer.auroraborealiscoin.com/
 **Mining Pool:** https://pool.auroraborealiscoin.com/
 **Faucet:** https://faucet.auroraborealiscoin.com/
+## Technical Whitepaper
+
+[Read the official ABRS Technical Whitepaper v1.2 (PDF)](whitepaper/Aurora_Borealis_Coin_ABRS_Technical_Whitepaper_v1.2.pdf)
 
 ---
 
