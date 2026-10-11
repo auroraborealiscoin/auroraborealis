@@ -12,6 +12,23 @@
 **Explorer:** https://explorer.auroraborealiscoin.com/
 **Mining Pool:** https://pool.auroraborealiscoin.com/
 **Faucet:** https://faucet.auroraborealiscoin.com/
+## Aurora Verify — Blockchain File Verification
+
+**Aurora Verify** is a digital file integrity and blockchain certification service operating on the Aurora Borealis Coin (ABRS) mainnet.
+
+The service supports:
+
+- SHA-256 file fingerprinting;
+- blockchain-linked integrity proofs;
+- verification of recorded certification transactions;
+- access to digital verification certificates.
+
+**Official Aurora Verify service:** https://verify.auroraborealiscoin.com/
+
+Aurora Verify records evidence associated with a file fingerprint on the ABRS blockchain. Such records do not independently establish copyright ownership, legal authorship, or the truth of a file's contents.
+
+---
+
 ## Technical Whitepaper
 
 [Read the official ABRS Technical Whitepaper v1.2 (PDF)](whitepaper/Aurora_Borealis_Coin_ABRS_Technical_Whitepaper_v1.2.pdf)
