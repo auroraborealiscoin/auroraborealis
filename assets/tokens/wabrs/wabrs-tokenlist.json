@@ -1,0 +1,25 @@
+{
+  "name": "Aurora Borealis Coin",
+  "timestamp": "2026-10-11T18:08:04Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "logoURI": "https://raw.githubusercontent.com/auroraborealiscoin/auroraborealis/main/assets/tokens/wabrs/wabrs-256.png",
+  "keywords": [
+    "aurora",
+    "abrs",
+    "wabrs"
+  ],
+  "tokens": [
+    {
+      "name": "Wrapped Aurora Borealis Coin",
+      "symbol": "wABRS",
+      "chainId": 56,
+      "address": "0x30c5E153aE8a90d5874A176F3ee35C9c195A5fb1",
+      "decimals": 8,
+      "logoURI": "https://raw.githubusercontent.com/auroraborealiscoin/auroraborealis/main/assets/tokens/wabrs/wabrs-256.png"
+    }
+  ]
+}
